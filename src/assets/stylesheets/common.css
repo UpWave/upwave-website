@@ -31,7 +31,6 @@ button::-moz-focus-inner {
 [role="button"],
 [role="link"] {
   color: inherit;
-  cursor: default;
   display: inline-block;
   text-align: center;
   text-decoration: none;
@@ -46,6 +45,7 @@ input[type="button"],
 [role="button"],
 [role="link"],
 button {
+  cursor: pointer;
   font-size: 14px;
   color: rgba(65, 73, 96, .75);
 }
@@ -59,8 +59,16 @@ button:hover {
   color: rgba(65, 73, 96, 1);
 }
 
+[role="link"].active {
+  color: #FE777A;
+}
+
 [role="button"] {
   padding: 10px 20px 10px 20px;
-  border: 1px solid rgba(65, 73, 96, .5);
+  border: 1px solid rgba(65, 73, 96, .75);
   border-radius: 8px;
+}
+
+[role="button"]:hover {
+  border: 1px solid rgba(65, 73, 96, 1);
 }

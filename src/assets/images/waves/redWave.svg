@@ -1,17 +1,4 @@
-<svg width="1920px" height="612px" viewBox="0 0 1920 612" preserveAspectRatio="xMinYMax meet" class="acceleration" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <desc>SVG of RedWave.</desc>
-    <defs>
-        <path d="M0,595.112078 C0,595.112078 105.668322,581.30879 231.919885,562.828035 C358.171448,544.347281 501.673569,533.677786 673.456319,547.16825 C845.239068,560.658715 923.85384,566.010174 1170.93544,566.010174 C1418.01703,566.010174 1431.05482,531.413236 1762.47249,528.93051 C1899.24628,527.905906 1920,528.93051 1920,528.93051 L1920,612 L0,612 L0,595.112078 Z" id="startPath"></path>
-        <path d="M0,446.112078 C0,446.112078 60.057062,383.308245 170.989692,383.308245 C281.922321,383.308245 417.618538,497.333333 630.243446,497.333333 C842.868354,497.333333 919.004727,209.333333 1166.08632,209.333333 C1413.16792,209.333333 1579.29442,380.947825 1779.6639,177.430946 C1892.05103,63.2784408 1920,0 1920,0 L1920,612 L0,612 L0,446.112078 Z" id="endPath"></path>
-        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="shadow">
-            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
-            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
-            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
-            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.25 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
-        </filter>
-    </defs>
-    <g id="RedWave" stroke="none" fill="none">
-        <use fill="black" fill-opacity="1" filter="url(#shadow)" xlink:href="#startPath"></use>
-        <use fill-opacity="0.8" fill="#F17174" fill-rule="evenodd" xlink:href="#startPath"></use>
-    </g>
+<svg width="1920px" height="612px" viewBox="0 0 1920 612" preserveAspectRatio="xMinYMax meet" class="acceleration" version="2.0" xmlns="http://www.w3.org/2000/svg">
+  <path fill-opacity="0.8" fill="#F17174" fill-rule="evenodd" d="M0,595 C0,595 106,581 232,563 C358,544 502,534 673,547 C845,561 924,566 1171,566 C1418,566 1431,531 1762,529 C1899,527.905906 1920,529 1920,529 L1920,612 L0,612 L0,595 Z" id="startPath"></path>
+  <path style="display:none" d="M0,446 C0,446 60,383 171,383 C282,383 418,497 630,497 C843,497 919,209 1166,209 C1413,209 1579,381 1780,177 C1892,63 1920,0 1920,0 L1920,612 L0,612 L0,446 Z" id="endPath"></path>
 </svg>

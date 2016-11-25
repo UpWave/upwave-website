@@ -7,14 +7,25 @@ import '../../assets/stylesheets/waves.css';
 
 import SVGWave from './components/SVGWave';
 
-function Waves() {
-  return (
-    <section className="waves">
-      <SVGWave svg={blueWave} />
-      <SVGWave svg={redWave} />
-      <SVGWave svg={blackWave} />
-    </section>
-  );
+class Waves extends React.Component {
+  // componentWillEnter(callback){
+  //   console.log('enter');
+  // }
+  //
+  // componentWillLeave(callback) {
+  //   console.log('here');
+  //   callback();
+  // }
+
+  render() {
+    return (
+      <section className="waves">
+        <SVGWave key="blue" svg={blueWave} />
+        <SVGWave key="red" svg={redWave} />
+        <SVGWave key="black" svg={blackWave} />
+      </section>
+    );
+  }
 };
 
 export default Waves;

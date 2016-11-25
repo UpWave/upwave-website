@@ -1,0 +1,22 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0 12px 5px 0;
+  font-size: 12px;
+  line-height: 1.5em;
+  color: rgb(95, 103, 126);
+  box-sizing: border-box;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.sitemap-links {
+  padding: 0 5px;
+  color: rgb(95, 103, 126);
+  text-transform: capitalize;
+}
+
+.sitemap-links:last-of-type {
+  padding-right: 0;
+}

@@ -1,17 +1,4 @@
-<svg width="1920px" height="573px" viewBox="0 0 1920 573" preserveAspectRatio="xMinYMax meet" class="acceleration" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <desc>SVG of BlueWave.</desc>
-    <defs>
-        <path d="M0,573.432029 C0,573.432029 148.876573,461.44397 434.875592,461.44397 C720.874611,461.44397 965.326827,503.071453 1165.85273,503.071453 C1366.37864,503.071453 1571.02836,482.321997 1707.17936,461.44397 C1843.33036,440.565944 1920,415 1920,415 L1920,573.432029 L0,573.432029 Z" id="startPath"></path>
-        <path d="M0,573 C0,573 190.411545,232.608661 476.410564,232.608661 C762.409584,232.608661 954.297208,522.184099 1162.88306,380.921718 C1371.4689,239.659337 1444.84494,47.0662739 1632.50852,9.69081483 C1820.17209,-27.6846442 1920,55.1030153 1920,55.1030153 L1920,573 L0,573 Z" id="endPath"></path>
-        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="shadow">
-            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
-            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
-            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
-            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.25 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
-        </filter>
-    </defs>
-    <g id="BlueWave" stroke="none" fill="none">
-        <use fill="black" fill-opacity="1" filter="url(#shadow)" xlink:href="#startPath"></use>
-        <use fill-opacity="0.8" fill="#6DCDE9" fill-rule="evenodd" xlink:href="#startPath"></use>
-    </g>
+<svg width="1920px" height="573px" viewBox="0 0 1920 573" preserveAspectRatio="xMinYMax meet" class="acceleration" version="2.0" xmlns="http://www.w3.org/2000/svg">
+  <path fill-opacity="0.8" fill="#6DCDE9" fill-rule="evenodd" d="M0,573 C0,573 149,461 435,461 C721,461 965,503 1166,503 C1366,503 1571,482 1707,461 C1843,441 1920,415 1920,415 L1920,573 L0,573 Z" id="startPath"></path>
+  <path style="display:none" d="M0,573 C0,573 190,233 476,233 C762,233 954,522 1163,381 C1371,240 1445,47 1633,10 C1820,-28 1920,55 1920,55 L1920,573 L0,573 Z" id="endPath"></path>
 </svg>

@@ -10,17 +10,21 @@ class SVGWave extends React.Component {
   };
 
   componentDidMount() {
-    setTimeout(() => this.drawWave(), 2000);
+    setTimeout(() => this.drawWave(), 100);
   }
 
   drawWave() {
-    const s = new Snap(
-      this.getSVGDocument(ReactDOM.findDOMNode(this.refs.blackWave))
-    );
+    const s = this.getSnapHandler();
 
     s.select('#startPath').animate({
       d: this.getSVGPath(s.select('#endPath')),
     }, 600);
+  }
+
+  getSnapHandler() {
+    return new Snap(
+      this.getSVGDocument(ReactDOM.findDOMNode(this.refs.blackWave))
+    );
   }
 
   getSVGDocument({ contentDocument }) { return contentDocument; }

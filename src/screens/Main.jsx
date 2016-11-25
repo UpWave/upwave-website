@@ -1,18 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react';
+import ReactTransitionGroup from 'react-addons-transition-group';
 
 import Waves from '../components/Waves';
-import Background from '../components/Background';
-import Header from '../components/Header';
-import Content from '../components/Content';
 
-class Main extends Component {
+class Main extends React.Component {
   render() {
     return (
       <section>
-        <Background />
-        <Waves />
-        <Header />
-        <Content />
+        <ReactTransitionGroup>
+          <Waves key="waves" />
+        </ReactTransitionGroup>
+        <section className="container">
+          <section className="motto">
+            <h1>We are <strong>UpWave.</strong></h1>
+            <h3>Our the highest goal is your successful business.</h3>
+          </section>
+        </section>
       </section>
     );
   }
