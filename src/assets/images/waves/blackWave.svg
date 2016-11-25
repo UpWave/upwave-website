@@ -13,6 +13,6 @@
     </defs>
     <g id="BlackWave" stroke="none" fill="none">
         <use fill="black" fill-opacity="1" filter="url(#shadow)" xlink:href="#startPath"></use>
-        <use fill-opacity="0.83" fill="#29304F" fill-rule="evenodd" xlink:href="#startPath"></use>
+        <use fill-opacity="0.73" fill="#29304F" fill-rule="evenodd" xlink:href="#startPath"></use>
     </g>
 </svg>

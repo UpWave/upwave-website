@@ -7,7 +7,7 @@ body {
 
 h1,
 h3 {
-  padding: 20px 0;
+  padding: 20px 0 15px;
   display: inline-block;
 }
 
@@ -18,7 +18,12 @@ h1 {
 }
 
 h3 {
+  padding-top: 15px;
   font-size: 29px;
+}
+
+h1 strong {
+  color: #FE777A !important;
 }
 
 .container {
@@ -34,6 +39,6 @@ h3 {
 
 .content {
   position: relative;
-  top: 50px;
+  top: 12%;
   left: 0px;
 }

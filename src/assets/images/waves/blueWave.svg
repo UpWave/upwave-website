@@ -12,6 +12,6 @@
     </defs>
     <g id="BlueWave" stroke="none" fill="none">
         <use fill="black" fill-opacity="1" filter="url(#shadow)" xlink:href="#startPath"></use>
-        <use fill-opacity="0.9" fill="#6DCDE9" fill-rule="evenodd" xlink:href="#startPath"></use>
+        <use fill-opacity="0.8" fill="#6DCDE9" fill-rule="evenodd" xlink:href="#startPath"></use>
     </g>
 </svg>

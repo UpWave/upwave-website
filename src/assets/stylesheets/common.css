@@ -47,6 +47,16 @@ input[type="button"],
 [role="link"],
 button {
   font-size: 14px;
+  color: rgba(65, 73, 96, .75);
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+[role="button"]:hover,
+[role="link"]:hover,
+button:hover {
+  color: rgba(65, 73, 96, 1);
 }
 
 [role="button"] {
