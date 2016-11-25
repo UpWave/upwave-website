@@ -1,0 +1,56 @@
+[role="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+  box-sizing: border-box;
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  appearance: button;
+  user-select: none;
+  text-transform: uppercase;
+}
+
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+[role="button"],
+[role="link"] {
+  color: inherit;
+  cursor: default;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  white-space: pre;
+  user-select: none;
+  text-transform: uppercase;
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+[role="button"],
+[role="link"],
+button {
+  font-size: 14px;
+}
+
+[role="button"] {
+  padding: 10px 20px 10px 20px;
+  border: 1px solid rgba(65, 73, 96, .5);
+  border-radius: 8px;
+}

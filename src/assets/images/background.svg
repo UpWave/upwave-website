@@ -1,0 +1,72 @@
+<svg width="1440px" height="924px" viewBox="0 0 1440 924" version="1.1" preserveAspectRatio="xMinYMax slice" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <desc>Background lines.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="1440" height="924"></rect>
+        <linearGradient x1="50%" y1="6.7857097%" x2="50%" y2="164.652756%" id="linearGradient-3">
+            <stop stop-color="#FDFDFE" offset="0%"></stop>
+            <stop stop-color="#FDFDFE" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Background" opacity="0.600000024" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(0.000000, 100.000000)">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <g id="Mask" opacity="0.216768569"></g>
+        <g id="Vertical" mask="url(#mask-2)" stroke-linecap="square" stroke="#414960">
+            <g transform="translate(-2.000000, -101.000000)" id="Line">
+                <path d="M590,512 L1614,512" transform="translate(1102.000000, 512.000000) rotate(270.000000) translate(-1102.000000, -512.000000) "></path>
+                <path d="M540,513 L1564,513" transform="translate(1052.000000, 513.000000) rotate(270.000000) translate(-1052.000000, -513.000000) "></path>
+                <path d="M490,513 L1514,513" transform="translate(1002.000000, 513.000000) rotate(270.000000) translate(-1002.000000, -513.000000) "></path>
+                <path d="M440,513 L1464,513" transform="translate(952.000000, 513.000000) rotate(270.000000) translate(-952.000000, -513.000000) "></path>
+                <path d="M790,513 L1814,513" transform="translate(1302.000000, 513.000000) rotate(270.000000) translate(-1302.000000, -513.000000) "></path>
+                <path d="M740,513 L1764,513" transform="translate(1252.000000, 513.000000) rotate(270.000000) translate(-1252.000000, -513.000000) "></path>
+                <path d="M690,513 L1714,513" transform="translate(1202.000000, 513.000000) rotate(270.000000) translate(-1202.000000, -513.000000) "></path>
+                <path d="M640,513 L1664,513" transform="translate(1152.000000, 513.000000) rotate(270.000000) translate(-1152.000000, -513.000000) "></path>
+                <path d="M890,513 L1914,513" transform="translate(1402.000000, 513.000000) rotate(270.000000) translate(-1402.000000, -513.000000) "></path>
+                <path d="M840,513 L1864,513" transform="translate(1352.000000, 513.000000) rotate(270.000000) translate(-1352.000000, -513.000000) "></path>
+                <path d="M-361,513 L663,513" transform="translate(151.000000, 513.000000) rotate(270.000000) translate(-151.000000, -513.000000) "></path>
+                <path d="M-411,513 L613,513" transform="translate(101.000000, 513.000000) rotate(270.000000) translate(-101.000000, -513.000000) "></path>
+                <path d="M-461,513 L563,513" transform="translate(51.000000, 513.000000) rotate(270.000000) translate(-51.000000, -513.000000) "></path>
+                <path d="M-511,513 L513,513" transform="translate(1.000000, 513.000000) rotate(270.000000) translate(-1.000000, -513.000000) "></path>
+                <path d="M-161,513 L863,513" transform="translate(351.000000, 513.000000) rotate(270.000000) translate(-351.000000, -513.000000) "></path>
+                <path d="M-211,513 L813,513" transform="translate(301.000000, 513.000000) rotate(270.000000) translate(-301.000000, -513.000000) "></path>
+                <path d="M-261,513 L763,513" transform="translate(251.000000, 513.000000) rotate(270.000000) translate(-251.000000, -513.000000) "></path>
+                <path d="M-311,513 L713,513" transform="translate(201.000000, 513.000000) rotate(270.000000) translate(-201.000000, -513.000000) "></path>
+                <path d="M39,513 L1063,513" transform="translate(551.000000, 513.000000) rotate(270.000000) translate(-551.000000, -513.000000) "></path>
+                <path d="M-11,513 L1013,513" transform="translate(501.000000, 513.000000) rotate(270.000000) translate(-501.000000, -513.000000) "></path>
+                <path d="M-61,513 L963,513" transform="translate(451.000000, 513.000000) rotate(270.000000) translate(-451.000000, -513.000000) "></path>
+                <path d="M-111,513 L913,513" transform="translate(401.000000, 513.000000) rotate(270.000000) translate(-401.000000, -513.000000) "></path>
+                <path d="M239,513 L1263,513" transform="translate(751.000000, 513.000000) rotate(270.000000) translate(-751.000000, -513.000000) "></path>
+                <path d="M189,513 L1213,513" transform="translate(701.000000, 513.000000) rotate(270.000000) translate(-701.000000, -513.000000) "></path>
+                <path d="M139,513 L1163,513" transform="translate(651.000000, 513.000000) rotate(270.000000) translate(-651.000000, -513.000000) "></path>
+                <path d="M89,513 L1113,513" transform="translate(601.000000, 513.000000) rotate(270.000000) translate(-601.000000, -513.000000) "></path>
+                <path d="M389,513 L1413,513" transform="translate(901.000000, 513.000000) rotate(270.000000) translate(-901.000000, -513.000000) "></path>
+                <path d="M339,513 L1363,513" transform="translate(851.000000, 513.000000) rotate(270.000000) translate(-851.000000, -513.000000) "></path>
+                <path d="M289,513 L1313,513" transform="translate(801.000000, 513.000000) rotate(270.000000) translate(-801.000000, -513.000000) "></path>
+            </g>
+        </g>
+        <g id="Horizontal" mask="url(#mask-2)" stroke-linecap="square" stroke="#414960">
+            <g transform="translate(0.000000, 49.000000)" id="Line">
+                <path d="M0,101 L1440,101"></path>
+                <path d="M0,51 L1440,51"></path>
+                <path d="M0,1 L1440,1"></path>
+                <path d="M0,301 L1440,301"></path>
+                <path d="M0,251 L1440,251"></path>
+                <path d="M0,201 L1440,201"></path>
+                <path d="M0,151 L1440,151"></path>
+                <path d="M0,501 L1440,501"></path>
+                <path d="M0,451 L1440,451"></path>
+                <path d="M0,401 L1440,401"></path>
+                <path d="M0,351 L1440,351"></path>
+                <path d="M0,701 L1440,701"></path>
+                <path d="M0,651 L1440,651"></path>
+                <path d="M0,601 L1440,601"></path>
+                <path d="M0,551 L1440,551"></path>
+                <path d="M0,851 L1440,851"></path>
+                <path d="M0,801 L1440,801"></path>
+                <path d="M0,751 L1440,751"></path>
+            </g>
+        </g>
+        <rect id="Rectangle" fill="url(#linearGradient-3)" mask="url(#mask-2)" x="0" y="0" width="1440" height="1000"></rect>
+    </g>
+</svg>
