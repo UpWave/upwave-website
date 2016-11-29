@@ -2,21 +2,17 @@ import React from 'react';
 
 import Background from '../../components/Background';
 import Header from '../../components/Header';
-// import Footer from '../../components/Footer';
+import Footer from '../../components/Footer';
 
-function Root({ children, location }) {
+function Root({ children }) {
   return (
     <section>
       <Background />
       {children}
-      <Header location={location} />
-      {/* <Footer /> */}
+      <Header />
+      <Footer />
     </section>
   )
 }
-
-Root.propTypes = {
-  location: React.PropTypes.object,
-};
 
 export default Root;

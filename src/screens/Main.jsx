@@ -1,18 +1,18 @@
 import React from 'react';
-import ReactTransitionGroup from 'react-addons-transition-group';
 
 import Waves from '../components/Waves';
+import TypeAhead from '../components/TypeAhead';
 
 class Main extends React.Component {
   render() {
     return (
       <section>
-        <ReactTransitionGroup>
-          <Waves key="waves" />
-        </ReactTransitionGroup>
+        <Waves />
         <section className="container">
           <section className="motto">
-            <h1>We are <strong>UpWave.</strong></h1>
+            <TypeAhead sentence="We are " tag="h1">
+              <TypeAhead sentence="UpWave." tag="strong" />
+            </TypeAhead>
             <h3>Our the highest goal is your successful business.</h3>
           </section>
         </section>

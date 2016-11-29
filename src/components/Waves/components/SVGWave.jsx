@@ -7,35 +7,63 @@ import '../../../assets/stylesheets/waves.css';
 class SVGWave extends React.Component {
   static propTypes = {
     svg: React.PropTypes.string.isRequired,
+    status: React.PropTypes.string.isRequired,
+    onLeft: React.PropTypes.func.isRequired,
   };
 
   componentDidMount() {
-    setTimeout(() => this.drawWave(), 100);
+    const wave = ReactDOM.findDOMNode(this.refs.wave);
+    wave.innerHTML = this.props.svg;
+
+    setTimeout(() => this.drawWave(), 0);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.status === 'leave') {
+      this.stopDrawing();
+      this.eraseWave();
+    }
   }
 
   drawWave() {
     const s = this.getSnapHandler();
 
-    s.select('#startPath').animate({
+    s.select('#path').animate({
       d: this.getSVGPath(s.select('#endPath')),
-    }, 600);
+      'fill-opacity': 0.9,
+    }, 500);
+  }
+
+  stopDrawing() {
+    const s = this.getSnapHandler();
+
+    s.selectAll('d').forEach(e => e.stop());
+  }
+
+  eraseWave() {
+    const s = this.getSnapHandler();
+
+    s.select('#path').animate({
+      d: this.getSVGPath(s.select('#startPath')),
+      'fill-opacity': 0,
+    }, 600, n => n, this.props.onLeft);
   }
 
   getSnapHandler() {
     return new Snap(
-      this.getSVGDocument(ReactDOM.findDOMNode(this.refs.blackWave))
+      this.getSVGDocument(ReactDOM.findDOMNode(this.refs.wave))
     );
   }
 
-  getSVGDocument({ contentDocument }) { return contentDocument; }
+  getSVGDocument(element) {
+    return element.querySelector('#svg');
+  }
   getSVGPath({ node }) { return node.getAttribute('d'); }
 
   render() {
     return (
-      <object
-        type="image/svg+xml"
-        data={this.props.svg}
-        ref="blackWave"
+      <section
+        ref="wave"
         className="wave acceleration"
       />
     );

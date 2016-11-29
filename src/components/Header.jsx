@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter, locationShape } from 'react-router';
 
 import Button from './common/components/Button';
 
@@ -44,7 +45,7 @@ function Header({ location: { pathname } }) {
 };
 
 Header.contextTypes = {
-  location: React.PropTypes.object,
+  location: locationShape,
 };
 
-export default Header;
+export default withRouter(Header);

@@ -3,11 +3,9 @@
   top: 0;
   left: 50%;
   width: 100%;
-  max-width: 1000px;
   height: 80px;
+  padding: 0 25px;
   line-height: 80px;
-  background-color: #FDFDFE;
-  border-bottom: 1px solid rgba(65, 73, 96, .25);
   box-sizing: border-box;
   transform: translateX(-50%);
 }
@@ -29,10 +27,4 @@
 .logo-button {
   width: auto;
   height: 100%;
-}
-
-@media (max-width: 1000px) {
-  .header {
-    padding: 0 25px;
-  }
 }
