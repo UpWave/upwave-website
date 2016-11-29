@@ -7,7 +7,7 @@
  *
  * Inspired by http://requestlab.fr/ and http://disruptivebydesign.com/
  */
-
+// TODO: Fix for proper import in Common JS
 ;(function(window, document) {
   "use strict";
   var pluginName = 'particleground';
