@@ -1,7 +1,7 @@
 import { withRouter, routerShape } from 'react-router';
 
 function routerTransition(WrappedComponent, route) {
-  return withRouter(class extends WrappedComponent {
+  return withRouter(class routerTransition extends WrappedComponent {
     static propTypes = {
       router: routerShape,
     };

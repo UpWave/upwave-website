@@ -13,7 +13,7 @@ class Main extends React.Component {
             <TypeAhead sentence="We are " tag="h1">
               <TypeAhead sentence="UpWave." tag="strong" />
             </TypeAhead>
-            <h3>Our the highest goal is your successful business.</h3>
+            <h3>Our highest goal is your successful business.</h3>
           </section>
         </section>
       </section>
