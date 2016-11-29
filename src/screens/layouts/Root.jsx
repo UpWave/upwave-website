@@ -2,7 +2,7 @@ import React from 'react';
 
 import Background from '../../components/Background';
 import Header from '../../components/Header';
-import Footer from '../../components/Footer';
+// import Footer from '../../components/Footer';
 
 function Root({ children }) {
   return (
@@ -10,7 +10,7 @@ function Root({ children }) {
       <Background />
       {children}
       <Header />
-      <Footer />
+      {/* <Footer /> */}
     </section>
   )
 }
