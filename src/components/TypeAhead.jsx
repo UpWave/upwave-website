@@ -18,7 +18,7 @@ class TypeAhead extends React.Component {
 
   get children() {
     const { children } = this.props;
-    const { completed } = this.state;
+    const { isCompleted } = this.state;
 
     if (!children) return children;
 
@@ -28,23 +28,25 @@ class TypeAhead extends React.Component {
       case 'object':
         if (children instanceof Array) {
           return children.map(child => React.cloneElement(child, {
-            start: completed,
+            start: isCompleted,
           }));
         } else {
-          return React.cloneElement(children, { startImmediately: completed });
+          return React.cloneElement(children, { startImmediately: isCompleted });
         }
       default:
         return children;
     }
   }
 
-  constructor() {
-    super();
+  constructor(props, context) {
+    super(props, context);
 
     this.state = {
-      value: '',
+      value: props.children ? '|' : '',
       cursor: 0,
-      completed: false,
+      isStarted: false,
+      isCompleted: false,
+      isBlinking: false,
     };
 
     this.type = () => {
@@ -53,8 +55,18 @@ class TypeAhead extends React.Component {
 
       if (cursor >= sentence.length) {
         this.setState({
-          completed: true,
+          isCompleted: true,
         });
+
+        if (!this.children) {
+          this.setState({
+            startBlinking: true,
+          }, () => this.startBlinking());
+        } else {
+          this.setState({
+            value: value.slice(0, -1),
+          });
+        }
 
         return;
       }
@@ -62,10 +74,22 @@ class TypeAhead extends React.Component {
       const nextCharacter = this.props.sentence[cursor];
 
       this.setState({
-        value: value + nextCharacter,
+        value: value.slice(0, -1) + nextCharacter + '|',
         cursor: cursor + 1,
       }, this.startTyping);
     }
+
+    this.blinkIn = () => {
+      this.setState({
+        value: this.state.value.slice(0, -1),
+      }, () => setTimeout(this.blinkOut, 600));
+    };
+
+    this.blinkOut = () => {
+      this.setState({
+        value: this.state.value + '|',
+      }, () => setTimeout(this.blinkIn, 600));
+    };
   }
 
   componentDidMount() {
@@ -73,13 +97,21 @@ class TypeAhead extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.startImmediately && !this.state.cursor) {
-      this.startTyping();
+    const { cursor, isStarted } = this.state;
+
+    if (nextProps.startImmediately && !cursor && !isStarted) {
+      this.setState({
+        isStarted: true,
+      }, () => this.startTyping());
     }
   }
 
   startTyping() {
     setTimeout(this.type, TypeAhead.getRandomValue(75, 150));
+  }
+
+  startBlinking() {
+    setTimeout(this.blinkIn, 0);
   }
 
   render() {
