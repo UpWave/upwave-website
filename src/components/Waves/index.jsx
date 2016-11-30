@@ -8,6 +8,10 @@ import blackWave from './assets/blackWave.svg.js';
 import '../../assets/stylesheets/waves.css';
 
 class Waves extends React.Component {
+  static propTypes = {
+    registerAnimation: React.PropTypes.func.isRequired,
+  };
+
   constructor(props, context) {
     super(props, context);
 

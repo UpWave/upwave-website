@@ -1,8 +1,11 @@
 import React from 'react';
 
 import Waves from '../components/Waves';
-import Greeting from '../components/Greeting';
-import routerTransition from '../components/common/components/routerTransition';
+import Content from '../components/Content';
+import {
+  routerTransition,
+} from '../components/common/components/routerAnimation';
+import TypeAhead from '../components/TypeAhead';
 
 // TODO: Refactor!!! Move to routerTransition or new HoC
 class Main extends React.Component {
@@ -55,7 +58,14 @@ class Main extends React.Component {
     return (
       <section>
         <Waves registerAnimation={this.registerAnimation} />
-        <Greeting registerAnimation={this.registerAnimation} />
+        <Content name="main" registerAnimation={this.registerAnimation}>
+          {/* Fix bug with sentence prop */}
+          <TypeAhead sentence="We are " tag="h1" skipAnimation={true}>
+            <TypeAhead sentence="UpWave." tag="strong" />
+          </TypeAhead>
+          <br/>
+          <h3>Our highest goal is your successful business.</h3>
+        </Content>
       </section>
     );
   }

@@ -7,7 +7,9 @@ function routerTransition(WrappedComponent, route) {
     };
 
     findRoute() {
-      return this.props.router.routes[1];
+      const { routes } = this.props;
+      
+      return routes[routes.length - 1];
     }
 
     routerWillLeave(nextLocation) {
