@@ -1,24 +1,64 @@
 import React from 'react';
 
 import Waves from '../components/Waves';
-import TypeAhead from '../components/TypeAhead';
+import Greeting from '../components/Greeting';
+import routerTransition from '../components/common/components/routerTransition';
 
+// TODO: Refactor!!! Move to routerTransition or new HoC
 class Main extends React.Component {
+  checkAnimationsStatus() {
+    let result = true;
+
+    for (const key in this.state) {
+      if (Object.hasOwnProperty.call(this.state, key) && this.state[key].callback) {
+        result = result && this.state[key].completed;
+
+        if (!result) return result;
+      }
+    }
+
+    this.state.routerCallback();
+
+    return result;
+  }
+
+  completedCallback = name => {
+    this.setState({
+      [name]: Object.assign({}, this.state[name], {
+        completed: true,
+      })
+    }, this.checkAnimationsStatus);
+  }
+
+  transitionShouldStart = routerCallback => {
+    this.setState({
+      routerCallback,
+    });
+
+    for (const key in this.state) {
+      if (Object.hasOwnProperty.call(this.state, key)) {
+        if (this.state[key].callback) this.state[key].callback(this.completedCallback);
+      }
+    }
+  }
+
+  registerAnimation = (name, callback) => {
+    this.setState({
+      [name]: {
+        callback,
+        completed: false,
+      },
+    });
+  }
+
   render() {
     return (
       <section>
-        <Waves />
-        <section className="container">
-          <section className="motto">
-            <TypeAhead sentence="We are " tag="h1">
-              <TypeAhead sentence="UpWave." tag="strong" />
-            </TypeAhead>
-            <h3>Our highest goal is your successful business.</h3>
-          </section>
-        </section>
+        <Waves registerAnimation={this.registerAnimation} />
+        <Greeting registerAnimation={this.registerAnimation} />
       </section>
     );
   }
 }
 
-export default Main;
+export default routerTransition(Main);

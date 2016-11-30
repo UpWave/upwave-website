@@ -8,24 +8,34 @@ body {
 h1,
 h2,
 h3 {
-  padding: 20px 0 15px;
-  display: block;
+  display: inline-block;
+  position: relative;
 }
 
 h1 {
-  margin-top: 25px;
-  font-size: 86px;
+  padding: 20px 0 20px 0;
+  font-size: 5.36em;
 }
 
 h2 {
-  font-size: 56px;
-  border-bottom: 2px solid rgba(65, 73, 96, .25);
+  padding: 20px 0 10px 0;
+  font-size: 3em;
 }
 
 h3 {
-  padding-top: 15px;
-  font-size: 32px;
-  border-top: 2px solid rgba(65, 73, 96, .25);
+  padding: 36px 0 20px 0;
+  font-size: 2em;
+}
+
+h1::before,
+h2::before {
+  content: '';
+  position: absolute;
+  bottom: -16px;
+  left: 0;
+  width: 250px;
+  height: 16px;
+  background: rgba(65, 73, 96, .5);
 }
 
 h1 strong {
@@ -41,12 +51,34 @@ h1 strong {
   height: 100%;
   max-width: 1000px;
   transform: translateX(-50%);
+  opacity: 1;
   box-sizing: border-box;
+  transition-property: left, opacity;
+  transition-duration: .5s, .5s;
+  transition-timing-function: ease-out;
+  animation-name: fadeIn;
+  animation-duration: .5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    left: 100%;
+  }
+  100% {
+    opacity: 1;
+    left: 50%;
+  }
+}
+
+.container-fade-out {
+  left: -50%;
+  opacity: 0;
 }
 
 .motto {
   position: relative;
-  top: 12%;
+  top: 9%;
   left: 0px;
 }
 

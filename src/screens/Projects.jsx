@@ -2,8 +2,8 @@ import React from 'react';
 
 function Projects() {
   return (
-    <section className="container">
-      <h2>&lt;OurWork /&gt;</h2>
+    <section className="container container-fade-in">
+      <h2>Our work!</h2>
     </section>
   );
 }

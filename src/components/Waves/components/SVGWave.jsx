@@ -46,7 +46,7 @@ class SVGWave extends React.Component {
     s.select('#path').animate({
       d: this.getSVGPath(s.select('#startPath')),
       'fill-opacity': 0,
-    }, 600, n => n, this.props.onLeft);
+    }, 500, n => n, this.props.onLeft);
   }
 
   getSnapHandler() {

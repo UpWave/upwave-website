@@ -5,19 +5,24 @@ class TypeAhead extends React.Component {
     sentence: React.PropTypes.string.isRequired,
     tag: React.PropTypes.string,
     startImmediately: React.PropTypes.bool,
+    skipAnimation: React.PropTypes.bool,
   };
 
   static defaultProps = {
     tag: 'span',
     startImmediately: true,
+    skipAnimation: false,
   };
 
   static getRandomValue(min, max) {
     return Math.random() * (max - min) + min;
   }
 
+  typeTimeout = 0;
+  blinkTimeout = 0;
+
   get children() {
-    const { children } = this.props;
+    const { children, skipAnimation } = this.props;
     const { isCompleted } = this.state;
 
     if (!children) return children;
@@ -28,10 +33,14 @@ class TypeAhead extends React.Component {
       case 'object':
         if (children instanceof Array) {
           return children.map(child => React.cloneElement(child, {
+            skipAnimation,
             start: isCompleted,
           }));
         } else {
-          return React.cloneElement(children, { startImmediately: isCompleted });
+          return React.cloneElement(children, {
+            skipAnimation,
+            startImmediately: isCompleted
+          });
         }
       default:
         return children;
@@ -82,18 +91,20 @@ class TypeAhead extends React.Component {
     this.blinkIn = () => {
       this.setState({
         value: this.state.value.slice(0, -1),
-      }, () => setTimeout(this.blinkOut, 600));
+      }, () => this.blinkTimeout = setTimeout(this.blinkOut, 600));
     };
 
     this.blinkOut = () => {
       this.setState({
         value: this.state.value + '|',
-      }, () => setTimeout(this.blinkIn, 600));
+      }, () => this.blinkTimeout = setTimeout(this.blinkIn, 600));
     };
   }
 
   componentDidMount() {
-    if (this.props.startImmediately) this.startTyping();
+    const { startImmediately, skipAnimation } = this.props;
+
+    if (!skipAnimation && startImmediately) this.startTyping();
   }
 
   componentWillReceiveProps(nextProps) {
@@ -106,20 +117,26 @@ class TypeAhead extends React.Component {
     }
   }
 
+  componentWillUnmount() {
+    clearTimeout(this.typeTimeout);
+    clearTimeout(this.blinkTimeout);
+  }
+
   startTyping() {
-    setTimeout(this.type, TypeAhead.getRandomValue(75, 150));
+    this.typeTimeout = setTimeout(this.type, TypeAhead.getRandomValue(75, 150));
   }
 
   startBlinking() {
-    setTimeout(this.blinkIn, 0);
+    this.blinkTimeout = setTimeout(this.blinkIn, 0);
   }
 
   render() {
     const Tag = this.props.tag;
+    const { skipAnimation } = this.props;
 
     return (
       <Tag>
-        {this.state.value}
+        {skipAnimation ? this.props.sentence : this.state.value}
         {this.children}
       </Tag>
     );

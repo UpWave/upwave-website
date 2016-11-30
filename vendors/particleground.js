@@ -9,7 +9,6 @@
  */
 // TODO: Fix for proper import in Common JS
 ;(function(window, document) {
-  "use strict";
   var pluginName = 'particleground';
 
   function Plugin(element, options) {
@@ -383,7 +382,7 @@
     density: 9000, // How many particles will be generated: one particle every n pixels
     dotColor: '#C4C4C5',
     lineColor: '#EAEAEB',
-    particleRadius: 4, // Dot size
+    particleRadius: 3, // Dot size
     lineWidth: 0.5,
     curvedLines: false,
     proximity: 100, // How close two dots need to be before they join

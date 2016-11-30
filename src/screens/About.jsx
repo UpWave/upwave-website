@@ -2,8 +2,8 @@ import React from 'react';
 
 function About() {
   return (
-    <section className="container">
-      <h2>&lt;WhoWeAre /&gt;</h2>
+    <section className="container container-fade-in">
+      <h2>Who we are?</h2>
     </section>
   );
 }

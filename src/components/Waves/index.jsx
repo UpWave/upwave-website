@@ -1,7 +1,6 @@
 import React from 'react';
 
 import SVGWave from './components/SVGWave';
-import routerTransition from '../common/components/routerTransition';
 
 import blueWave from './assets/blueWave.svg.js';
 import redWave from './assets/redWave.svg.js';
@@ -9,8 +8,8 @@ import blackWave from './assets/blackWave.svg.js';
 import '../../assets/stylesheets/waves.css';
 
 class Waves extends React.Component {
-  constructor() {
-    super();
+  constructor(props, context) {
+    super(props, context);
 
     this.state = {
       animationStatus: 'appear',
@@ -20,7 +19,7 @@ class Waves extends React.Component {
 
   onFinish = () => {
     if (this.state.finishCounter >= 3) {
-      this.state.routerCallback();
+      this.state.routerCallback('waves');
     }
   }
 
@@ -35,6 +34,10 @@ class Waves extends React.Component {
       routerCallback,
       animationStatus: 'leave',
     }, () => this.setState({ animationStatus: 'left' }));
+  }
+
+  componentDidMount() {
+    this.props.registerAnimation('waves', this.transitionShouldStart);
   }
 
   render() {
@@ -62,4 +65,4 @@ class Waves extends React.Component {
   }
 };
 
-export default routerTransition(Waves);
+export default Waves;
