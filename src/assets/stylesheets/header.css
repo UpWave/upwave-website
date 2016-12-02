@@ -1,22 +1,17 @@
 .header {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 100%;
+  flex-direction: row;
   height: 80px;
   padding: 0 25px;
-  line-height: 80px;
-  box-sizing: border-box;
-  transform: translateX(-50%);
+  justify-content: space-between;
 }
 
 .navigation {
-  float: right;
+  flex-direction: row;
+  align-items: center;
 }
 
 .nav-button {
   margin: 0 0 0 40px;
-  line-height: 1;
 }
 
 .logo {

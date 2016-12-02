@@ -11,12 +11,7 @@ class Background extends React.Component {
   }
 
   render() {
-    return (
-      <section>
-        {/* <img src={background} role="presentation" className="background" /> */}
-        <section className="background" ref="particles"></section>
-      </section>
-    );
+    return <section className="background" ref="particles"></section>;
   }
 };
 

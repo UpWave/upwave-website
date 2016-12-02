@@ -1,8 +1,37 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+
 body {
-  /*font-family: 'Varela Round', sans-serif;*/
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
   font-family: 'Varela', sans-serif;
   color: #414960;
   background-color: #FDFDFE;
+  overflow-x: hidden;
+}
+
+body,
+section,
+div,
+footer,
+header,
+nav {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+
+#root,
+.content {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  flex: 1;
 }
 
 h1,
@@ -39,20 +68,11 @@ h2::before {
 }
 
 h1 strong {
-  color: #FE777A !important;
+  color: #F17174 !important;
 }
 
-.container {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  padding-top: 80px;
-  width: 100%;
-  height: 100%;
-  max-width: 1000px;
-  transform: translateX(-50%);
+.box {
   opacity: 1;
-  box-sizing: border-box;
   transition-property: left, opacity;
   transition-duration: .5s, .5s;
   transition-timing-function: ease-out;
@@ -63,27 +83,24 @@ h1 strong {
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    left: 100%;
   }
   100% {
     opacity: 1;
-    left: 50%;
   }
 }
 
-.container-fade-out {
-  left: -50%;
+.box-fade-out {
   opacity: 0;
 }
 
 .motto {
-  position: relative;
   top: 9%;
-  left: 0px;
 }
 
-@media (max-width: 1000px) {
-  .motto {
-    left: 25px;
-  }
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 667px) {
+
 }
