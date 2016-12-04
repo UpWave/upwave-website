@@ -6,6 +6,7 @@ import {
   routerTransition,
 } from '../components/common/components/routerAnimation';
 import TypeAhead from '../components/TypeAhead';
+import Button from '../components/common/components/Button';
 
 // TODO: Refactor!!! Move to routerTransition or new HoC
 class Main extends React.Component {
@@ -58,12 +59,21 @@ class Main extends React.Component {
     return (
       <section>
         <Content name="main" registerAnimation={this.registerAnimation}>
-          {/* Fix bug with sentence prop */}
-          <TypeAhead sentence="We are " tag="h1" skipAnimation={true}>
-            <TypeAhead sentence="UpWave." tag="strong" />
-          </TypeAhead>
-          <br/>
-          <h3>Our highest goal is your successful business.</h3>
+          <section className="motto">
+            {/* Fix bug with sentence prop */}
+            <TypeAhead sentence="We are " tag="h1" skipAnimation={true}>
+              <TypeAhead sentence="UpWave" tag="strong" />
+            </TypeAhead>
+            <br/>
+            <h3>Our highest goal is your successful business</h3>
+            <Button
+              type="externalButtonLink"
+              href="mailto:contact@upwave.net"
+              className="nav-button all-hide sm-show"
+            >
+              Get in touch
+            </Button>
+          </section>
         </Content>
         <Waves registerAnimation={this.registerAnimation} />
       </section>

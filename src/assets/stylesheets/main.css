@@ -24,6 +24,10 @@ nav {
   flex-direction: column;
 }
 
+.all-hide {
+  display: none;
+}
+
 #root,
 .content {
   width: 100%;
@@ -44,6 +48,7 @@ h3 {
 h1 {
   padding: 20px 0 20px 0;
   font-size: 5.36em;
+  line-height: 1;
 }
 
 h2 {
@@ -54,6 +59,7 @@ h2 {
 h3 {
   padding: 36px 0 20px 0;
   font-size: 2em;
+  line-height: 1.5;
 }
 
 h1::before,
@@ -67,40 +73,96 @@ h2::before {
   background: rgba(65, 73, 96, .5);
 }
 
+h2::before {
+  width: 50%;
+}
+
 h1 strong {
   color: #F17174 !important;
 }
 
 .box {
+  position: relative;
+  margin-left: 100px;
   opacity: 1;
+  left: 0;
   transition-property: left, opacity;
   transition-duration: .5s, .5s;
   transition-timing-function: ease-out;
   animation-name: fadeIn;
   animation-duration: .5s;
+  align-items: left;
+}
+
+.main-box {
+  margin-top: 75px;
 }
 
 @keyframes fadeIn {
   0% {
+    left: 100%;
     opacity: 0;
   }
   100% {
+    left: 0;
     opacity: 1;
   }
 }
 
 .box-fade-out {
   opacity: 0;
+  left: -100%;
 }
 
 .motto {
-  top: 9%;
+  text-align: left;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
+  .box {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
+  .motto {
+    text-align: center;
+  }
+
+  h1 {
+    padding: 20px 0 20px 0;
+    font-size: 4.9em;
+  }
+
+  h1::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  h2::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  h3 {
+    padding: 25px 0 20px 0;
+    font-size: 1.75em;
+  }
 }
 
-@media (max-width: 667px) {
+@media (max-width: 568px) {
+  .sm-hide {
+    display: none;
+  }
 
+  .sm-show {
+    display: block;
+  }
+
+  .motto .nav-button {
+    margin: 0 auto;
+  }
+
+  .main-box {
+    margin-top: 25px;
+  }
 }

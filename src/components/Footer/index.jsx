@@ -30,10 +30,14 @@ class Footer extends React.Component {
         <nav className="footer-navigation">
           <nav className="sitemap">
             <h3>CHECK THIS</h3>
-            <Link to="/" className="sitemap-link">Contact us</Link>
-            <Link to="/our_work" className="sitemap-link">Our work</Link>
-            <Link to="/who_we_are" className="sitemap-link">About us</Link>
-            <Link to="/" className="sitemap-link">Home</Link>
+            <section className="sitemap-group">
+              <Link to="/" className="sitemap-link">Home</Link>
+              <Link to="/who_we_are" className="sitemap-link">About&nbsp;us</Link>
+            </section>
+            <section className="sitemap-group">
+              <Link to="/our_work" className="sitemap-link">Our&nbsp;work</Link>
+              <Link to="/" className="sitemap-link">Contact&nbsp;us</Link>
+            </section>
           </nav>
           <section className="social">
             <a href="#" className="social-link" ref="tw" />

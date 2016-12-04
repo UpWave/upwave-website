@@ -35,7 +35,7 @@ function Header({ location: { pathname } }) {
         <Button
           type="externalButtonLink"
           href="mailto:contact@upwave.net"
-          className="nav-button"
+          className="nav-button sm-hide"
         >
           Get in touch
         </Button>

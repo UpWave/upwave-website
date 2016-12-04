@@ -30,11 +30,9 @@ class Content extends React.Component {
   render() {
     return (
       <section
-        className={`box ${this.state.transitionStarted ? 'box-fade-out' : ''}`}
+        className={`box main-box ${this.state.transitionStarted ? 'box-fade-out' : ''}`}
       >
-        <section className="motto">
-          {this.props.children}
-        </section>
+        {this.props.children}
       </section>
     );
   }

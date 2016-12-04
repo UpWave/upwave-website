@@ -2,7 +2,7 @@ import React from 'react';
 
 function About() {
   return (
-    <section className="container container-fade-in">
+    <section className="box box-fade-in">
       <h2>Who we are?</h2>
     </section>
   );
