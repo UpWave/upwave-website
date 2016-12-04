@@ -4,6 +4,11 @@ class Content extends React.Component {
   static propTypes = {
     name: React.PropTypes.string.isRequired,
     registerAnimation: React.PropTypes.func.isRequired,
+    className: React.PropTypes.string,
+  };
+
+  static defaultProps = {
+    className: '',
   };
 
   timeout = 0;
@@ -30,7 +35,7 @@ class Content extends React.Component {
   render() {
     return (
       <section
-        className={`box main-box ${this.state.transitionStarted ? 'box-fade-out' : ''}`}
+        className={`box${this.state.transitionStarted ? ' box-fade-out' : ''} ${this.props.className}`}
       >
         {this.props.children}
       </section>

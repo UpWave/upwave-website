@@ -58,7 +58,7 @@ class Main extends React.Component {
   render() {
     return (
       <section>
-        <Content name="main" registerAnimation={this.registerAnimation}>
+        <Content name="main" registerAnimation={this.registerAnimation} className="main-box">
           <section className="motto">
             {/* Fix bug with sentence prop */}
             <TypeAhead sentence="We are " tag="h1" skipAnimation={true}>

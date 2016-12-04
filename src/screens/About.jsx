@@ -1,11 +1,63 @@
 import React from 'react';
 
-function About() {
-  return (
-    <section className="box box-fade-in">
-      <h2>Who we are?</h2>
-    </section>
-  );
+import Content from '../components/Content';
+import {
+  routerTransition,
+} from '../components/common/components/routerAnimation';
+
+class About extends React.Component {
+  checkAnimationsStatus() {
+    let result = true;
+
+    for (const key in this.state) {
+      if (Object.hasOwnProperty.call(this.state, key) && this.state[key].callback) {
+        result = result && this.state[key].completed;
+
+        if (!result) return result;
+      }
+    }
+
+    this.state.routerCallback();
+
+    return result;
+  }
+
+  completedCallback = name => {
+    this.setState({
+      [name]: Object.assign({}, this.state[name], {
+        completed: true,
+      })
+    }, this.checkAnimationsStatus);
+  }
+
+  transitionShouldStart = routerCallback => {
+    this.setState({
+      routerCallback,
+    });
+
+    for (const key in this.state) {
+      if (Object.hasOwnProperty.call(this.state, key)) {
+        if (this.state[key].callback) this.state[key].callback(this.completedCallback);
+      }
+    }
+  }
+
+  registerAnimation = (name, callback) => {
+    this.setState({
+      [name]: {
+        callback,
+        completed: false,
+      },
+    });
+  }
+
+  render() {
+    return (
+      <Content name="about" registerAnimation={this.registerAnimation}>
+        <h2>Who we are?</h2>
+      </Content>
+    );
+  }
 }
 
-export default About;
+export default routerTransition(About);
