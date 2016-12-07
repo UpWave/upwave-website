@@ -5,8 +5,71 @@
   width: 100%;
   max-height: 125px;
   height: auto;
-  color: #21263F;
   background-color: #29304F;
+}
+
+.footer.who_we_are {
+  background-color: #6DCDE9;
+}
+
+.footer.who_we_are .copyright {
+  color: #48889A;
+}
+
+.footer.who_we_are .social-link svg path {
+  fill: #48889A;
+}
+
+.footer.who_we_are .social-link:hover svg path {
+  fill: #23424C;
+}
+
+.footer.who_we_are .sitemap-link {
+  color: #48889A;
+}
+
+.footer.who_we_are .sitemap-link:hover {
+  color: #23424C;
+}
+
+.footer.who_we_are h3 {
+  color: #23424C;
+}
+
+.footer.who_we_are h3::before {
+  background-color: #23424C;
+}
+
+.footer.our_work {
+  background-color: #F17174;
+}
+
+.footer.our_work .copyright {
+  color: #A24C4E;
+}
+
+.footer.our_work .social-link svg path {
+  fill: #A24C4E;
+}
+
+.footer.our_work .social-link:hover svg path {
+  fill: #7B3A3B;
+}
+
+.footer.our_work .sitemap-link {
+  color: #A24C4E;
+}
+
+.footer.our_work .sitemap-link:hover {
+  color: #7B3A3B;
+}
+
+.footer.our_work h3 {
+  color: #7B3A3B;
+}
+
+.footer.our_work h3::before {
+  background-color: #7B3A3B;
 }
 
 .footer-navigation {
@@ -35,11 +98,11 @@
 }
 
 .social-link svg path {
-  fill: #21263F;
+  fill: #3D4775;
 }
 
 .social-link:hover svg path {
-  fill: #555d74;
+  fill: #515E9B;
 }
 
 .sitemap {
@@ -51,7 +114,7 @@
 .sitemap h3 {
   padding: 0 0 9px;
   margin: 0 10px 0 25px;
-  color: #555d74;
+  color: #515E9B;
 }
 
 .sitemap h3::before {
@@ -61,7 +124,7 @@
   right: 0;
   width: 50%;
   height: 9px;
-  background: rgba(65, 73, 96, .75);
+  background: #515E9B;
 }
 
 .sitemap-group {
@@ -71,13 +134,13 @@
 .sitemap-link {
   margin-left: 25px;
   font-size: 22px;
-  color: #21263F;
+  color: #3D4775;
   text-transform: uppercase;
   text-decoration: none;
 }
 
 .sitemap-link:hover {
-  color: #555d74;
+  color: #515E9B;
 }
 
 .copyright {
@@ -85,7 +148,7 @@
   text-transform: uppercase;
   text-align: center;
   font-size: 14px;
-  color: #555d74;
+  color: #3D4775;
 }
 
 @media (max-width: 1023px) {
@@ -96,7 +159,7 @@
   }
 
   .footer-navigation {
-    flex-direction: column;
+    flex-direction: column-reverse;
     flex: initial;
     margin: 0;
   }
@@ -104,7 +167,7 @@
   .sitemap {
     flex-direction: column;
     align-items: flex-start;
-    margin: 10px auto 0;
+    margin: 5px auto 0;
   }
 
   .sitemap h3 {
@@ -125,7 +188,7 @@
   }
 
   .social {
-    margin: 10px auto 0;
+    margin: 15px auto 0;
   }
 
   .social-link {

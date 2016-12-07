@@ -10,6 +10,14 @@ import '../../assets/stylesheets/footer.css';
 
 // TODO: Make SVG component for external svgs
 class Footer extends React.Component {
+  static propTypes = {
+    className: React.PropTypes.string,
+  };
+
+  static defaultProps = {
+    className: '',
+  };
+
   componentDidMount() {
     let wave = ReactDOM.findDOMNode(this.refs.tw);
     wave.innerHTML = tw;
@@ -26,7 +34,7 @@ class Footer extends React.Component {
 
   render() {
     return (
-      <footer className="footer">
+      <footer className={`footer${this.props.className.replace(/\//g, ' ')}`}>
         <nav className="footer-navigation">
           <nav className="sitemap">
             <h3>CHECK THIS</h3>

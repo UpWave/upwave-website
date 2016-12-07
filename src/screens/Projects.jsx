@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Waves from '../components/Waves';
 import Content from '../components/Content';
 import {
   routerTransition,
@@ -53,9 +54,12 @@ class Projects extends React.Component {
 
   render() {
     return (
-      <Content name="about" registerAnimation={this.registerAnimation}>
-        <h2>Our work!</h2>
-      </Content>
+      <section>
+        <Content name="about" registerAnimation={this.registerAnimation}>
+          Our work!
+        </Content>
+        <Waves mode="red" registerAnimation={this.registerAnimation} />
+      </section>
     );
   }
 }
