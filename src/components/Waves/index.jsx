@@ -1,6 +1,6 @@
 import React from 'react';
 
-import SVGWave from './components/SVGWave';
+import SVGWave from './SVGWave';
 
 import blueWave from './assets/blueWave.svg.js';
 import redWave from './assets/redWave.svg.js';

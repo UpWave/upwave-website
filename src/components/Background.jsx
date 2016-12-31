@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// import background from '../assets/images/background.svg';
 import '../assets/stylesheets/background.css';
 
 class Background extends React.Component {
@@ -11,7 +10,7 @@ class Background extends React.Component {
   }
 
   render() {
-    return <section className="background" ref="particles"></section>;
+    return <section className="background" ref="particles" />;
   }
 };
 

@@ -22,7 +22,7 @@ function Header({ location: { pathname } }) {
           }
         >
             Who we are
-          </Button>
+        </Button>
         <Button
           type="link"
           href="/our_work"
@@ -31,6 +31,15 @@ function Header({ location: { pathname } }) {
           }
         >
             Our work
+        </Button>
+        <Button
+          type="link"
+          href="/careers"
+          className={
+            `nav-button ${pathname === '/careers' ? 'active': ''}`
+          }
+        >
+            Careers
         </Button>
         <Button
           type="externalButtonLink"

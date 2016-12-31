@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Snap from 'snapsvg';
 
-import '../../../assets/stylesheets/waves.css';
+import '../../assets/stylesheets/waves.css';
 
 class SVGWave extends React.Component {
   static propTypes = {
@@ -56,9 +56,12 @@ class SVGWave extends React.Component {
   }
 
   getSVGDocument(element) {
-    return element.querySelector('#svg');
+    return element.querySelector('#wave');
   }
-  getSVGPath({ node }) { return node.getAttribute('d'); }
+
+  getSVGPath({ node }) {
+    return node.getAttribute('d');
+  }
 
   render() {
     return (

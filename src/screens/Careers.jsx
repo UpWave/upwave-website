@@ -5,9 +5,8 @@ import Content from '../components/Content';
 import {
   routerTransition,
 } from '../components/common/components/routerAnimation';
-import OurWork from '../components/OurWork';
 
-class Projects extends React.Component {
+class Careers extends React.Component {
   checkAnimationsStatus() {
     let result = true;
 
@@ -56,13 +55,13 @@ class Projects extends React.Component {
   render() {
     return (
       <section>
-        <Content name="projects" registerAnimation={this.registerAnimation}>
-          <OurWork />
+        <Content name="careers" registerAnimation={this.registerAnimation}>
+          Careers!!!
         </Content>
-        <Waves mode="red" registerAnimation={this.registerAnimation} />
+        <Waves mode="black" registerAnimation={this.registerAnimation} />
       </section>
     );
   }
 }
 
-export default routerTransition(Projects);
+export default routerTransition(Careers);
