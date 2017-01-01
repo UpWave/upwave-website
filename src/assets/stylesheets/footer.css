@@ -12,7 +12,8 @@
   background-color: #6DCDE9;
 }
 
-.footer.who_we_are .copyright {
+.footer.who_we_are .copyright,
+.footer.who_we_are .copyright a {
   color: #48889A;
 }
 
@@ -44,7 +45,8 @@
   background-color: #F17174;
 }
 
-.footer.our_work .copyright {
+.footer.our_work .copyright,
+.footer.our_work .copyright a {
   color: #A24C4E;
 }
 
