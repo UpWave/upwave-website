@@ -143,7 +143,8 @@
   color: #515E9B;
 }
 
-.copyright {
+.copyright,
+.copyright a {
   line-height: 2.5em;
   text-transform: uppercase;
   text-align: center;
