@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 class SVGElement extends React.Component {
   static propTypes = {
     svg: React.PropTypes.string.isRequired,
+    className: React.PropTypes.string,
   };
 
   componentDidMount() {
@@ -13,7 +14,7 @@ class SVGElement extends React.Component {
 
   render() {
     return (
-      <span ref="svgElement" />
+      <section ref="svgElement" className={this.props.className} />
     );
   }
 }

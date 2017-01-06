@@ -1,26 +1,24 @@
 import React from 'react';
 
-import Waves from '../components/Waves';
-import Paragraph from '../components/Paragraph';
-import Content from '../components/Content';
-import routerAnimation from '../components/common/components/routerAnimation';
+import Waves from '../../components/Waves';
+import Paragraph from '../../components/Paragraph';
+import Content from '../../components/Content';
+import routerAnimation from '../../components/common/components/routerAnimation';
+import SVGElement from '../../components/common/components/SVGElement';
 
-import whoWeAre from '../assets/images/who-we-are.svg';
-// import ruby from '../assets/images/icons/ruby.svg';
-// import rails from '../assets/images/icons/rails.svg';
-// import nodejs from '../assets/images/icons/nodejs.svg';
-// import reactjs from '../assets/images/icons/reactjs.svg';
-// import angularjs from '../assets/images/icons/angularjs.svg';
-// import apple from '../assets/images/icons/apple.svg';
-// import swift from '../assets/images/icons/swift.svg';
-// import phonegap from '../assets/images/icons/phonegap.svg';
+import whoWeAre from './assets/who-we-are.svg';
+import ruby from './assets/ruby.svg';
+import rails from './assets/rails.svg';
+import nodejs from './assets/nodejs.svg';
+import reactjs from './assets/reactjs.svg';
+import '../../assets/stylesheets/about.css';
 
 function About({ registerAnimation }) {
   return (
     <section>
       <Content name="about" registerAnimation={registerAnimation}>
         <section className="about-us">
-          <img src={whoWeAre} role="presentation" className="sm-hide" />
+          <SVGElement svg={whoWeAre} className="who-we-are-term sm-hide" />
           <section className="all-hide sm-show">
             <Paragraph>
               &#09;We are small but very ambitious software development agency, which is focused on working with rising startups. <strong>Our main goal is your successful business.</strong> We are always ready to consult and assess your project and provide the best solution to achieve greatest results.
@@ -30,6 +28,10 @@ function About({ registerAnimation }) {
             </Paragraph>
           </section>
         </section>
+        <SVGElement svg={ruby} className="badge badge-ruby" />
+        <SVGElement svg={rails} className="badge badge-rails" />
+        <SVGElement svg={nodejs} className="badge badge-nodejs" />
+        <SVGElement svg={reactjs} className="badge badge-reactjs" />
       </Content>
       <Waves mode="blue" registerAnimation={registerAnimation} />
     </section>

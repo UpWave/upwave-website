@@ -152,17 +152,6 @@ strong {
   margin-left: 100px;
 }
 
-.about-us {
-  padding: 25px 50px 25px 50px;
-  align-items: center;
-}
-
-.about-us img {
-  width: 100%;
-  height: auto;
-  margin: 0 auto;
-}
-
 .big-letter-paragraph {
   position: relative;
   min-width: 320px;
