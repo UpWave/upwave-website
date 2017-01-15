@@ -17,7 +17,7 @@ class SVGWave extends React.Component {
     const wave = ReactDOM.findDOMNode(this.refs.wave);
     wave.innerHTML = this.props.svg;
 
-    setTimeout(() => this.drawWave(), 10);
+    setTimeout(() => this.drawWave(), 0);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -28,8 +28,12 @@ class SVGWave extends React.Component {
   }
 
   componentWillUnmount() {
-    this.stopDrawing();
-    this.eraseWave();
+    const { status } = this.props;
+
+    if (status !== 'left' && status !== 'leave') {
+      this.stopDrawing();
+      this.eraseWave();
+    }
   }
 
   drawWave() {

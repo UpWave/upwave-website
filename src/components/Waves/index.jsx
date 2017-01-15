@@ -62,48 +62,48 @@ class Waves extends React.Component {
       <SVGWave
         key="blue"
         svg={blueWave}
-        status={animationStatus}
         onLeft={this.onLeft}
+        status={animationStatus}
       />
     );
     const wave2 = (
       <SVGWave
         key="red"
         svg={redWave}
-        status={animationStatus}
         onLeft={this.onLeft}
+        status={animationStatus}
       />
     );
     const wave3 = (
       <SVGWave
         key="black"
         svg={blackWave}
-        status={animationStatus}
         onLeft={this.onLeft}
+        status={animationStatus}
       />
     );
     const black = (
       <SVGWave
         key="black"
         svg={singleBlackWave}
-        status={animationStatus}
         onLeft={this.onLeft}
+        status={animationStatus}
       />
     );
     const blue = (
       <SVGWave
         key="blue"
         svg={singleBlueWave}
-        status={animationStatus}
         onLeft={this.onLeft}
+        status={animationStatus}
       />
     );
     const red = (
       <SVGWave
         key="red"
         svg={singleRedWave}
-        status={animationStatus}
         onLeft={this.onLeft}
+        status={animationStatus}
       />
     );
 
