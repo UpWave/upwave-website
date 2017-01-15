@@ -11,11 +11,13 @@ class SVGWave extends React.Component {
     onLeft: React.PropTypes.func.isRequired,
   };
 
+  static delay = 500;
+
   componentDidMount() {
     const wave = ReactDOM.findDOMNode(this.refs.wave);
     wave.innerHTML = this.props.svg;
 
-    setTimeout(() => this.drawWave(), 0);
+    setTimeout(() => this.drawWave(), 10);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -25,13 +27,18 @@ class SVGWave extends React.Component {
     }
   }
 
+  componentWillUnmount() {
+    this.stopDrawing();
+    this.eraseWave();
+  }
+
   drawWave() {
     const s = this.getSnapHandler();
 
     s.select('#path').animate({
       d: this.getSVGPath(s.select('#endPath')),
       'fill-opacity': 1,
-    }, 500);
+    }, SVGWave.delay);
   }
 
   stopDrawing() {
@@ -46,7 +53,7 @@ class SVGWave extends React.Component {
     s.select('#path').animate({
       d: this.getSVGPath(s.select('#startPath')),
       'fill-opacity': 0,
-    }, 500, n => n, this.props.onLeft);
+    }, SVGWave.delay, n => n, this.props.onLeft);
   }
 
   getSnapHandler() {

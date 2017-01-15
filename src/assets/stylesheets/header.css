@@ -1,8 +1,37 @@
 .header {
-  flex-direction: row;
+  height: 80px;
+}
+
+.header-wrapper {
   height: 80px;
   padding: 0 25px;
+  flex-direction: row;
   justify-content: space-between;
+}
+
+.greeting .header-wrapper {
+  opacity: 0;
+}
+
+.header-wrapper-animation {
+  position: absolute;
+  width: 100%;
+  animation-name: slideHeaderIn;
+  animation-duration: .5s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
+}
+
+@keyframes slideHeaderIn {
+  0% {
+    top: -80px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
 }
 
 .navigation {

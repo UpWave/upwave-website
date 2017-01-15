@@ -22,6 +22,11 @@
        url('./../fonts/Upwave-Bold.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Monaco';
+  src: url('./../fonts/Monaco.ttf') format('truetype');
+}
+
 html {
   width: 100%;
   height: 100%;
@@ -94,7 +99,7 @@ h2::before {
   position: absolute;
   bottom: -16px;
   left: 0;
-  width: 250px;
+  width: 300px;
   height: 16px;
   background: rgba(65, 73, 96, .5);
 }
@@ -113,25 +118,32 @@ strong {
   color: #F17174 !important;
 }
 
-.box {
+.box,
+.main-box {
   position: relative;
-  margin: 0 75px;
-  opacity: 1;
   left: 0;
+  margin: 75px 100px 0 0;
+  opacity: 1;
+  z-index: 1;
+  align-items: left;
+}
+
+.box {
+  margin: 0 75px;
+}
+
+.box-animation {
+  animation-name: fadeBoxIn;
+  animation-duration: .5s;
+}
+
+.box-transition {
   transition-property: left, opacity;
   transition-duration: .5s, .5s;
   transition-timing-function: ease-out;
-  animation-name: fadeIn;
-  animation-duration: .5s;
-  align-items: left;
-  z-index: 1;
 }
 
-.main-box {
-  margin: 75px 100px 0 0;
-}
-
-@keyframes fadeIn {
+@keyframes fadeBoxIn {
   0% {
     left: 100%;
     opacity: 0;
@@ -142,7 +154,7 @@ strong {
   }
 }
 
-.box-fade-out {
+.box-animation-fade-out {
   opacity: 0;
   left: -100%;
 }
@@ -150,6 +162,43 @@ strong {
 .motto {
   text-align: left;
   margin-left: 100px;
+}
+
+.greeting-motto h1::before {
+  display: none;
+}
+
+.greeting-motto h3 {
+  animation-name: slideMottoIn;
+  animation-duration: 1s;
+  animation-delay: 3.3s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
+}
+
+@keyframes slideMottoIn {
+  0% {
+    margin-top: 80px;
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+
+.greeting-motto h3::before {
+  content: '';
+  position: absolute;
+  top: -16px;
+  left: 0;
+  width: 300px;
+  height: 16px;
+  background: rgba(65, 73, 96, .5);
 }
 
 .big-letter-paragraph {
@@ -171,39 +220,10 @@ strong {
   border-bottom: 10px solid rgba(65, 73, 96, .5);
   box-sizing: border-box;
 }
-/*
-.our-stack {
-  min-width: 320px;
-  max-width: 1024px;
-  width: 50%;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 40px 20px 0;
-  justify-content: flex-start;
-}
-
-.stack-group {
-  min-width: 320px;
-  max-width: 1024px;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.technology-icon {
-  padding: 10px 10px 0;
-}*/
 
 @media (max-width: 1023px) {
-  .box {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   .motto {
-    text-align: center;
-    margin-left: 0;
-    padding-left: 20px;
-    padding-right: 20px;
+    margin-left: 50px;
   }
 
   h1 {
@@ -214,16 +234,6 @@ strong {
   h2 {
     text-align: center;
     padding: 0;
-  }
-
-  h1::before {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  h2::before {
-    left: 50%;
-    transform: translateX(-50%);
   }
 
   h3 {
@@ -241,11 +251,11 @@ strong {
     display: block;
   }
 
-  .motto .nav-button {
-    margin: 0 auto;
-  }
-
   .main-box {
     margin-top: 25px;
+  }
+
+  .motto {
+    margin-left: 20px;
   }
 }

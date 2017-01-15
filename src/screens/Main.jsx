@@ -3,18 +3,20 @@ import React from 'react';
 import Waves from '../components/Waves';
 import Content from '../components/Content';
 import routerAnimation from '../components/common/components/routerAnimation';
-import TypeAhead from '../components/TypeAhead';
+import checkGreeting from '../components/common/components/checkGreeting';
 import Button from '../components/common/components/Button';
 
-function Main({ registerAnimation }) {
+function Main({ registerAnimation, isFromGreeting }) {
   return (
     <section>
-      <Content name="main" registerAnimation={registerAnimation} className="main-box">
+      <Content
+        name="main"
+        registerAnimation={registerAnimation}
+        className="main-box"
+        skipAnimation={isFromGreeting}
+      >
         <section className="motto">
-          {/* Fix bug with sentence prop */}
-          <TypeAhead sentence="We are " tag="h1" skipAnimation={true}>
-            <TypeAhead sentence="UpWave" tag="strong" />
-          </TypeAhead>
+          <h1>We are <strong>UpWave</strong></h1>
           <br/>
           <h3>Our highest goal is your successful business</h3>
           <Button
@@ -33,6 +35,7 @@ function Main({ registerAnimation }) {
 
 Main.propTypes = {
   registerAnimation: React.PropTypes.func.isRequired,
-}
+  isFromGreeting: React.PropTypes.bool,
+};
 
-export default routerAnimation(Main);
+export default checkGreeting(routerAnimation(Main));

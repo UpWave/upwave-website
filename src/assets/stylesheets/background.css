@@ -6,3 +6,23 @@
   height: 100%;
   z-index: -1;
 }
+
+.background.greeting {
+  animation-name: fadeBackgroundIn;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
+}
+
+@keyframes fadeBackgroundIn {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,7 +1,12 @@
 import React from 'react';
+import { locationShape } from 'react-router';
 
 function animationManager(WrappedComponent) {
   return class animationManager extends React.Component {
+    static propTypes = {
+      location: locationShape,
+    };
+
     checkAnimationsStatus() {
       let result = true;
 
@@ -48,7 +53,12 @@ function animationManager(WrappedComponent) {
     }
 
     render() {
-      return <WrappedComponent registerAnimation={this.registerAnimation} />
+      return (
+        <WrappedComponent
+          registerAnimation={this.registerAnimation}
+          {...this.props}
+        />
+      );
     }
   };
 }

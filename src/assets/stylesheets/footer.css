@@ -8,6 +8,10 @@
   background-color: #29304F;
 }
 
+.footer.greeting {
+  display: none;
+}
+
 .footer.who_we_are {
   background-color: #6DCDE9;
 }

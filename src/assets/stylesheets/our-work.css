@@ -1,0 +1,47 @@
+.our-work {
+  flex-direction: row;
+}
+
+.our-work-clients {
+  width: 40%;
+}
+
+.our-work-testemonials {
+  width: 60%;
+  height: 100%;
+}
+
+.testemonial-panel {
+  margin: 25px 0;
+}
+
+.testemonial-panel h3 strong {
+  font-family: "UpWave-Bold";
+  color: #6DCDE9 !important;
+}
+
+blockquote {
+  position: relative;
+  font-style: italic;
+  line-height: 1.5em;
+  color: rgba(65, 73, 96, .75);
+  padding: 10px 30px 10px 75px;
+  border-left: 16px solid rgba(109, 205, 233, .75);
+}
+
+blockquote::before {
+  font-family: "UpWave-Bold";
+  content: "\201C";
+  color: rgba(109, 205, 233, .75);
+  font-size: 64px;
+  position: absolute;
+  left: 12px;
+  top: 20px;
+}
+
+blockquote span {
+  display: inline-block;
+  font-family: "UpWave-Medium";
+  font-style: normal;
+  margin-top: 20px;
+}

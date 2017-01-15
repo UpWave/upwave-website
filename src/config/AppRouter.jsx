@@ -12,6 +12,7 @@ import Main from '../screens/Main';
 import About from '../screens/About';
 import Projects from '../screens/Projects';
 import Careers from '../screens/Careers';
+import Greeting from '../screens/Greeting';
 
 function AppRouter() {
   return (
@@ -21,6 +22,7 @@ function AppRouter() {
         <Route path='/who_we_are' component={About} />
         <Route path='/our_work' component={Projects} />
         <Route path='/careers' component={Careers} />
+        <Route path='/greeting' component={Greeting} />
       </Route>
       <Redirect from="/*" to="/" />
     </Router>

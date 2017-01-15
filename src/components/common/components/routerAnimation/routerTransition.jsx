@@ -8,7 +8,7 @@ function routerTransition(WrappedComponent, route) {
 
     findRoute() {
       const { routes } = this.props;
-      
+
       return routes[routes.length - 1];
     }
 

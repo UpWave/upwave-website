@@ -4,11 +4,13 @@ class Content extends React.Component {
   static propTypes = {
     name: React.PropTypes.string.isRequired,
     registerAnimation: React.PropTypes.func.isRequired,
+    skipAnimation: React.PropTypes.bool,
     className: React.PropTypes.string,
   };
 
   static defaultProps = {
     className: '',
+    skipAnimation: false,
   };
 
   timeout = 0;
@@ -21,11 +23,13 @@ class Content extends React.Component {
     this.props.registerAnimation(this.props.name, this.transitionShouldStart);
   }
 
-  // TODO: Make a prop
   transitionShouldStart = routerCallback => {
     this.setState({
       transitionStarted: true,
-    }, () => this.timeout = setTimeout(() => routerCallback(this.props.name), 500));
+    },
+    () => this.timeout = setTimeout(
+      () => routerCallback(this.props.name), 500)
+    );
   }
 
   componentWillUnmount() {
@@ -33,9 +37,12 @@ class Content extends React.Component {
   }
 
   render() {
+    const { className, skipAnimation } = this.props;
+    const { transitionStarted } = this.state;
+
     return (
       <section
-        className={`box${this.state.transitionStarted ? ' box-fade-out' : ''} ${this.props.className}`}
+        className={`box-transition${skipAnimation ? ' ' : ' box-animation'}${transitionStarted ? ' box-animation-fade-out' : ''} ${className}`}
       >
         {this.props.children}
       </section>

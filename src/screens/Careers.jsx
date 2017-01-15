@@ -7,7 +7,11 @@ import routerAnimation from '../components/common/components/routerAnimation';
 function Careers({ registerAnimation }) {
   return (
     <section>
-      <Content name="careers" registerAnimation={registerAnimation}>
+      <Content
+        name="careers"
+        registerAnimation={registerAnimation}
+        className="box"
+      >
         Careers!!!
       </Content>
       <Waves mode="black" registerAnimation={registerAnimation} />

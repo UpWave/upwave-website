@@ -16,7 +16,11 @@ import '../../assets/stylesheets/about.css';
 function About({ registerAnimation }) {
   return (
     <section>
-      <Content name="about" registerAnimation={registerAnimation}>
+      <Content
+        name="about"
+        registerAnimation={registerAnimation}
+        className="box"
+      >
         <section className="about-us">
           <SVGElement svg={whoWeAre} className="who-we-are-term sm-hide" />
           <section className="all-hide sm-show">

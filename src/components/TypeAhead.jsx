@@ -6,23 +6,36 @@ class TypeAhead extends React.Component {
     tag: React.PropTypes.string,
     startImmediately: React.PropTypes.bool,
     skipAnimation: React.PropTypes.bool,
+    delayAfter: React.PropTypes.number,
+    onFinish: React.PropTypes.func,
   };
 
   static defaultProps = {
     tag: 'span',
     startImmediately: true,
     skipAnimation: false,
+    delayAfter: 0,
+    onFinish: () => {},
   };
 
   static getRandomValue(min, max) {
     return Math.random() * (max - min) + min;
   }
 
-  typeTimeout = 0;
-  blinkTimeout = 0;
+  typeTimeout = -1;
+  blinkInTimeout = -1;
+  blinkOutTimeout = -1;
+
+  state = {
+    value: '',
+    cursor: 0,
+    isStarted: this.props.startImmediately,
+    isCompleted: false,
+    isBlinking: false,
+  };
 
   get children() {
-    const { children, skipAnimation } = this.props;
+    const { children, skipAnimation, delayAfter } = this.props;
     const { isCompleted } = this.state;
 
     if (!children) return children;
@@ -32,73 +45,22 @@ class TypeAhead extends React.Component {
         return children;
       case 'object':
         if (children instanceof Array) {
+          // TODO: It won't work with multiple children on one level
           return children.map(child => React.cloneElement(child, {
             skipAnimation,
-            start: isCompleted,
+            delayAfter,
+            startImmediately: isCompleted,
           }));
         } else {
           return React.cloneElement(children, {
             skipAnimation,
-            startImmediately: isCompleted
+            delayAfter,
+            startImmediately: isCompleted,
           });
         }
       default:
         return children;
     }
-  }
-
-  constructor(props, context) {
-    super(props, context);
-
-    this.state = {
-      value: props.children ? '|' : '',
-      cursor: 0,
-      isStarted: false,
-      isCompleted: false,
-      isBlinking: false,
-    };
-
-    this.type = () => {
-      const { value, cursor } = this.state;
-      const { sentence } = this.props;
-
-      if (cursor >= sentence.length) {
-        this.setState({
-          isCompleted: true,
-        });
-
-        if (!this.children) {
-          this.setState({
-            startBlinking: true,
-          }, () => this.startBlinking());
-        } else {
-          this.setState({
-            value: value.slice(0, -1),
-          });
-        }
-
-        return;
-      }
-
-      const nextCharacter = this.props.sentence[cursor];
-
-      this.setState({
-        value: value.slice(0, -1) + nextCharacter + '|',
-        cursor: cursor + 1,
-      }, this.startTyping);
-    }
-
-    this.blinkIn = () => {
-      this.setState({
-        value: this.state.value.slice(0, -1),
-      }, () => this.blinkTimeout = setTimeout(this.blinkOut, 600));
-    };
-
-    this.blinkOut = () => {
-      this.setState({
-        value: this.state.value + '|',
-      }, () => this.blinkTimeout = setTimeout(this.blinkIn, 600));
-    };
   }
 
   componentDidMount() {
@@ -113,21 +75,80 @@ class TypeAhead extends React.Component {
     if (nextProps.startImmediately && !cursor && !isStarted) {
       this.setState({
         isStarted: true,
-      }, () => this.startTyping());
+      }, this.startTyping);
     }
   }
 
   componentWillUnmount() {
     clearTimeout(this.typeTimeout);
-    clearTimeout(this.blinkTimeout);
+    clearTimeout(this.blinkInTimeout);
+    clearTimeout(this.blinkOutTimeout);
   }
 
-  startTyping() {
+  startTyping = () => {
     this.typeTimeout = setTimeout(this.type, TypeAhead.getRandomValue(75, 150));
   }
 
-  startBlinking() {
-    this.blinkTimeout = setTimeout(this.blinkIn, 0);
+  startBlinking = () => {
+    const { delayAfter, onFinish } = this.props;
+    this.blinkInTimeout = setTimeout(this.blinkIn, 0);
+
+    if (delayAfter) {
+      setTimeout(() => {
+        clearTimeout(this.blinkInTimeout);
+        clearTimeout(this.blinkOutTimeout);
+
+        if (this.blinkInTimeout > this.blinkOutTimeout) {
+          this.setState({
+            value: this.state.value.slice(0, -1),
+          });
+
+          onFinish();
+        }
+      }, delayAfter);
+    }
+  }
+
+  type = () => {
+    const { value, cursor } = this.state;
+    const { sentence } = this.props;
+
+    if (cursor >= sentence.length) {
+      this.setState({
+        isCompleted: true,
+      });
+
+      if (!this.children) {
+        this.setState({
+          startBlinking: true,
+        }, this.startBlinking);
+      } else {
+        this.setState({
+          value: value.slice(0, -1),
+        });
+      }
+
+      return;
+    }
+
+    const nextCharacter = this.props.sentence[cursor];
+
+    this.setState({
+      value: value.slice(0, -1) + nextCharacter + '|',
+      cursor: cursor + 1,
+    }, this.startTyping);
+  }
+
+  blinkIn = () => {
+    this.setState({
+      value: this.state.value.slice(0, -1),
+    }, () => this.blinkOutTimeout = setTimeout(this.blinkOut, 600));
+  }
+
+  blinkOut = () => {
+    this.setState({
+      value: this.state.value + '|',
+    }, () => this.blinkInTimeout = setTimeout(this.blinkIn, 600));
   }
 
   render() {
