@@ -10,7 +10,7 @@ class Greeting extends React.Component {
 
   static abortGreeting = () => {
     browserHistory.push('/');
-  }
+  };
 
   typingTimeout = -1;
   waitingTimeout = -1;
