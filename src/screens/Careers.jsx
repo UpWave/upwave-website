@@ -6,7 +6,7 @@ import routerAnimation from '../components/common/components/routerAnimation';
 
 function Careers({ registerAnimation }) {
   return (
-    <section>
+    <section className="container">
       <Content
         name="careers"
         registerAnimation={registerAnimation}

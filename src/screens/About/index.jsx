@@ -19,18 +19,16 @@ function About({ registerAnimation }) {
       <Content
         name="about"
         registerAnimation={registerAnimation}
-        className="box"
+        className="box about-us"
       >
-        <section className="about-us">
-          <SVGElement svg={whoWeAre} className="who-we-are-term sm-hide" />
-          <section className="all-hide sm-show">
-            <Paragraph>
-              &#09;We are small but very ambitious software development agency, which is focused on working with rising startups. <strong>Our main goal is your successful business.</strong> We are always ready to consult and assess your project and provide the best solution to achieve greatest results.
-            </Paragraph>
-            <Paragraph>
-              &#09;Our experience based on a bunch of projects which we’ve already made or we’re still doing. In addition, we are proud to announce that <strong>UpWave</strong> was working on <strong>Y combinator Summer 2016 startup EventGeek</strong>.
-            </Paragraph>
-          </section>
+        <SVGElement svg={whoWeAre} className="who-we-are-term sm-hide" />
+        <section className="all-hide sm-show">
+          <Paragraph>
+            &#09;We are small but very ambitious software development agency, which is focused on working with rising startups. <strong>Our main goal is your successful business.</strong> We are always ready to consult and assess your project and provide the best solution to achieve greatest results.
+          </Paragraph>
+          <Paragraph>
+            &#09;Our experience based on a bunch of projects which we’ve already made or we’re still doing. In addition, we are proud to announce that <strong>UpWave</strong> was working on <strong>Y combinator Summer 2016 startup EventGeek</strong>.
+          </Paragraph>
         </section>
         <SVGElement svg={ruby} className="badge badge-ruby" />
         <SVGElement svg={rails} className="badge badge-rails" />

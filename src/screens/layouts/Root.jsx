@@ -43,9 +43,7 @@ class Root extends React.Component {
           className={this.pathname}
           isFromGreeting={isFromGreeting}
         />
-        <section className="container">
-          {this.children}
-        </section>
+        {this.children}
         <Footer
           className={this.pathname}
           isFromGreeting={isFromGreeting}

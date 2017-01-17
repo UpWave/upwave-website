@@ -5,8 +5,8 @@ import TypeAhead from '../components/TypeAhead';
 
 class Greeting extends React.Component {
   static inDelay = 1000;
-  static outDelay = 1200;
-  static redirectDelay = 2500;
+  static outDelay = 2400;
+  static redirectDelay = 2750;
 
   static abortGreeting = () => {
     browserHistory.push('/');
@@ -46,22 +46,24 @@ class Greeting extends React.Component {
 
   render() {
     return (
-      <section className="main-box">
-        <section className="motto greeting-motto">
-          <TypeAhead
-            startImmediately={this.state.startTyping}
-            sentence="We are "
-            tag="h1"
-            delayAfter={Greeting.outDelay}
-          >
+      <section className="container">
+        <section className="main-box">
+          <section className="motto greeting-motto">
             <TypeAhead
-              sentence="UpWave"
-              tag="strong"
-              onFinish={this.initiateRedirect}
-            />
-          </TypeAhead>
-          <br/>
-          <h3>Our highest goal is your successful business</h3>
+              startImmediately={this.state.startTyping}
+              sentence="We are "
+              tag="h1"
+              delayAfter={Greeting.outDelay}
+            >
+              <TypeAhead
+                sentence="UpWave"
+                tag="strong"
+                onFinish={this.initiateRedirect}
+              />
+            </TypeAhead>
+            <br/>
+            <h3>Our highest goal is your successful business.<br/>We are always riding the highest wave.</h3>
+          </section>
         </section>
       </section>
     );

@@ -8,7 +8,7 @@ import Button from '../components/common/components/Button';
 
 function Main({ registerAnimation, isFromGreeting }) {
   return (
-    <section>
+    <section className="container">
       <Content
         name="main"
         registerAnimation={registerAnimation}
@@ -18,13 +18,13 @@ function Main({ registerAnimation, isFromGreeting }) {
         <section className="motto">
           <h1>We are <strong>UpWave</strong></h1>
           <br/>
-          <h3>Our highest goal is your successful business</h3>
+          <h3>Our highest goal is your successful business.<br/>We are always riding the highest wave.</h3>
           <Button
-            type="externalButtonLink"
-            href="mailto:contact@upwave.net"
-            className="nav-button all-hide sm-show"
+            type="buttonLink"
+            href="/who_we_are"
+            className="nav-button"
           >
-            Get in touch
+            Check who we are
           </Button>
         </section>
       </Content>

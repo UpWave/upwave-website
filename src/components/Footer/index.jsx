@@ -40,7 +40,7 @@ function Footer({ className }) {
         </section>
       </nav>
       <span className="copyright">
-        Copyright © 2016 UpWork Agency&nbsp;|&nbsp;
+        Copyright © 2016 UpWave Agency&nbsp;|&nbsp;
         <a href="mailto:contact@upwave.net">Contact us</a>
       </span>
     </footer>
