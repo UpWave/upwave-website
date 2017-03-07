@@ -1,5 +1,5 @@
 import React from 'react';
-import Carousel from 'nuka-carousel';
+import Slider from 'nuka-carousel';
 
 import Waves from '../components/Waves';
 import Content from '../components/Content';
@@ -16,8 +16,9 @@ function Projects({ registerAnimation }) {
         registerAnimation={registerAnimation}
         className="box our-work"
       >
-        <h3>Clients are talking about us:</h3>
-        <Carousel width="70%" className="our-work-testemonials">
+        <h3>Testemonials</h3>
+        <h4>Here is what our customers think of us:</h4>
+        <Slider>
           <Testemonial
             signedBy="Kestas Barzdaitis, Managing partner at" company="Meaningful.place"
             url=""
@@ -38,7 +39,7 @@ function Projects({ registerAnimation }) {
           >
             Pavlo helped develop, design and maintain our webapp. I found his service to be very friendly and helpful. He will always go out of his way to ensure completion of tasks in the most effective way. He completed changes quickly and always to the standard you expect. I would recommend Pavlo's service to anyone looking for talented developer.
           </Testemonial>
-        </Carousel>
+        </Slider>
       </Content>
       <Waves mode="red" registerAnimation={registerAnimation} />
     </section>

@@ -9,7 +9,12 @@ class SVGWave extends React.Component {
     svg: React.PropTypes.string.isRequired,
     status: React.PropTypes.string.isRequired,
     onLeft: React.PropTypes.func.isRequired,
+    delay: React.PropTypes.number,
   };
+
+  static default = {
+    delay: 600,
+  }
 
   static duration = 500;
 
@@ -17,7 +22,7 @@ class SVGWave extends React.Component {
     const wave = ReactDOM.findDOMNode(this.refs.wave);
     wave.innerHTML = this.props.svg;
 
-    setTimeout(() => this.drawWave(), 0);
+    setTimeout(() => this.drawWave(), this.props.delay);
   }
 
   componentWillReceiveProps(nextProps) {

@@ -14,10 +14,12 @@ class Waves extends React.Component {
   static propTypes = {
     registerAnimation: React.PropTypes.func.isRequired,
     mode: React.PropTypes.oneOf(['multiple', 'blue', 'red', 'black']),
+    delay: React.PropTypes.number,
   };
 
   static defaultProps = {
     mode: 'multiple',
+    delay: 600,
   };
 
   get countByMode() {
@@ -64,6 +66,7 @@ class Waves extends React.Component {
         svg={blueWave}
         onLeft={this.onLeft}
         status={animationStatus}
+        delay={this.props.delay}
       />
     );
     const wave2 = (
@@ -72,6 +75,7 @@ class Waves extends React.Component {
         svg={redWave}
         onLeft={this.onLeft}
         status={animationStatus}
+        delay={this.props.delay}
       />
     );
     const wave3 = (
@@ -80,6 +84,7 @@ class Waves extends React.Component {
         svg={blackWave}
         onLeft={this.onLeft}
         status={animationStatus}
+        delay={this.props.delay}
       />
     );
     const black = (
@@ -88,6 +93,7 @@ class Waves extends React.Component {
         svg={singleBlackWave}
         onLeft={this.onLeft}
         status={animationStatus}
+        delay={this.props.delay}
       />
     );
     const blue = (
@@ -96,6 +102,7 @@ class Waves extends React.Component {
         svg={singleBlueWave}
         onLeft={this.onLeft}
         status={animationStatus}
+        delay={this.props.delay}
       />
     );
     const red = (
@@ -104,6 +111,7 @@ class Waves extends React.Component {
         svg={singleRedWave}
         onLeft={this.onLeft}
         status={animationStatus}
+        delay={this.props.delay}
       />
     );
 

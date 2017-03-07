@@ -54,7 +54,7 @@
 }
 
 @media (max-width: 568px) {
-  .header {
+  .header-wrapper {
     flex-direction: column;
     justify-content: center;
     height: auto;

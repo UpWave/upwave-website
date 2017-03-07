@@ -1,14 +1,7 @@
 .our-work {
-  flex-direction: row;
-}
-
-.our-work-clients {
-  width: 40%;
 }
 
 .our-work-testemonials {
-  width: 60%;
-  height: 100%;
 }
 
 .testemonial-panel {

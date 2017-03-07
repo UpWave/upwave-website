@@ -5,6 +5,7 @@ function Testemonial({ children, signedBy, company, url }) {
     <section className="testemonial-panel">
       <blockquote cite={url}>
         {children}
+        <br />
         <span>
           - {signedBy}
           &nbsp;

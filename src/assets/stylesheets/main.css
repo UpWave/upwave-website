@@ -70,7 +70,8 @@ img {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   display: inline-block;
   position: relative;
 }
@@ -85,11 +86,17 @@ h1 {
 h2 {
   padding: 20px 0 15px 20px;
   font-size: 3em;
+  line-height: 1.5;
 }
 
 h3 {
   padding: 10px 0 20px 0;
   font-size: 2em;
+  line-height: 1.5;
+}
+
+h4 {
+  font-size: 1.4em;
   line-height: 1.5;
 }
 
