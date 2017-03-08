@@ -10,10 +10,9 @@ import '../assets/stylesheets/header.css';
 function Header({
   location: { pathname },
   isFromGreeting,
-  className,
 }) {
   return (
-    <header className={`header${className ? ` ${className}` : ''}`}>
+    <header className="header">
       <section
         className={`header-wrapper ${isFromGreeting ? 'header-wrapper-animation' : ''}`}
       >
@@ -62,13 +61,8 @@ function Header({
 }
 
 Header.propTypes = {
-  className: React.PropTypes.string,
   isFromGreeting: React.PropTypes.bool,
   location: locationShape,
-};
-
-Header.defaultProps = {
-  className: '',
 };
 
 export default withRouter(Header);

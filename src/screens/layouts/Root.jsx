@@ -38,20 +38,11 @@ class Root extends React.Component {
     const { isFromGreeting } = this.state;
 
     return (
-      <section className="content">
-        <Header
-          className={this.pathname}
-          isFromGreeting={isFromGreeting}
-        />
+      <section className={`content${this.pathname}`}>
+        <Header isFromGreeting={isFromGreeting} />
         {this.children}
-        <Footer
-          className={this.pathname}
-          isFromGreeting={isFromGreeting}
-        />
-        <Background
-          className={this.pathname}
-          isFromGreeting={isFromGreeting}
-        />
+        <Footer />
+        <Background />
       </section>
     );
   }

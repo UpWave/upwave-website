@@ -1,11 +1,16 @@
 .our-work {
+  flex: 1;
+  position: relative;
 }
 
 .our-work-testemonials {
 }
 
 .testemonial-panel {
-  margin: 25px 0;
+  flex: 1;
+  flex-direction: row;
+  position: relative;
+  height: 250px;
 }
 
 .testemonial-panel h3 strong {
@@ -13,28 +18,158 @@
   color: #6DCDE9 !important;
 }
 
+.testemonial-text {
+  flex: 2;
+  justify-content: center;
+  align-items: center;
+  border-left: 16px solid rgba(109, 205, 233, .75);
+}
+
+.arrow-next,
+.arrow-previous {
+  position: absolute;
+  top: 40%;
+  left: -50px;
+  width: 35px;
+  height: 35px;
+  transform: rotate(225deg);
+  border-top: 1px solid rgba(65, 73, 96, .5);
+  border-right: 1px solid rgba(65, 73, 96, .5);
+  border-top-right-radius: 4px;
+  z-index: 1;
+
+  &:hover {
+    border-color: #F17174;
+  }
+}
+
+.arrow-next {
+  left: initial;
+  right: -50px;
+  transform: rotate(45deg);
+}
+
+.bullets {
+  position: absolute;
+  bottom: 15px;
+  left: calc(50% - 45px);
+}
+
+.bullet {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 9px;
+  border-radius: 20px;
+  background: rgba(65, 73, 96, .5);
+
+  &:hover,
+  &.active {
+    background: rgba(65, 73, 96, 1);
+  }
+}
+
+.testemonial-logo {
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.meaningful-place {
+  .testemonial-logo {
+    background: #212121;
+  }
+}
+
+.ourea {
+  .testemonial-logo {
+    background: #0D3044;
+  }
+}
+
+.eventgeek {
+  .testemonial-logo {
+    background: #FFF;
+  }
+}
+
+.world-map,
+.selected-world-map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  padding: 0 75px;
+
+  svg {
+    width: 100%;
+    height: auto;
+    transform: translateZ(0, 0, 0) perspective(1000) !important;
+
+    #Lithuania:hover,
+    #London:hover,
+    #SF:hover {
+      fill: #F17174;
+      fill-opacity: 1;
+    }
+
+    #Lithuania.active,
+    #London.active,
+    #SF.active {
+      fill: #F17174;
+      fill-opacity: 1;
+    }
+  }
+}
+
+.testimonials-slider {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  width: 100%;
+  background: #F9F9F9;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(65, 73, 96, .3);
+  overflow: hidden;
+}
+
 blockquote {
   position: relative;
   font-style: italic;
   line-height: 1.5em;
   color: rgba(65, 73, 96, .75);
-  padding: 10px 30px 10px 75px;
-  border-left: 16px solid rgba(109, 205, 233, .75);
+  padding: 10px 30px 10px 90px;
 }
 
 blockquote::before {
   font-family: "UpWave-Bold";
   content: "\201C";
-  color: rgba(109, 205, 233, .75);
+  color: rgba(65, 73, 96, .75);
   font-size: 64px;
   position: absolute;
-  left: 12px;
-  top: 20px;
+  left: 25px;
+  top: 18px;
 }
 
-blockquote span {
-  display: inline-block;
-  font-family: "UpWave-Medium";
-  font-style: normal;
-  margin-top: 20px;
+blockquote{
+  span {
+    display: inline-block;
+    font-family: "UpWave-Medium";
+    font-style: normal;
+    margin-top: 20px;
+    color: rgba(65, 73, 96, .6);
+  }
+
+  .testemonial-link {
+    font-size: 16px;
+  }
 }
