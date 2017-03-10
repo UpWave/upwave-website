@@ -62,11 +62,11 @@
   transform: translateZ(0, 0, 0) perspective(1000) !important;
 }
 
-@media (max-width: 1023px) {
+@media only screen and (min-width: 569px) and (max-width: 1024px) {
   .about-us {
     padding: 25px;
   }
 }
 
-@media (max-width: 568px) {
+@media only screen and (max-width: 568px) {
 }

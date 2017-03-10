@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import MediaQuery from 'react-responsive';
 import Slider from 'nuka-carousel';
 
 import Waves from '../../components/Waves';
@@ -16,6 +17,7 @@ import ourea from './assets/ourea.png';
 import eventgeek from './assets/eventgeek.png';
 import meaningfulPlace from './assets/meaningful-place.png';
 
+// TODO: REFACTOR DAT SHIT
 class Projects extends React.Component {
   static propTypes = {
     registerAnimation: React.PropTypes.func.isRequired,
@@ -28,6 +30,40 @@ class Projects extends React.Component {
   state = {
     currentSlide: 0,
   };
+
+  get testemonials() {
+    return [
+      <Testemonial
+        key="meaningful-place"
+        className="meaningful-place"
+        signedBy="Kestas Barzdaitis, Managing partner at" company="Meaningful.place"
+        url="http://www.meaningful.place/"
+        logo={meaningfulPlace}
+      >
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Upwave</strong> is a great engineering partner thanks to their depth of knowledge in technology, their design experience, coupled with their flexibility to engage with their clients and their firm commitment to deliver. <strong>Upwave</strong> team always tries to learn and understand our business needs instead of just coding to our specs.
+      </Testemonial>,
+      <Testemonial
+        key="ourea"
+        className="ourea"
+        signedBy="James Campion, CEO at"
+        company="Ourea"
+        url="http://oureasystems.com/"
+        logo={ourea}
+      >
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Upwave agency</strong> helped develop, design and maintain our webapp. I found his service to be very friendly and helpful. He will always go out of his way to ensure completion of tasks in the most effective way. He completed changes quickly and always to the standard you expect. I would recommend <strong>Upwave agency's</strong> service to anyone looking for talented developers.
+      </Testemonial>,
+      <Testemonial
+        key="eventgeek"
+        className="eventgeek"
+        signedBy="Alex Patriquin, CEO at"
+        company="EventGeek"
+        url="https://www.eventgeek.com/"
+        logo={eventgeek}
+      >
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We had a great experience working together with <strong>Upwave agency</strong>. Agency made solid efforts and their contributions meaningfully advanced our company's progress. Their greatest strength is in thinking about both technical and business problems holistically.
+      </Testemonial>,
+    ];
+  }
 
   componentDidMount() {
     this.mapPoints = this.getMapControls();
@@ -136,45 +172,26 @@ class Projects extends React.Component {
             svg={selectedWorldMap}
             ref='selectedMap'
           ></SVGElement>
-          {/* <h3>Testemonials</h3>
-          <h4>Here is what our customers think of us:</h4> */}
           <section className='testimonials-slider'>
-            <Slider
-              beforeSlide={this.beforeSlide.bind(this)}
-              swiping={true}
-              wrapAround={true}
-              decorators={[]}
-              ref='slider'
-            >
-              <Testemonial
-                className="meaningful-place"
-                signedBy="Kestas Barzdaitis, Managing partner at" company="Meaningful.place"
-                url="http://www.meaningful.place/"
-                logo={meaningfulPlace}
-              >
-                <strong>Upwave</strong> is a great engineering partner thanks to their depth of knowledge in technology, their design experience, coupled with their flexibility to engage with their clients and their firm commitment to deliver. <strong>Upwave</strong> team always tries to learn and understand our business needs instead of just coding to our specs.
-              </Testemonial>
-              <Testemonial
-                className="ourea"
-                signedBy="James Campion, CEO at"
-                company="Ourea"
-                url="http://oureasystems.com/"
-                logo={ourea}
-              >
-                <strong>Upwave agency</strong> helped develop, design and maintain our webapp. I found his service to be very friendly and helpful. He will always go out of his way to ensure completion of tasks in the most effective way. He completed changes quickly and always to the standard you expect. I would recommend <strong>Upwave agency's</strong> service to anyone looking for talented developers.
-              </Testemonial>
-              <Testemonial
-                className="eventgeek"
-                signedBy="Alex Patriquin, CEO at"
-                company="EventGeek"
-                url="https://www.eventgeek.com/"
-                logo={eventgeek}
-              >
-                We had a great experience working together with <strong>Upwave agency</strong>. Agency made solid efforts and their contributions meaningfully advanced our company's progress. Their greatest strength is in thinking about both technical and business problems holistically.
-              </Testemonial>
-            </Slider>
+            <MediaQuery query='(max-device-width: 1440px)'>
+              <Slider
+                beforeSlide={this.beforeSlide.bind(this)}
+                swiping={true}
+                wrapAround={true}
+                decorators={[]}
+                ref='slider'
+              >{this.testemonials}</Slider>
+            </MediaQuery>
+            <MediaQuery query='(min-device-width: 1441px)'>
+              {/* <h2>Testemonials</h2> */}
+              <Slider
+                slidesToShow={3}
+                decorators={[]}
+                ref='slider'
+              >{this.testemonials}</Slider>
+            </MediaQuery>
           </section>
-          <ul className="bullets">
+          <ul className="bullets bullets-inline bullets-active">
             <li
               id='0'
               className={

@@ -1,0 +1,46 @@
+.panel-container {
+  flex-direction: column;
+  flex: 1;
+  margin-right: 20px;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.panel {
+  flex: 1;
+  margin-bottom: 20px;
+  background: #F9F9F9;
+  box-shadow: 0 0 2px rgba(65, 73, 96, .3);
+  border-radius: 2px;
+  overflow: hidden;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.panel-expanded {
+  flex: 3;
+}
+
+.panel-collapsed {
+  flex: 1;
+}
+
+
+@media only screen and (max-width: 1024px) {
+  .panel-container {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .panel-expanded {
+    flex: 1;
+  }
+
+  .panel-collapsed {
+    flex: 1;
+  }
+}

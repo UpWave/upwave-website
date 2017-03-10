@@ -54,7 +54,7 @@
   height: 80%;
 }
 
-@media (max-width: 568px) {
+@media only screen and (max-width: 568px) {
   .header-wrapper {
     flex-direction: column;
     justify-content: center;

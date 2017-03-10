@@ -72,3 +72,61 @@ button:hover {
 [role="button"]:hover {
   border: 1px solid rgba(65, 73, 96, 1);
 }
+
+.bullets,
+.bullets-inline {
+  position: relative;
+
+  .bullet {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding-left: 20px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 5px;
+      left: 0;
+      width: 8px;
+      height: 8px;
+      margin: 0;
+      border-radius: 8px;
+      background: rgba(65, 73, 96, .75);
+    }
+  }
+}
+
+.bullets {
+  padding-left: 20px;
+}
+
+.bullets-inline {
+  .bullet {
+    display: inline-block;
+    padding-left: 30px;
+
+    &::before {
+      position: absolute;
+      top: initial;
+      bottom: 0;
+      left: 0;
+      width: 12px;
+      height: 12px;
+      margin: 0 9px;
+      border-radius: 12px;
+      background: rgba(65, 73, 96, .5);
+    }
+  }
+}
+
+.bullets-active {
+  .bullet {
+    &:hover,
+    &.active {
+      &::before {
+        background: rgba(65, 73, 96, 1);
+      }
+    }
+  }
+}

@@ -162,7 +162,7 @@
   color: #3D4775;
 }
 
-@media (max-width: 1023px) {
+@media only screen and (max-width: 768px) {
   .footer {
     bottom: -265px;
     max-height: 265px;
