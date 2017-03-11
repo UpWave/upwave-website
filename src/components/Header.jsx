@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter, locationShape } from 'react-router';
+import MediaQuery from 'react-responsive';
 
 import Button from './common/components/Button';
 
@@ -27,7 +28,12 @@ function Header({
               `nav-button ${pathname === '/who_we_are' ? 'active': ''}`
             }
           >
+            <MediaQuery query='(min-device-width: 569px)'>
               Who we are
+            </MediaQuery>
+            <MediaQuery query='(max-device-width: 568px)'>
+              About
+            </MediaQuery>
           </Button>
           <Button
             type="link"
@@ -36,7 +42,12 @@ function Header({
               `nav-button ${pathname === '/our_work' ? 'active': ''}`
             }
           >
+            <MediaQuery query='(min-device-width: 569px)'>
               Our work
+            </MediaQuery>
+            <MediaQuery query='(max-device-width: 568px)'>
+              Work
+            </MediaQuery>
           </Button>
           <Button
             type="link"
@@ -45,7 +56,7 @@ function Header({
               `nav-button ${pathname === '/careers' ? 'active': ''}`
             }
           >
-              Careers
+              Career
           </Button>
           <Button
             type="externalButtonLink"

@@ -214,7 +214,14 @@ blockquote {
   }
 }
 
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
+@media only screen and (max-width: 568px) {
+  .arrow-next,
+  .arrow-previous {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 569px) and (max-width: 1024px) {
   .testemonial-panel {
     height: 300px;
   }
