@@ -15,20 +15,24 @@
   box-shadow: 0 0 2px rgba(65, 73, 96, .3);
   border-radius: 2px;
   overflow: hidden;
+  transition: flex-grow .5s;
 
   &:last-child {
     margin: 0;
   }
+
+  &:hover {
+    flex-grow: 10;
+  }
 }
 
 .panel-expanded {
-  flex: 3;
+  flex-grow: 3;
 }
 
 .panel-collapsed {
-  flex: 1;
+  flex-grow: 1;
 }
-
 
 @media only screen and (max-width: 1024px) {
   .panel-container {

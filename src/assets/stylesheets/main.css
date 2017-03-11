@@ -249,7 +249,17 @@ strong {
   }
 }
 
+@media only screen and (min-width: 569px) and (max-width: 768px) {
+  .box {
+    margin: 0 50px;
+  }
+}
+
 @media only screen and (max-width: 568px) {
+  .box {
+    margin: 0 25px;
+  }
+
   .sm-hide {
     display: none;
   }
