@@ -5,7 +5,7 @@
 
   .bullets {
     position: absolute;
-    bottom: 15px;
+    bottom: 6px;
     left: calc(50% - 38px);
   }
 }
@@ -268,10 +268,6 @@ blockquote {
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1440px) {
-  .bullets {
-    bottom: 6px;
-  }
-
   .testimonials-slider {
     bottom: 30px;
     box-shadow: 0 0 2px rgba(65, 73, 96, .3);
