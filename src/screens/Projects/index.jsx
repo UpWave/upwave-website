@@ -176,7 +176,8 @@ class Projects extends React.Component {
             <MediaQuery query='(max-device-width: 1440px)'>
               <Slider
                 beforeSlide={this.beforeSlide.bind(this)}
-                swiping={true}
+                swiping={false}
+                dragging={false}
                 wrapAround={true}
                 decorators={[]}
                 ref='slider'

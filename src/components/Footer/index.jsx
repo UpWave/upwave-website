@@ -14,7 +14,7 @@ function Footer({ className }) {
     <footer className={`footer${className ? ` ${className}` : ''}`}>
       <nav className="footer-navigation">
         <nav className="sitemap">
-          <h3>CHECK THIS</h3>
+          <h3>CHECK&nbsp;THIS</h3>
           <section className="sitemap-group">
             <Link to="/" className="sitemap-link">Home</Link>
             <Link to="/career" className="sitemap-link">Career</Link>
@@ -40,8 +40,12 @@ function Footer({ className }) {
         </section>
       </nav>
       <span className="copyright">
-        Copyright © 2016 UpWave Agency&nbsp;|&nbsp;
-        <a href="mailto:contact@upwave.net">Contact us</a>
+        <span className="legit-name">
+          Copyright&nbsp;©&nbsp;2016&nbsp;UpWave&nbsp;Agency
+        </span>
+        <span className="help-links">
+          <a href="mailto:contact@upwave.net">Contact&nbsp;us</a>
+        </span>
       </span>
     </footer>
   );

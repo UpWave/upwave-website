@@ -100,6 +100,10 @@
   max-width: 75px;
   height: auto;
   margin-right: 25px;
+
+  section {
+    max-height: 75px;
+  }
 }
 
 .social-link svg {
@@ -164,8 +168,8 @@
 
 @media only screen and (max-width: 768px) {
   .footer {
-    bottom: -265px;
-    max-height: 265px;
+    bottom: -300px;
+    min-height: 300px;
     height: auto;
   }
 
@@ -195,7 +199,7 @@
   }
 
   .sitemap-link {
-    margin: 0;
+    margin: 0 0 3px;
   }
 
   .social {
@@ -204,5 +208,19 @@
 
   .social-link {
     margin: 0 10px;
+  }
+
+  .copyright {
+    margin-top: 10px;
+    line-height: 1em;
+
+    .help-links,
+    .legit-name {
+      display: flex;
+      min-width: 100%;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
   }
 }
