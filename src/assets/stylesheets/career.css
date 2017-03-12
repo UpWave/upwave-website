@@ -1,4 +1,4 @@
-.careers-box {
+.career-box {
   flex-direction: row;
   flex: 1;
   padding: 15px 0 50px;
@@ -73,8 +73,51 @@
   }
 }
 
+@media only screen and (max-width: 568px) {
+  .box.career-box {
+    padding: 0;
+
+    .panel {
+      min-height: 80px;
+      max-height: 80px;
+
+      &:hover {
+        min-height: 80px;
+        max-height: 80px;
+      }
+    }
+
+    .panel-container {
+      min-height: 175px;
+      max-height: 175px;
+      min-width: 100%;
+    }
+
+    .career-position {
+      min-height: 80px;
+      max-height: 80px;
+
+      .position-header {
+        h2 {
+          width: 150px;
+          font-size: 17px;
+
+          &::before {
+            bottom: -18px;
+          }
+        }
+      }
+
+      .position-text,
+      .position-footer {
+        display: none;
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 1024px) {
-  .careers-box {
+  .career-box {
     flex-direction: column;
     flex: initial;
 

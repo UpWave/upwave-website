@@ -102,6 +102,8 @@ button:hover {
 }
 
 .bullets-inline {
+  padding: 0;
+
   .bullet {
     display: inline-block;
     padding-left: 30px;

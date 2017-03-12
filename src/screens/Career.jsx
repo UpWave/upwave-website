@@ -1,4 +1,5 @@
 import React from 'react';
+import MediaQuery from 'react-responsive';
 
 import Waves from '../components/Waves';
 import Content from '../components/Content';
@@ -6,9 +7,9 @@ import Panel from '../components/Panel';
 import routerAnimation from '../components/common/components/routerAnimation';
 import Button from '../components/common/components/Button';
 
-import '../assets/stylesheets/careers.css';
+import '../assets/stylesheets/career.css';
 
-class Careers extends React.Component {
+class Career extends React.Component {
   static propTypes = {
     registerAnimation: React.PropTypes.func.isRequired,
   };
@@ -21,9 +22,9 @@ class Careers extends React.Component {
     return (
       <section className="container">
         <Content
-          name="careers"
+          name="career"
           registerAnimation={this.props.registerAnimation}
-          className="box careers-box"
+          className="box career-box"
         >
           <Panel isContainer={true}>
             <Panel className="panel-expanded">
@@ -158,10 +159,12 @@ class Careers extends React.Component {
             </Panel>
           </Panel>
         </Content>
-        <Waves mode="black" registerAnimation={this.props.registerAnimation} />
+        <MediaQuery query='(min-device-width: 768px)'>
+          <Waves mode="black" registerAnimation={this.props.registerAnimation} />
+        </MediaQuery>
       </section>
     );
   }
 }
 
-export default routerAnimation(Careers);
+export default routerAnimation(Career);

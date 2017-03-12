@@ -1,4 +1,5 @@
 import React from 'react';
+import MediaQuery from 'react-responsive';
 
 import Waves from '../../components/Waves';
 import Paragraph from '../../components/Paragraph';
@@ -15,7 +16,7 @@ import '../../assets/stylesheets/about.css';
 
 function About({ registerAnimation }) {
   return (
-    <section>
+    <section className="container">
       <Content
         name="about"
         registerAnimation={registerAnimation}
@@ -35,7 +36,9 @@ function About({ registerAnimation }) {
         <SVGElement svg={nodejs} className="badge badge-nodejs" />
         <SVGElement svg={reactjs} className="badge badge-reactjs" /> */}
       </Content>
-      <Waves mode="blue" registerAnimation={registerAnimation} />
+      <MediaQuery query='(min-device-width: 768px)'>
+        <Waves mode="blue" registerAnimation={registerAnimation} />
+      </MediaQuery>
     </section>
   );
 }

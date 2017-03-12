@@ -163,17 +163,15 @@ class Projects extends React.Component {
             className="arrow-next"
             onClick={this.goNext.bind(this)}
           ></span>
-          <MediaQuery query='(min-device-width: 569px)'>
-            <SVGElement
-              className="world-map"
-              svg={worldMap}
-            ></SVGElement>
-            <SVGElement
-              className="selected-world-map"
-              svg={selectedWorldMap}
-              ref='selectedMap'
-            ></SVGElement>
-          </MediaQuery>
+          <SVGElement
+            className="world-map"
+            svg={worldMap}
+          ></SVGElement>
+          <SVGElement
+            className="selected-world-map"
+            svg={selectedWorldMap}
+            ref='selectedMap'
+          ></SVGElement>
           <section className='testimonials-slider'>
             <MediaQuery query='(max-device-width: 1440px)'>
               <Slider
@@ -216,7 +214,9 @@ class Projects extends React.Component {
             ></li>
           </ul>
         </Content>
-        <Waves mode="red" registerAnimation={this.props.registerAnimation} />
+        <MediaQuery query='(min-device-width: 768px)'>
+          <Waves mode="red" registerAnimation={this.props.registerAnimation} />
+        </MediaQuery>
       </section>
     );
   }

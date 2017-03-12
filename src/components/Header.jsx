@@ -51,9 +51,9 @@ function Header({
           </Button>
           <Button
             type="link"
-            href="/careers"
+            href="/career"
             className={
-              `nav-button ${pathname === '/careers' ? 'active': ''}`
+              `nav-button ${pathname === '/career' ? 'active': ''}`
             }
           >
               Career

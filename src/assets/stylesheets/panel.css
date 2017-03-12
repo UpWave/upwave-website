@@ -34,6 +34,18 @@
   flex-grow: 1;
 }
 
+@media only screen and (max-width: 568px) {
+  .box {
+    .panel-container {
+      margin-bottom: 15px;
+
+      .panel {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 1024px) {
   .panel-container {
     margin-right: 0;

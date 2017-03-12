@@ -1,6 +1,7 @@
 .our-work {
   flex: 1;
   position: relative;
+  padding-bottom: 25px;
 
   .bullets {
     position: absolute;
@@ -168,15 +169,55 @@ blockquote {
 }
 
 @media only screen and (max-width: 568px) {
+  .arrow-next,
+  .arrow-previous,
+  .world-map,
+  .selected-world-map {
+    display: none;
+  }
 
+  .testimonials-slider {
+    position: relative;
+    bottom: initial;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+
+    .testemonial-panel {
+      .testemonial-logo {
+        max-height: 50px;
+      }
+
+      .testemonial-text {
+        padding: 5px 0;
+        justify-content: flex-start;
+        align-items: center;
+
+        blockquote {
+          font-size: 14px;
+          line-height: 1.4em;
+
+          span {
+            margin-top: 5px;
+          }
+        }
+      }
+    }
+  }
 }
 
-@media only screen and (min-width: 569px) and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .world-map,
   .selected-world-map {
     top: 25px;
     padding: 0;
     transform: scale(1.15);
+  }
+
+  .our-work {
+    .bullets-inline {
+      bottom: 0;
+    }
   }
 
   .testemonial-panel {
@@ -211,13 +252,6 @@ blockquote {
         font-size: 16px;
       }
     }
-  }
-}
-
-@media only screen and (max-width: 568px) {
-  .arrow-next,
-  .arrow-previous {
-    display: none;
   }
 }
 

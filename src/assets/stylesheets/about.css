@@ -62,6 +62,12 @@
   transform: translateZ(0, 0, 0) perspective(1000) !important;
 }
 
+@media only screen and (max-width: 568px) {
+  .box.about-us {
+    padding: 0;
+  }
+}
+
 @media only screen and (min-width: 569px) and (max-width: 1024px) {
   .about-us {
     padding: 25px;
