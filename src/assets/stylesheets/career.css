@@ -90,7 +90,6 @@
     .panel-container {
       min-height: 175px;
       max-height: 175px;
-      min-width: 100%;
     }
 
     .career-position {
@@ -131,6 +130,7 @@
 
     .panel-container {
       min-height: 300px;
+      min-width: 100%;
     }
   }
 }

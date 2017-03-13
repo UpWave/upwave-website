@@ -133,7 +133,7 @@ strong {
 .main-box {
   position: relative;
   left: 0;
-  margin: 75px 100px 0 0;
+  margin: 30px 0;
   opacity: 1;
   z-index: 1;
   align-items: left;
@@ -173,6 +173,14 @@ strong {
 .motto {
   text-align: left;
   margin-left: 100px;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  .nav-button {
+    margin: 0;
+    transform: scale(1.5);
+    transform-origin: left top;
+  }
 }
 
 .greeting-motto h1::before {
@@ -239,7 +247,7 @@ strong {
 
   h1 {
     padding: 20px 0 20px 0;
-    font-size: 4.9em;
+    font-size: 4.6em;
   }
 
   h2 {
@@ -249,13 +257,27 @@ strong {
 
   h3 {
     padding: 15px 0 20px 0;
-    font-size: 1.75em;
+    font-size: 1.7em;
   }
 }
 
 @media only screen and (min-width: 569px) and (max-width: 768px) {
   .box {
     margin: 0 50px;
+  }
+
+  .motto {
+    h1 {
+      font-size: 3.5em;
+    }
+
+    h3 {
+      font-size: 1.3em;
+    }
+
+    .nav-button {
+      transform: scale(1.25);
+    }
   }
 }
 
@@ -279,10 +301,26 @@ strong {
   }
 
   .main-box {
-    margin-top: 25px;
+    margin-top: 0;
   }
 
   .motto {
     margin-left: 20px;
+
+    h1 {
+      font-size: 2em;
+
+      &::before {
+        width: 50%;
+      }
+    }
+
+    h3 {
+      font-size: 1em;
+    }
+
+    .nav-button {
+      transform: none;
+    }
   }
 }

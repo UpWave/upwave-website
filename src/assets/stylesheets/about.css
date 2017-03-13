@@ -56,6 +56,11 @@
   height: auto;
 }
 
+.who-we-are-term {
+  width: 100%;
+  min-height: 100%;
+}
+
 .who-we-are-term svg {
   width: 100%;
   height: auto;

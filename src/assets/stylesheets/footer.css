@@ -3,7 +3,7 @@
   left: 0;
   bottom: -125px;
   width: 100%;
-  max-height: 125px;
+  min-height: 125px;
   height: auto;
   background-color: rgba(41, 48, 79, 1);
 }
@@ -164,6 +164,12 @@
   text-align: center;
   font-size: 14px;
   color: #3D4775;
+}
+
+.copyright {
+  .help-links {
+    margin: 0 10px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
