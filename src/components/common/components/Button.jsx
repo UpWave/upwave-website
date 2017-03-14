@@ -9,21 +9,41 @@ function Button(props) {
 
 // TODO: Refactor dat shit
 Button.types = {
-  link: ({ href, children, className }) => (
-    <Link to={href} role="link" className={className}>{children}</Link>
-  ),
-  button: ({ callback, className, children }) => (
-    <a role='button' onClick={callback} className={className}>
-      {children}
-    </a>
-  ),
-  buttonLink: ({ href, children, className }) => (
-    <Link to={href} role="button" className={className}>
+  link: ({ href, children, className, id }) => (
+    <Link
+      id={id}
+      to={href}
+      role="link"
+      className={className}
+      onClick={e => e.stopPropagation()}
+    >
       {children}
     </Link>
   ),
-  externalButtonLink: ({ href, children, className }) => (
-    <a href={href} role='button' className={className}>
+  button: ({ callback, className, children, id }) => (
+    <a id={id} role='button' onClick={callback} className={className}>
+      {children}
+    </a>
+  ),
+  buttonLink: ({ href, children, className, id }) => (
+    <Link
+      id={id}
+      to={href}
+      role="button"
+      className={className}
+      onClick={e => e.stopPropagation()}
+    >
+      {children}
+    </Link>
+  ),
+  externalButtonLink: ({ href, children, className, id }) => (
+    <a
+      id={id}
+      href={href}
+      role='button'
+      className={className}
+      onClick={e => e.stopPropagation()}
+    >
       {children}
     </a>
   ),
@@ -31,6 +51,7 @@ Button.types = {
 
 Button.propTypes = {
   type: React.PropTypes.string.isRequired,
+  id: React.PropTypes.string,
   href: React.PropTypes.string,
   callback: React.PropTypes.func,
   className: React.PropTypes.string,

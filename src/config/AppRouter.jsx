@@ -11,8 +11,9 @@ import Root from '../screens/layouts/Root';
 import Main from '../screens/Main';
 import About from '../screens/About';
 import Projects from '../screens/Projects';
-import Career from '../screens/Career';
+import Careers from '../screens/Careers';
 import Greeting from '../screens/Greeting';
+import Career from '../screens/dialogs/Career';
 
 function AppRouter() {
   return (
@@ -21,7 +22,9 @@ function AppRouter() {
         <IndexRoute component={Main} />
         <Route path='/who_we_are' component={About} />
         <Route path='/our_work' component={Projects} />
-        <Route path='/career' component={Career} />
+        <Route path='/careers' component={Careers}>
+          <Route path='/career/:id' component={Career} />
+        </Route>
         <Route path='/greeting' component={Greeting} />
       </Route>
       <Redirect from="/*" to="/" />

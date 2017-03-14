@@ -1,0 +1,120 @@
+.dialogs-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 75px 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 2;
+  background-color: rgba(41, 48, 79, .9);
+  animation-name: fadeDialogIn;
+  animation-duration: .5s;
+  transition: opacity .5s;
+
+  &.dialog-fade-out {
+    opacity: 0;
+  }
+
+  &::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/back.jpg') no-repeat center center fixed;
+    background-size: cover;
+    opacity: .7;
+    z-index: -1;
+  }
+}
+
+@keyframes fadeDialogIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.dialogs-content {
+  flex: 1;
+  width: 100%;
+  min-height: 100%;
+  align-items: center;
+
+  &:focus {
+    outline: none;
+  }
+
+  .logo-button {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    width: 60px;
+    height: 60px;
+    border: 4px solid white;
+    border-radius: 60px;
+
+    .logo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: scale(1.1);
+    }
+  }
+
+  .dialogs-close-button {
+    position: fixed;
+    top: 25px;
+    right: 50px;
+    width: 40px;
+    height: 40px;
+    color: #F9F9F9;
+    border: none;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1px;
+      height: 40px;
+      background-color: #F9F9F9;
+      transform: translateX(20px) rotate(45deg);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1px;
+      height: 40px;
+      background-color: #F9F9F9;
+      transform: translateX(20px) rotate(315deg);
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .dialogs-overlay {
+    padding-top: 90px;
+
+    .logo-button {
+      top: 12px;
+    }
+
+    .dialogs-close-button {
+      position: absolute;
+      right: 30px;
+    }
+  }
+}

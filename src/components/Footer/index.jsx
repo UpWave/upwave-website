@@ -17,7 +17,7 @@ function Footer({ className }) {
           <h3>CHECK&nbsp;THIS</h3>
           <section className="sitemap-group">
             <Link to="/" className="sitemap-link">Home</Link>
-            <Link to="/career" className="sitemap-link">Career</Link>
+            <Link to="/careers" className="sitemap-link">Careers</Link>
           </section>
           <section className="sitemap-group">
           <Link to="/who_we_are" className="sitemap-link">About&nbsp;us</Link>

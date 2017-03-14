@@ -1,5 +1,6 @@
 import React from 'react';
 import MediaQuery from 'react-responsive';
+import { browserHistory } from 'react-router';
 
 import Waves from '../components/Waves';
 import Content from '../components/Content';
@@ -7,15 +8,15 @@ import Panel from '../components/Panel';
 import routerAnimation from '../components/common/components/routerAnimation';
 import Button from '../components/common/components/Button';
 
-import '../assets/stylesheets/career.css';
+import '../assets/stylesheets/careers.css';
 
-class Career extends React.Component {
+class Careers extends React.Component {
   static propTypes = {
     registerAnimation: React.PropTypes.func.isRequired,
   };
 
-  openDialog() {
-
+  openDialog(e) {
+    browserHistory.push(`/career/${e.currentTarget.id}`);
   }
 
   render() {
@@ -29,8 +30,19 @@ class Career extends React.Component {
           <Panel isContainer={true}>
             <Panel className="panel-expanded">
               <section className="career-position">
-                <section className="position-header ruby">
+                <section
+                  id="1"
+                  className="position-header ruby"
+                  onClick={this.openDialog.bind(this)}
+                >
                   <h2>Senior Ruby developer</h2>
+                  <Button
+                    type="externalButtonLink"
+                    href="mailto:contact@upwave.net"
+                    className="nav-button"
+                  >
+                    Apply now
+                  </Button>
                 </section>
                 <section className="position-text">
                   <h3>Requirements:</h3>
@@ -53,7 +65,7 @@ class Career extends React.Component {
                   </ul>
                 </section>
                 <section className="position-footer">
-                  <Button callback={this.openDialog.bind(this)} type="button">
+                  <Button id='1' callback={this.openDialog.bind(this)} type="button">
                     More details
                   </Button>
                 </section>
@@ -61,8 +73,19 @@ class Career extends React.Component {
             </Panel>
             <Panel className="panel-collapsed">
               <section className="career-position">
-                <section className="position-header ruby">
+                <section
+                  id="2"
+                  className="position-header ruby"
+                  onClick={this.openDialog.bind(this)}
+                >
                   <h2>Junior Ruby developer</h2>
+                  <Button
+                    type="externalButtonLink"
+                    href="mailto:contact@upwave.net"
+                    className="nav-button"
+                  >
+                    Apply now
+                  </Button>
                 </section>
                 <section className="position-text">
                   <h3>Requirements:</h3>
@@ -85,7 +108,7 @@ class Career extends React.Component {
                   </ul>
                 </section>
                 <section className="position-footer">
-                  <Button callback={this.openDialog.bind(this)} type="button">
+                  <Button id="2" callback={this.openDialog.bind(this)} type="button">
                     More details
                   </Button>
                 </section>
@@ -93,10 +116,21 @@ class Career extends React.Component {
             </Panel>
           </Panel>
           <Panel isContainer={true}>
-            <Panel className="panel-collapsed">
+            <Panel className="panel-expanded">
               <section className="career-position">
-                <section className="position-header ui-ux">
-                  <h2>UI/UX developer</h2>
+                <section
+                  id="3"
+                  className="position-header js"
+                  onClick={this.openDialog.bind(this)}
+                >
+                  <h2>Javascript developer</h2>
+                  <Button
+                    type="externalButtonLink"
+                    href="mailto:contact@upwave.net"
+                    className="nav-button"
+                  >
+                    Apply now
+                  </Button>
                 </section>
                 <section className="position-text">
                   <h3>Requirements:</h3>
@@ -119,16 +153,27 @@ class Career extends React.Component {
                   </ul>
                 </section>
                 <section className="position-footer">
-                  <Button callback={this.openDialog.bind(this)} type="button">
+                  <Button id="3" callback={this.openDialog.bind(this)} type="button">
                     More details
                   </Button>
                 </section>
               </section>
             </Panel>
-            <Panel className="panel-expanded">
+            <Panel className="panel-collapsed">
               <section className="career-position">
-                <section className="position-header js">
-                  <h2>Javascript developer</h2>
+                <section
+                  id="4"
+                  className="position-header ui-ux"
+                  onClick={this.openDialog.bind(this)}
+                >
+                  <h2>UI/UX developer</h2>
+                  <Button
+                    type="externalButtonLink"
+                    href="mailto:contact@upwave.net"
+                    className="nav-button"
+                  >
+                    Apply now
+                  </Button>
                 </section>
                 <section className="position-text">
                   <h3>Requirements:</h3>
@@ -151,7 +196,7 @@ class Career extends React.Component {
                   </ul>
                 </section>
                 <section className="position-footer">
-                  <Button callback={this.openDialog.bind(this)} type="button">
+                  <Button id="4" callback={this.openDialog.bind(this)} type="button">
                     More details
                   </Button>
                 </section>
@@ -162,9 +207,10 @@ class Career extends React.Component {
         <MediaQuery query='(min-device-width: 768px)'>
           <Waves mode="black" registerAnimation={this.props.registerAnimation} />
         </MediaQuery>
+        {this.props.children}
       </section>
     );
   }
 }
 
-export default routerAnimation(Career);
+export default routerAnimation(Careers);

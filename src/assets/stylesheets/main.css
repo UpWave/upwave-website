@@ -144,7 +144,7 @@ strong {
 }
 
 .box-animation {
-  animation-name: fadeBoxIn;
+  animation-name: slideBoxIn;
   animation-duration: .5s;
 }
 
@@ -154,7 +154,7 @@ strong {
   transition-timing-function: ease-out;
 }
 
-@keyframes fadeBoxIn {
+@keyframes slideBoxIn {
   0% {
     left: 100%;
     opacity: 0;
