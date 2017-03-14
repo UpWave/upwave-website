@@ -191,7 +191,7 @@ class Projects extends React.Component {
               >{this.testemonials}</Slider>
             </MediaQuery>
           </section>
-          <ul className="bullets bullets-inline bullets-active">
+          <ul className="bullets bullets-inline bullets-active slider-bullets">
             <li
               id='0'
               className={

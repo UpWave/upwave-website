@@ -51,7 +51,7 @@
   }
 
   .logo-button {
-    position: absolute;
+    position: fixed;
     top: 25px;
     left: 25px;
     width: 60px;
@@ -109,6 +109,7 @@
     padding-top: 90px;
 
     .logo-button {
+      position: absolute;
       top: 12px;
     }
 

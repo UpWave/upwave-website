@@ -1,9 +1,8 @@
 .our-work {
   flex: 1;
   position: relative;
-  padding-bottom: 25px;
 
-  .bullets {
+  .slider-bullets {
     position: absolute;
     bottom: 6px;
     left: calc(50% - 38px);
@@ -215,7 +214,7 @@ blockquote {
   }
 
   .our-work {
-    .bullets-inline {
+    .slider-bullets-inline {
       bottom: 0;
     }
   }
@@ -280,12 +279,8 @@ blockquote {
 }
 
 @media only screen and (min-width: 1441px) {
-  .our-work {
-    margin: 0 50px !important;
-  }
-
-  .bullets {
-    display: none;
+  .slider-bullets {
+    display: none !important;
   }
 
   .arrow-next,

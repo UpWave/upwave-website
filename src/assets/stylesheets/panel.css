@@ -22,12 +22,12 @@
   }
 
   &:hover {
-    flex-grow: 10;
+    flex-grow: 25;
   }
 }
 
 .panel-expanded {
-  flex-grow: 3;
+  flex-grow: 5;
 }
 
 .panel-collapsed {
