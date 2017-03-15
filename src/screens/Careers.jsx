@@ -41,7 +41,7 @@ class Careers extends React.Component {
                     href="mailto:contact@upwave.net"
                     className="nav-button"
                   >
-                    Apply now
+                    Apply
                   </Button>
                 </section>
                 <section className="position-text">
@@ -84,7 +84,7 @@ class Careers extends React.Component {
                     href="mailto:contact@upwave.net"
                     className="nav-button"
                   >
-                    Apply now
+                    Apply
                   </Button>
                 </section>
                 <section className="position-text">
@@ -129,7 +129,7 @@ class Careers extends React.Component {
                     href="mailto:contact@upwave.net"
                     className="nav-button"
                   >
-                    Apply now
+                    Apply
                   </Button>
                 </section>
                 <section className="position-text">
@@ -172,7 +172,7 @@ class Careers extends React.Component {
                     href="mailto:contact@upwave.net"
                     className="nav-button"
                   >
-                    Apply now
+                    Apply
                   </Button>
                 </section>
                 <section className="position-text">

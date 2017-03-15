@@ -14,7 +14,7 @@ class Career extends React.Component {
               href="mailto:contact@upwave.net"
               className="nav-button"
             >
-              Apply now
+              Apply
             </Button>
           </section>
           <section className="position-text">
