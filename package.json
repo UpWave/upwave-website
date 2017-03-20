@@ -1,6 +1,6 @@
 {
   "name": "upwave_website",
-  "homepage": "https://upwave.github.io/upwave.net",
+  "homepage": "http://www.upwave.net",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
