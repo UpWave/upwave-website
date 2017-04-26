@@ -42,7 +42,7 @@ class Content extends React.Component {
 
     return (
       <section
-        className={`box-transition${skipAnimation ? ' ' : ' box-animation'}${transitionStarted ? ' box-animation-fade-out' : ''} ${className}`}
+        className={`box-transition${skipAnimation ? ' ' : ' box-animation'}${transitionStarted ? ' box-animation-fade-out' : ''}${' ' + className}`}
       >
         {this.props.children}
       </section>

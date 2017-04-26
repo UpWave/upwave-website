@@ -2,7 +2,7 @@ import React from 'react';
 
 function Testemonial({ children, signedBy, company, url, logo, className }) {
   return (
-    <section className={`testemonial-panel ${className}`}>
+    <section className={`testemonial-panel${className ? ' ' + className : ''}`}>
       <div className="testemonial-logo">
         <a
           className="testemonial-link"
@@ -10,7 +10,7 @@ function Testemonial({ children, signedBy, company, url, logo, className }) {
           role="link"
           target="_blank"
         >
-          <img src={logo} role="presentation" />
+          { logo ? <img src={logo} role="presentation" /> : <h2>{company}</h2> }
         </a>
       </div>
       <div className="testemonial-text">
@@ -32,5 +32,18 @@ function Testemonial({ children, signedBy, company, url, logo, className }) {
     </section>
   );
 }
+
+Testemonial.propTypes = {
+  children: React.PropTypes.node,
+  className: React.PropTypes.string,
+  signedBy: React.PropTypes.string.isRequired,
+  company: React.PropTypes.string.isRequired,
+  logo: React.PropTypes.string,
+  url: React.PropTypes.string.isRequired,
+};
+
+Testemonial.defaultProps = {
+  className: '',
+};
 
 export default Testemonial;

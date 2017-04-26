@@ -8,7 +8,7 @@
   overflow-x: hidden;
   overflow-y: auto;
   z-index: 2;
-  background-color: rgba(41, 48, 79, .9);
+  background-color: rgba(44, 72, 96, .9);
   animation-name: fadeDialogIn;
   animation-duration: .5s;
   transition: opacity .5s;
@@ -26,7 +26,7 @@
     height: 100%;
     background: url('../images/back.jpg') no-repeat center center fixed;
     background-size: cover;
-    opacity: .7;
+    opacity: 1;
     z-index: -1;
   }
 }

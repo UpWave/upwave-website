@@ -5,13 +5,13 @@
   width: 100%;
   min-height: 125px;
   height: auto;
-  background-color: rgba(41, 48, 79, 1);
+  background-color: rgba(44, 72, 96, 1);
 }
 
 .footer.greeting {
   display: none;
 }
-
+/*
 .who_we_are {
   .footer {
     background-color: rgba(109, 205, 233, 1);
@@ -81,7 +81,7 @@
     background-color: #7B3A3B;
   }
 }
-
+*/
 .footer-navigation {
   width: 100%;
   margin-top: 12px;
@@ -112,11 +112,11 @@
 }
 
 .social-link svg path {
-  fill: #3D4775;
+  fill: #3D6687;
 }
 
 .social-link:hover svg path {
-  fill: #515E9B;
+  fill: #6DCDE9;
 }
 
 .sitemap {
@@ -128,7 +128,7 @@
 .sitemap h3 {
   padding: 0 0 9px;
   margin: 0 10px 0 25px;
-  color: #515E9B;
+  color: #6DCDE9;
 }
 
 .sitemap h3::before {
@@ -138,7 +138,7 @@
   right: 0;
   width: 50%;
   height: 9px;
-  background: #515E9B;
+  background: #6DCDE9;
 }
 
 .sitemap-group {
@@ -148,13 +148,13 @@
 .sitemap-link {
   margin-left: 25px;
   font-size: 22px;
-  color: #3D4775;
+  color: #3D6687;
   text-transform: uppercase;
   text-decoration: none;
 }
 
 .sitemap-link:hover {
-  color: #515E9B;
+  color: #6DCDE9;
 }
 
 .copyright,
@@ -163,7 +163,7 @@
   text-transform: uppercase;
   text-align: center;
   font-size: 14px;
-  color: #3D4775;
+  color: #3D6687;
 }
 
 .copyright {

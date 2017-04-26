@@ -23,7 +23,7 @@ function AppRouter() {
         <Route path='/who_we_are' component={About} />
         <Route path='/our_work' component={Projects} />
         <Route path='/careers' component={Careers}>
-          <Route path='/career/:id' component={Career} />
+          <Route path='/careers/:id' component={Career} />
         </Route>
         <Route path='/greeting' component={Greeting} />
       </Route>

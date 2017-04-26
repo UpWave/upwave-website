@@ -12,7 +12,7 @@
   flex: 1;
   margin-bottom: 20px;
   background: #F9F9F9;
-  box-shadow: 0 0 2px rgba(65, 73, 96, .3);
+  box-shadow: 0 0 2px rgba(44, 72, 96, .3);
   border-radius: 2px;
   overflow: hidden;
   transition: flex-grow .5s;

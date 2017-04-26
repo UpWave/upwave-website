@@ -41,7 +41,7 @@ function Footer({ className }) {
       </nav>
       <span className="copyright">
         <span className="legit-name">
-          Copyright&nbsp;©&nbsp;2016&nbsp;UpWave&nbsp;Agency
+          Copyright&nbsp;©&nbsp;{(new Date()).getUTCFullYear()}&nbsp;UpWave&nbsp;Agency
         </span>
         <span className="help-links">
           <a href="mailto:contact@upwave.net">Contact&nbsp;us</a>

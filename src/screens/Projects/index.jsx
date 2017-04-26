@@ -1,9 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import MediaQuery from 'react-responsive';
-import Slider from 'nuka-carousel';
+// import MediaQuery from 'react-responsive';
 
-import Waves from '../../components/Waves';
 import Content from '../../components/Content';
 import Testemonial from '../../components/Testemonial';
 import routerAnimation from '../../components/common/components/routerAnimation';
@@ -23,13 +21,8 @@ class Projects extends React.Component {
     registerAnimation: React.PropTypes.func.isRequired,
   };
 
-  slider = null;
   mapPoints = null;
   mapPointsHandlers = [];
-
-  state = {
-    currentSlide: 0,
-  };
 
   get testemonials() {
     return [
@@ -78,8 +71,6 @@ class Projects extends React.Component {
     });
 
     this.setActiveMapPoint(0);
-
-    this.slider = this.refs.slider;
   }
 
   componentWillUnmount() {
@@ -95,16 +86,12 @@ class Projects extends React.Component {
   onMapPointClick(e) {
     switch (e.currentTarget.id) {
       case 'Lithuania':
-        this.slider.goToSlide(0);
         break;
       case 'London':
-        this.slider.goToSlide(1);
         break;
       case 'SF':
-        this.slider.goToSlide(2);
         break;
       default:
-        this.slider.goToSlide(0);
     }
   }
 
@@ -119,32 +106,12 @@ class Projects extends React.Component {
     return result;
   }
 
-  beforeSlide(prev, next) {
-    this.setState({
-      currentSlide: next
-    });
-
-    this.setActiveMapPoint(next)
-  }
-
   setActiveMapPoint(id) {
     this.mapPoints.forEach(point => {
       point.setAttribute('class', '');
     });
 
     this.mapPoints[id].setAttribute('class', 'active');
-  }
-
-  goNext() {
-    this.slider.nextSlide();
-  }
-
-  goPrev() {
-    this.slider.previousSlide();
-  }
-
-  goToSlide(e) {
-    this.slider.goToSlide(parseInt(e.currentTarget.id, 10));
   }
 
   render() {
@@ -155,14 +122,6 @@ class Projects extends React.Component {
           registerAnimation={this.props.registerAnimation}
           className="box our-work"
         >
-          <span
-            className="arrow-previous"
-            onClick={this.goPrev.bind(this)}
-          ></span>
-          <span
-            className="arrow-next"
-            onClick={this.goNext.bind(this)}
-          ></span>
           <SVGElement
             className="world-map"
             svg={worldMap}
@@ -173,51 +132,12 @@ class Projects extends React.Component {
             ref='selectedMap'
           ></SVGElement>
           <section className='testimonials-slider'>
-            <MediaQuery query='(max-device-width: 1440px)'>
-              <Slider
-                beforeSlide={this.beforeSlide.bind(this)}
-                swiping={false}
-                dragging={false}
-                wrapAround={true}
-                decorators={[]}
-                ref='slider'
-              >{this.testemonials}</Slider>
-            </MediaQuery>
-            <MediaQuery query='(min-device-width: 1441px)'>
-              <Slider
-                slidesToShow={3}
-                decorators={[]}
-                ref='slider'
-              >{this.testemonials}</Slider>
-            </MediaQuery>
+            {/* {this.testemonials} */}
           </section>
-          <ul className="bullets bullets-inline bullets-active slider-bullets">
-            <li
-              id='0'
-              className={
-                `bullet ${this.state.currentSlide === 0 ? 'active' : ''}`
-              }
-              onClick={this.goToSlide.bind(this)}
-            ></li>
-            <li
-              id='1'
-              className={
-                `bullet ${this.state.currentSlide === 1 ? 'active' : ''}`
-              }
-              onClick={this.goToSlide.bind(this)}
-            ></li>
-            <li
-              id='2'
-              className={
-                `bullet ${this.state.currentSlide === 2 ? 'active' : ''}`
-              }
-              onClick={this.goToSlide.bind(this)}
-            ></li>
-          </ul>
         </Content>
-        <MediaQuery query='(min-device-width: 768px)'>
+        {/* <MediaQuery query='(min-device-width: 768px)'>
           <Waves mode="red" registerAnimation={this.props.registerAnimation} />
-        </MediaQuery>
+        </MediaQuery> */}
       </section>
     );
   }

@@ -58,6 +58,8 @@ function Header({
           >
               Careers
           </Button>
+        </nav>
+        <nav className="navigation">
           <Button
             type="externalButtonLink"
             href="mailto:contact@upwave.net"

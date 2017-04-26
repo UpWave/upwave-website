@@ -7,6 +7,10 @@ class SVGElement extends React.Component {
     className: React.PropTypes.string,
   };
 
+  static defaultProps = {
+    className: "",
+  };
+
   componentDidMount() {
     let svgElement = ReactDOM.findDOMNode(this.refs.svgElement);
     svgElement.innerHTML = this.props.svg;

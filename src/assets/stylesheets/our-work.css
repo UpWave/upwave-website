@@ -33,7 +33,7 @@
   &::before {
     font-family: "UpWave-Bold";
     content: "\201C";
-    color: rgba(65, 73, 96, .75);
+    color: rgba(44, 72, 96, .75);
     font-size: 64px;
     position: absolute;
     left: 15px;
@@ -49,8 +49,8 @@
   width: 35px;
   height: 35px;
   transform: rotate(225deg);
-  border-top: 1px solid rgba(65, 73, 96, .75);
-  border-right: 1px solid rgba(65, 73, 96, .75);
+  border-top: 1px solid rgba(44, 72, 96, .75);
+  border-right: 1px solid rgba(44, 72, 96, .75);
   border-top-right-radius: 8px;
   z-index: 1;
 
@@ -115,7 +115,6 @@
   svg {
     width: 100%;
     height: auto;
-    transform: translateZ(0, 0, 0) perspective(1000) !important;
 
     #Lithuania:hover,
     #London:hover,
@@ -140,14 +139,14 @@
   width: 100%;
   border-radius: 2px;
   overflow: hidden;
-  box-shadow: 0 0 2px rgba(65, 73, 96, .3);
+  box-shadow: 0 0 2px rgba(44, 72, 96, .3);
 }
 
 blockquote {
   position: relative;
   font-style: italic;
-  line-height: 1.5em;
-  color: rgba(65, 73, 96, .75);
+  line-height: 1.5;
+  color: rgba(44, 72, 96, .75);
   padding: 10px 30px 10px 90px;
   text-align: justify;
   font-size: 16px;
@@ -157,12 +156,13 @@ blockquote {
     font-family: "UpWave-Medium";
     font-style: normal;
     margin-top: 14px;
-    color: rgba(65, 73, 96, .6);
+    color: rgba(44, 72, 96, .6);
     text-align: right;
     float: right;
   }
 
   .testemonial-link {
+    font-family: "UpWave-Medium";
     font-size: 16px;
   }
 }
@@ -269,7 +269,7 @@ blockquote {
 @media only screen and (min-width: 1025px) and (max-width: 1440px) {
   .testimonials-slider {
     bottom: 30px;
-    box-shadow: 0 0 2px rgba(65, 73, 96, .3);
+    box-shadow: 0 0 2px rgba(44, 72, 96, .3);
 
     .testemonial-panel {
       margin: 0;
@@ -295,7 +295,7 @@ blockquote {
       flex-direction: column;
       height: 400px;
       margin: 0 25px;
-      box-shadow: 0 0 2px rgba(65, 73, 96, .3);
+      box-shadow: 0 0 2px rgba(44, 72, 96, .3);
 
       .testemonial-logo {
         padding: 20px;

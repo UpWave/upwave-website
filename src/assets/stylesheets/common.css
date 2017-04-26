@@ -47,7 +47,7 @@ input[type="button"],
 button {
   cursor: pointer;
   font-size: 14px;
-  color: rgba(65, 73, 96, .75);
+  color: rgba(44, 72, 96, .75);
 }
 
 input[type="submit"]:hover,
@@ -56,7 +56,7 @@ input[type="button"]:hover,
 [role="button"]:hover,
 [role="link"]:hover,
 button:hover {
-  color: rgba(65, 73, 96, 1);
+  color: rgba(44, 72, 96, 1);
 }
 
 [role="link"].active {
@@ -65,12 +65,12 @@ button:hover {
 
 [role="button"] {
   padding: 10px 20px 10px 20px;
-  border: 1px solid rgba(65, 73, 96, .75);
+  border: 1px solid rgba(44, 72, 96, .75);
   border-radius: 8px;
 }
 
 [role="button"]:hover {
-  border: 1px solid rgba(65, 73, 96, 1);
+  border: 1px solid rgba(44, 72, 96, 1);
 }
 
 .bullets,
@@ -92,7 +92,7 @@ button:hover {
       height: 8px;
       margin: 0;
       border-radius: 8px;
-      background: rgba(65, 73, 96, .75);
+      background: rgba(44, 72, 96, .75);
     }
   }
 }
@@ -117,7 +117,7 @@ button:hover {
       height: 12px;
       margin: 0 9px;
       border-radius: 12px;
-      background: rgba(65, 73, 96, .5);
+      background: rgba(44, 72, 96, .5);
     }
   }
 }
@@ -127,7 +127,7 @@ button:hover {
     &:hover,
     &.active {
       &::before {
-        background: rgba(65, 73, 96, 1);
+        background: rgba(44, 72, 96, 1);
       }
     }
   }

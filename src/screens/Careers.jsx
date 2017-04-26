@@ -1,8 +1,7 @@
 import React from 'react';
-import MediaQuery from 'react-responsive';
+// import MediaQuery from 'react-responsive';
 import { browserHistory } from 'react-router';
 
-import Waves from '../components/Waves';
 import Content from '../components/Content';
 import Panel from '../components/Panel';
 import routerAnimation from '../components/common/components/routerAnimation';
@@ -16,7 +15,7 @@ class Careers extends React.Component {
   };
 
   openDialog(e) {
-    browserHistory.push(`/career/${e.currentTarget.id}`);
+    browserHistory.push(`/careers/${e.currentTarget.id}`);
   }
 
   render() {
@@ -204,9 +203,9 @@ class Careers extends React.Component {
             </Panel>
           </Panel>
         </Content>
-        <MediaQuery query='(min-device-width: 768px)'>
+        {/* <MediaQuery query='(min-device-width: 768px)'>
           <Waves mode="black" registerAnimation={this.props.registerAnimation} />
-        </MediaQuery>
+        </MediaQuery> */}
         {this.props.children}
       </section>
     );

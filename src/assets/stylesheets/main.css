@@ -37,7 +37,7 @@ body {
   height: 100%;
   overflow-x: hidden;
   font-family: 'Upwave-Book', sans-serif;
-  color: #414960;
+  color: #2c4860;
   background-color: #FDFDFE;
   overflow-x: hidden;
 }
@@ -81,20 +81,43 @@ h4 {
 }
 
 h1 {
-  padding: 20px 0 20px 0;
+  padding: 20px 0 30px 0;
   font-size: 5.36em;
   line-height: 1;
-  font-family: 'Upwave-Medium';
+  font-family: 'Upwave-Bold';
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    background: rgba(44, 72, 96, .5);
+  }
 }
 
 h2 {
   padding: 20px 0 15px 20px;
   font-size: 3em;
+  font-family: 'Upwave-Medium';
   line-height: 1.5;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 20px;
+    background: #F17174;
+  }
 }
 
 h3 {
-  padding: 10px 0 20px 0;
+  font-family: 'Upwave-Medium';
+  padding: 0 0 20px 0;
   font-size: 2em;
   line-height: 1.5;
 }
@@ -104,24 +127,8 @@ h4 {
   line-height: 1.5;
 }
 
-h1::before,
-h2::before {
-  content: '';
-  position: absolute;
-  bottom: -16px;
-  left: 0;
-  width: 300px;
-  height: 16px;
-  background: rgba(65, 73, 96, .5);
-}
-
-h2::before {
-  width: calc(50% - 40px);
-  left: 20px;
-}
-
 h1 strong {
-  font-family: 'Upwave-Medium';
+  font-family: 'Upwave-Bold';
   color: #F17174 !important;
 }
 
@@ -133,14 +140,84 @@ strong {
 .main-box {
   position: relative;
   left: 0;
+  width: 100%;
+  height: 100%;
   margin: 30px 0;
   opacity: 1;
   z-index: 1;
   align-items: left;
-}
 
-.box {
-  margin: 0 75px;
+  .main-testimonial {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 35%;
+    margin: 0 100px 50px 0;
+    align-items: flex-end;
+
+    .testemonial-panel {
+      height: auto;
+      flex: initial;
+      flex-direction: column;
+      align-items: left;
+      background: none;
+      box-shadow: none;
+
+      .testemonial-logo {
+        flex: initial;
+        padding-top: 0;
+        padding-bottom: 0;
+
+        h2 {
+          padding-left: 0;
+          padding-bottom: 20px;
+          color: #6DCDE9;
+        }
+      }
+
+      .testemonial-text {
+        padding-top: 50px;
+        border: none;
+        flex: initial;
+
+        &::before {
+          font-family: "UpWave-Bold";
+          content: "\201C";
+          color: #F17174;
+          font-size: 7em;
+          position: absolute;
+          left: 15px;
+          top: 18px;
+        }
+
+        span,
+        .testemonial-link {
+          color: #FDFDFE;
+          font-size: 1.25em;
+          line-height: 1.5;
+        }
+
+        span {
+          margin-top: 35px;
+          font-family: "UpWave-Book";
+        }
+
+        blockquote {
+          color: #FDFDFE;
+          font-size: 1.3em;
+          line-height: 1.5;
+          padding-left: 70px;
+          padding-right: 0;
+        }
+      }
+    }
+
+    .nav-button {
+      color: #FDFDFE;
+      border-color: #FDFDFE;
+      margin: 15px 0 0 0;
+    }
+  }
 }
 
 .box-animation {
@@ -156,7 +233,7 @@ strong {
 
 @keyframes slideBoxIn {
   0% {
-    left: 100%;
+    left: 10%;
     opacity: 0;
   }
   100% {
@@ -167,11 +244,12 @@ strong {
 
 .box-animation-fade-out {
   opacity: 0;
-  left: -100%;
+  left: -10%;
 }
 
 .motto {
   text-align: left;
+  margin-top: 25px;
   margin-left: 100px;
   align-items: flex-start;
   justify-content: flex-start;
@@ -217,7 +295,7 @@ strong {
   left: 0;
   width: 300px;
   height: 16px;
-  background: rgba(65, 73, 96, .5);
+  background: rgba(44, 72, 96, .5);
 }
 
 .big-letter-paragraph {
@@ -236,34 +314,259 @@ strong {
   font-family: 'Upwave-Bold';
   line-height: 1;
   margin-right: 10px;
-  border-bottom: 10px solid rgba(65, 73, 96, .5);
+  border-bottom: 10px solid rgba(44, 72, 96, .5);
   box-sizing: border-box;
 }
 
-@media only screen and (min-width: 1441px) {
-  .box {
-    margin: 25px 125px;
+@media only screen and (min-width: 1921px) {
+  .main-box {
+    margin: 60px 0;
+
+    .motto {
+      margin-left: 125px;
+
+      .nav-button {
+        margin: 0;
+        transform: scale(2.25);
+        transform-origin: left top;
+      }
+
+      h1 {
+        font-size: 8em;
+      }
+
+      h3 {
+        font-size: 2.9em;
+      }
+    }
+
+    .main-testimonial {
+      margin-right: 150px;
+
+      .nav-button {
+        transform-origin: right top;
+        transform: scale(2);
+      }
+
+      .testemonial-panel {
+        .testemonial-logo {
+          h2 {
+            font-size: 4.15em;
+          }
+        }
+
+        .testemonial-text {
+          span,
+          .testemonial-link {
+            font-size: 1.2em;
+          }
+
+          blockquote {
+            font-size: 1.9em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1441px) and (max-width: 1920px) {
+  .main-box {
+    margin: 25px 0;
+
+    .motto {
+      .nav-button {
+        margin: 0;
+        transform: scale(1.75);
+        transform-origin: left top;
+      }
+
+      h1 {
+        font-size: 6em;
+      }
+
+      h3 {
+        font-size: 2.2em;
+      }
+    }
+
+    .main-testimonial {
+      .nav-button {
+        transform-origin: right top;
+        transform: scale(1.5);
+      }
+
+      .testemonial-panel {
+        .testemonial-logo {
+          h2 {
+            font-size: 3.4em;
+          }
+        }
+
+        .testemonial-text {
+          span,
+          .testemonial-link {
+            font-size: 1.2em;
+          }
+
+          blockquote {
+            font-size: 1.4em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1281px) and (max-width: 1440px) {
+  .main-box {
+    margin-top: 0;
+
+    .motto {
+      margin-top: 0;
+      margin-left: 50px;
+
+      h1 {
+        font-size: 4.5em;
+      }
+
+      h3 {
+        font-size: 1.5em;
+      }
+    }
+
+    .main-testimonial {
+      margin-right: 50px;
+      margin-bottom: 15px;
+
+      .nav-button {
+        transform-origin: right top;
+        transform: scale(1.25);
+      }
+
+      .testemonial-panel {
+        .testemonial-logo {
+          h2 {
+            font-size: 2.25em;
+          }
+        }
+
+        .testemonial-text {
+          padding-top: 25px;
+
+          &::before {
+            top: 5px;
+          }
+
+          span,
+          .testemonial-link {
+            font-size: 1.2em;
+          }
+
+          blockquote {
+            font-size: 1em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+  .main-box {
+    margin-top: 0;
+
+    .motto {
+      margin-top: 0;
+      margin-left: 50px;
+
+      h1 {
+        font-size: 5em;
+      }
+
+      h3 {
+        font-size: 1.75em;
+      }
+    }
+
+    .main-testimonial {
+      margin-right: 50px;
+      margin-bottom: 0;
+
+      .testemonial-panel {
+        .testemonial-logo {
+          h2 {
+            font-size: 2.25em;
+          }
+        }
+
+        .testemonial-text {
+          padding-top: 25px;
+
+          &::before {
+            top: 5px;
+          }
+
+          span,
+          .testemonial-link {
+            font-size: 1.2em;
+          }
+
+          blockquote {
+            font-size: 1em;
+          }
+        }
+      }
+    }
   }
 }
 
 @media only screen and (min-width: 569px) and (max-width: 1024px) {
-  .motto {
-    margin-left: 50px;
-  }
+  .main-box {
+    .motto {
+      margin-top: 0;
+      margin-left: 50px;
 
-  h1 {
-    padding: 20px 0 20px 0;
-    font-size: 4.6em;
-  }
+      h1 {
+        font-size: 4.25em;
+      }
 
-  h2 {
-    text-align: center;
-    padding: 0;
-  }
+      h3 {
+        font-size: 1.25em;
+      }
+    }
 
-  h3 {
-    padding: 15px 0 20px 0;
-    font-size: 1.7em;
+    .main-testimonial {
+      width: 40%;
+      margin-right: 50px;
+      margin-bottom: 0;
+
+      .testemonial-panel {
+        .testemonial-logo {
+          h2 {
+            font-size: 1.75em;
+          }
+        }
+
+        .testemonial-text {
+          padding-top: 25px;
+
+          &::before {
+            top: 5px;
+            font-size: 96px;
+          }
+
+          span,
+          .testemonial-link {
+            font-size: 1em;
+          }
+
+          blockquote {
+            font-size: .9em;
+          }
+        }
+      }
+    }
   }
 }
 

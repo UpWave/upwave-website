@@ -39,6 +39,15 @@
 .navigation {
   flex-direction: row;
   align-items: center;
+
+  &:last-child {
+    .nav-button {
+      margin-right: 15px;
+      border-color: #FDFDFE;
+      color: #FDFDFE;
+      transform-origin: right top;
+    }
+  }
 }
 
 .nav-button {
@@ -53,6 +62,60 @@
 .logo-button {
   width: auto;
   height: 80%;
+}
+
+@media only screen and (min-width: 1921px) {
+  .navigation {
+    transform-origin: top left;
+
+    .nav-button {
+      margin-left: 125px;
+      transform: scale(1.75);
+    }
+  }
+
+  .navigation:last-child {
+    .nav-button {
+      transform: scale(2);
+    }
+  }
+
+  .logo-button {
+    transform-origin: top left;
+    transform: scale(1.5);
+  }
+}
+
+@media only screen and (min-width: 1441px) and (max-width: 1920px) {
+  .navigation {
+    transform-origin: top left;
+
+    .nav-button {
+      margin-left: 75px;
+      transform: scale(1.25);
+    }
+  }
+
+  .navigation:last-child {
+    .nav-button {
+      margin-right: 15px;
+      transform: scale(1.5);
+    }
+  }
+
+  .logo-button {
+    transform-origin: top left;
+    transform: scale(1.15);
+  }
+}
+
+@media only screen and (min-width: 1281px) and (max-width: 1440px) {
+  .navigation:last-child {
+    .nav-button {
+      margin-right: 0;
+      transform: scale(1.25);
+    }
+  }
 }
 
 @media only screen and (max-width: 568px) {
