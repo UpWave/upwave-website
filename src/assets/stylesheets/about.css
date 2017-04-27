@@ -1,6 +1,6 @@
 .about-us {
-  padding: 30px;
   align-items: center;
+  justify-content: center;
 }
 
 .about-us img {
@@ -12,12 +12,33 @@
 .who-we-are-term {
   width: 100%;
   min-height: 100%;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
 }
 
 .who-we-are-term svg {
   width: 100%;
   height: auto;
   transform: translateZ(0, 0, 0) perspective(1000) !important;
+}
+
+@media only screen and (min-width: 1441px) {
+  .who-we-are-term {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .about-us {
+    padding: 20px 0 40px;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .about-us {
+    padding: 20px 75px 40px;
+  }
 }
 
 @media only screen and (max-width: 568px) {
@@ -30,7 +51,4 @@
   .about-us {
     padding: 25px;
   }
-}
-
-@media only screen and (max-width: 568px) {
 }

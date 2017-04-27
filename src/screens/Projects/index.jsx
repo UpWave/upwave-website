@@ -1,16 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 // import MediaQuery from 'react-responsive';
 
 import Content from '../../components/Content';
 import Testemonial from '../../components/Testemonial';
 import routerAnimation from '../../components/common/components/routerAnimation';
-import SVGElement from '../../components/common/components/SVGElement';
 
 import '../../assets/stylesheets/our-work.css';
 
-import worldMap from './assets/world-map.svg';
-import selectedWorldMap from './assets/selected-world-map.svg';
 import ourea from './assets/ourea.png';
 import eventgeek from './assets/eventgeek.png';
 import meaningfulPlace from './assets/meaningful-place.png';
@@ -20,9 +16,6 @@ class Projects extends React.Component {
   static propTypes = {
     registerAnimation: React.PropTypes.func.isRequired,
   };
-
-  mapPoints = null;
-  mapPointsHandlers = [];
 
   get testemonials() {
     return [
@@ -58,62 +51,6 @@ class Projects extends React.Component {
     ];
   }
 
-  componentDidMount() {
-    this.mapPoints = this.getMapControls();
-
-    this.mapPoints.forEach(point => {
-      const handler = this.getOnMapPointClick();
-      const type = 'click';
-
-      point.addEventListener(type, handler);
-
-      this.mapPointsHandlers.push({ type, point, handler });
-    });
-
-    this.setActiveMapPoint(0);
-  }
-
-  componentWillUnmount() {
-    this.mapPointsHandlers.forEach(({ type, point, handler }) => {
-      point.removeEventListener(type, handler);
-    });
-  }
-
-  getOnMapPointClick() {
-    return this.onMapPointClick.bind(this);
-  }
-
-  onMapPointClick(e) {
-    switch (e.currentTarget.id) {
-      case 'Lithuania':
-        break;
-      case 'London':
-        break;
-      case 'SF':
-        break;
-      default:
-    }
-  }
-
-  getMapControls() {
-    const map = ReactDOM.findDOMNode(this.refs.selectedMap).children[0];
-    let result = [];
-
-    result.push(map.getElementById('Lithuania'));
-    result.push(map.getElementById('London'));
-    result.push(map.getElementById('SF'));
-
-    return result;
-  }
-
-  setActiveMapPoint(id) {
-    this.mapPoints.forEach(point => {
-      point.setAttribute('class', '');
-    });
-
-    this.mapPoints[id].setAttribute('class', 'active');
-  }
-
   render() {
     return (
       <section className="container">
@@ -122,17 +59,8 @@ class Projects extends React.Component {
           registerAnimation={this.props.registerAnimation}
           className="box our-work"
         >
-          <SVGElement
-            className="world-map"
-            svg={worldMap}
-          ></SVGElement>
-          <SVGElement
-            className="selected-world-map"
-            svg={selectedWorldMap}
-            ref='selectedMap'
-          ></SVGElement>
-          <section className='testimonials-slider'>
-            {/* {this.testemonials} */}
+          <section className='testimonials-container'>
+            {this.testemonials}
           </section>
         </Content>
         {/* <MediaQuery query='(min-device-width: 768px)'>
