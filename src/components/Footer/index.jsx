@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { Link } from 'react-router';
 
@@ -52,7 +53,7 @@ function Footer({ className }) {
 }
 
 Footer.propTypes = {
-  className: React.PropTypes.string,
+  className: PropTypes.string,
 };
 
 Footer.defaultProps = {

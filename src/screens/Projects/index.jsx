@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 // import MediaQuery from 'react-responsive';
 
@@ -14,7 +15,7 @@ import meaningfulPlace from './assets/meaningful-place.png';
 // TODO: REFACTOR DAT SHIT
 class Projects extends React.Component {
   static propTypes = {
-    registerAnimation: React.PropTypes.func.isRequired,
+    registerAnimation: PropTypes.func.isRequired,
   };
 
   get testemonials() {

@@ -1,10 +1,11 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
 class SVGElement extends React.Component {
   static propTypes = {
-    svg: React.PropTypes.string.isRequired,
-    className: React.PropTypes.string,
+    svg: PropTypes.string.isRequired,
+    className: PropTypes.string,
   };
 
   static defaultProps = {

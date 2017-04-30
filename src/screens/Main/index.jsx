@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Content from '../../components/Content';
@@ -49,8 +50,8 @@ function Main({ registerAnimation, isFromGreeting }) {
 }
 
 Main.propTypes = {
-  registerAnimation: React.PropTypes.func.isRequired,
-  isFromGreeting: React.PropTypes.bool,
+  registerAnimation: PropTypes.func.isRequired,
+  isFromGreeting: PropTypes.bool,
 };
 
 export default checkGreeting(routerAnimation(Main));

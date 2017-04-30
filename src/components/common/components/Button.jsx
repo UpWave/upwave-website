@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { Link } from 'react-router';
 
@@ -5,7 +6,7 @@ import '../../../assets/stylesheets/common.css';
 
 function Button(props) {
   return Button.types[props.type](props);
-};
+}
 
 // TODO: Refactor dat shit
 Button.types = {
@@ -50,11 +51,11 @@ Button.types = {
 }
 
 Button.propTypes = {
-  type: React.PropTypes.string.isRequired,
-  id: React.PropTypes.string,
-  href: React.PropTypes.string,
-  callback: React.PropTypes.func,
-  className: React.PropTypes.string,
+  type: PropTypes.string.isRequired,
+  id: PropTypes.string,
+  href: PropTypes.string,
+  callback: PropTypes.func,
+  className: PropTypes.string,
 }
 
 Button.defaultProps = {

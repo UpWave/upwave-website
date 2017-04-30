@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 function Testemonial({ children, signedBy, company, url, logo, className }) {
@@ -34,12 +35,12 @@ function Testemonial({ children, signedBy, company, url, logo, className }) {
 }
 
 Testemonial.propTypes = {
-  children: React.PropTypes.node,
-  className: React.PropTypes.string,
-  signedBy: React.PropTypes.string.isRequired,
-  company: React.PropTypes.string.isRequired,
-  logo: React.PropTypes.string,
-  url: React.PropTypes.string.isRequired,
+  children: PropTypes.node,
+  className: PropTypes.string,
+  signedBy: PropTypes.string.isRequired,
+  company: PropTypes.string.isRequired,
+  logo: PropTypes.string,
+  url: PropTypes.string.isRequired,
 };
 
 Testemonial.defaultProps = {

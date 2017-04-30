@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 // import MediaQuery from 'react-responsive';
 import { browserHistory } from 'react-router';
@@ -11,7 +12,7 @@ import '../assets/stylesheets/careers.css';
 
 class Careers extends React.Component {
   static propTypes = {
-    registerAnimation: React.PropTypes.func.isRequired,
+    registerAnimation: PropTypes.func.isRequired,
   };
 
   openDialog(e) {

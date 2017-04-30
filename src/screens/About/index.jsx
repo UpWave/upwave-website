@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 // import MediaQuery from 'react-responsive';
 
@@ -35,7 +36,7 @@ function About({ registerAnimation }) {
 }
 
 About.propTypes = {
-  registerAnimation: React.PropTypes.func.isRequired,
+  registerAnimation: PropTypes.func.isRequired,
 }
 
 export default routerAnimation(About);

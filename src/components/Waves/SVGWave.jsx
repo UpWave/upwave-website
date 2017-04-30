@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Snap from 'snapsvg';
@@ -6,10 +7,10 @@ import '../../assets/stylesheets/waves.css';
 
 class SVGWave extends React.Component {
   static propTypes = {
-    svg: React.PropTypes.string.isRequired,
-    status: React.PropTypes.string.isRequired,
-    onLeft: React.PropTypes.func.isRequired,
-    delay: React.PropTypes.number,
+    svg: PropTypes.string.isRequired,
+    status: PropTypes.string.isRequired,
+    onLeft: PropTypes.func.isRequired,
+    delay: PropTypes.number,
   };
 
   static default = {

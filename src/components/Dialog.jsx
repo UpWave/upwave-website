@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import ReactModal from 'react-modal';
 import { browserHistory } from 'react-router';
@@ -9,8 +10,8 @@ import logo from '../assets/images/logo.svg';
 
 class Dialog extends React.Component {
   static propTypes = {
-    name: React.PropTypes.string.isRequired,
-    className: React.PropTypes.string,
+    name: PropTypes.string.isRequired,
+    className: PropTypes.string,
   };
 
   static defaultProps = {

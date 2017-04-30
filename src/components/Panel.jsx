@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import '../assets/stylesheets/panel.css';
@@ -11,8 +12,8 @@ function Panel({ children, className, isContainer }) {
 }
 
 Panel.propTypes = {
-  className: React.PropTypes.string,
-  isContainer: React.PropTypes.bool,
+  className: PropTypes.string,
+  isContainer: PropTypes.bool,
 }
 
 Panel.defaultProps = {

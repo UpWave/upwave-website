@@ -1,11 +1,12 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 class Content extends React.Component {
   static propTypes = {
-    name: React.PropTypes.string.isRequired,
-    registerAnimation: React.PropTypes.func.isRequired,
-    skipAnimation: React.PropTypes.bool,
-    className: React.PropTypes.string,
+    name: PropTypes.string.isRequired,
+    registerAnimation: PropTypes.func.isRequired,
+    skipAnimation: PropTypes.bool,
+    className: PropTypes.string,
   };
 
   static defaultProps = {

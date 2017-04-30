@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { withRouter, locationShape } from 'react-router';
 import MediaQuery from 'react-responsive';
@@ -74,7 +75,7 @@ function Header({
 }
 
 Header.propTypes = {
-  isFromGreeting: React.PropTypes.bool,
+  isFromGreeting: PropTypes.bool,
   location: locationShape,
 };
 

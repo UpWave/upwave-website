@@ -94,10 +94,6 @@ module.exports = {
       }
     ],
     loaders: [
-      {
-          test: require.resolve('snapsvg'),
-          loader: 'imports-loader?this=>window,fix=>module.exports=0'
-      },
       // Process JS with Babel.
       {
         test: /\.(js|jsx)$/,

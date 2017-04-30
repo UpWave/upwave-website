@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import SVGWave from './SVGWave';
@@ -12,9 +13,9 @@ import '../../assets/stylesheets/waves.css';
 
 class Waves extends React.Component {
   static propTypes = {
-    registerAnimation: React.PropTypes.func.isRequired,
-    mode: React.PropTypes.oneOf(['multiple', 'blue', 'red', 'black']),
-    delay: React.PropTypes.number,
+    registerAnimation: PropTypes.func.isRequired,
+    mode: PropTypes.oneOf(['multiple', 'blue', 'red', 'black']),
+    delay: PropTypes.number,
   };
 
   static defaultProps = {
@@ -135,6 +136,6 @@ class Waves extends React.Component {
       </section>
     );
   }
-};
+}
 
 export default Waves;

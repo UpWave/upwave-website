@@ -1,13 +1,14 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 class TypeAhead extends React.Component {
   static propTypes = {
-    sentence: React.PropTypes.string.isRequired,
-    tag: React.PropTypes.string,
-    startImmediately: React.PropTypes.bool,
-    skipAnimation: React.PropTypes.bool,
-    delayAfter: React.PropTypes.number,
-    onFinish: React.PropTypes.func,
+    sentence: PropTypes.string.isRequired,
+    tag: PropTypes.string,
+    startImmediately: PropTypes.bool,
+    skipAnimation: PropTypes.bool,
+    delayAfter: PropTypes.number,
+    onFinish: PropTypes.func,
   };
 
   static defaultProps = {
@@ -162,6 +163,6 @@ class TypeAhead extends React.Component {
       </Tag>
     );
   }
-};
+}
 
 export default TypeAhead;
