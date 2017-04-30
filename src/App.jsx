@@ -1,11 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-snapshot';
 
 import AppRouter from './config/AppRouter';
 
 import './assets/stylesheets/main.css';
 
-ReactDOM.render(
+render(
   <AppRouter />,
   document.getElementById('root'),
 );

@@ -1,10 +1,9 @@
 .career-box {
   flex-direction: row;
   flex: 1;
-  padding: 15px 0 50px;
 
-  .panel {
-    min-height: 140px;
+  .panel-container {
+    max-height: 100%;
   }
 }
 
@@ -14,7 +13,6 @@
 
   .position-header {
     height: 80px;
-    min-height: 80px;
     align-items: center;
     justify-content: space-between;
     z-index: 1;
@@ -27,6 +25,13 @@
       font-size: 24px;
       font-family: 'Upwave-Medium';
       text-transform: uppercase;
+
+      &::before {
+        bottom: -15px;
+        left: 20px;
+        width: calc(100% - 40px);
+        background: rgba(44, 72, 96, .5);
+      }
     }
 
     .nav-button {
@@ -44,13 +49,13 @@
       padding: 15px 0 10px;
       font-size: 16px;
       font-family: 'Upwave-Medium';
+      text-transform: uppercase;
     }
   }
 
   .position-footer {
     position: relative;
-    height: 60px;
-    min-height: 60px;
+    flex: 1 0 60px;
     padding: 10px 20px 10px;
     align-items: flex-end;
     justify-content: center;
@@ -81,115 +86,269 @@
 }
 
 .career-dialog {
-  display: block;
+  flex: 1 0 auto;
   min-width: 750px;
   max-width: 750px;
   margin-right: 200px;
   margin-bottom: 75px;
   background: #F9F9F9;
-  border-radius: 2px;
+  border-radius: 8px;
 
   .position-header {
     box-shadow: 0 0 2px rgba(44, 72, 96, .3);
-    border-top-left-radius: 2px;
-    border-top-right-radius: 2px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
     cursor: default;
   }
 }
 
-@media only screen and (max-width: 568px) {
-  .career-dialog {
-    min-width: 100%;
-    max-width: 100%;
-    margin-right: 0;
-    padding-bottom: 25px;
-    margin-bottom: 0;
+// @media only screen and (max-width: 568px) {
+//   .career-dialog {
+//     min-width: 100%;
+//     max-width: 100%;
+//     margin-right: 0;
+//     padding-bottom: 25px;
+//     margin-bottom: 0;
+//
+//     .position-header {
+//       h2 {
+//         width: 150px;
+//         font-size: 17px;
+//
+//         &::before {
+//           bottom: -18px;
+//         }
+//       }
+//     }
+//   }
+//
+//   .box.career-box {
+//     padding: 0;
+//
+//     .panel {
+//       min-height: 80px;
+//       max-height: 80px;
+//
+//       &:hover {
+//         min-height: 80px;
+//         max-height: 80px;
+//       }
+//     }
+//
+//     .panel-container {
+//       min-height: 175px;
+//       max-height: 175px;
+//     }
+//
+//     .career-position {
+//       min-height: 80px;
+//       max-height: 80px;
+//
+//       .position-header {
+//         h2 {
+//           width: 150px;
+//           font-size: 17px;
+//
+//           &::before {
+//             bottom: -18px;
+//           }
+//         }
+//       }
+//
+//       .position-text,
+//       .position-footer {
+//         display: none;
+//       }
+//     }
+//   }
+// }
 
-    .position-header {
-      h2 {
-        width: 150px;
-        font-size: 17px;
+// @media only screen and (max-width: 1024px) {
+//   .career-dialog {
+//     min-width: 100%;
+//     max-width: 100%;
+//     margin-right: 0;
+//     margin-bottom: 0;
+//     padding-bottom: 75px;
+//   }
+//
+//   .career-box {
+//     flex-direction: column;
+//     flex: initial;
+//
+//     .panel {
+//       max-height: 140px;
+//
+//       &:hover {
+//         max-height: none;
+//       }
+//     }
+//
+//     .panel-container {
+//       min-height: 300px;
+//       min-width: 100%;
+//     }
+//   }
+// }
 
-        &::before {
-          bottom: -18px;
-        }
-      }
-    }
-  }
-
-  .box.career-box {
-    padding: 0;
-
-    .panel {
-      min-height: 80px;
-      max-height: 80px;
-
-      &:hover {
-        min-height: 80px;
-        max-height: 80px;
-      }
-    }
-
-    .panel-container {
-      min-height: 175px;
-      max-height: 175px;
-    }
-
-    .career-position {
-      min-height: 80px;
-      max-height: 80px;
-
-      .position-header {
-        h2 {
-          width: 150px;
-          font-size: 17px;
-
-          &::before {
-            bottom: -18px;
-          }
-        }
-      }
-
-      .position-text,
-      .position-footer {
-        display: none;
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 1024px) {
-  .career-dialog {
-    min-width: 100%;
-    max-width: 100%;
-    margin-right: 0;
-    margin-bottom: 0;
-    padding-bottom: 75px;
-  }
-
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
   .career-box {
-    flex-direction: column;
-    flex: initial;
+    padding: 25px 35px;
+  }
 
-    .panel {
-      max-height: 140px;
+  .career-position,
+  .career-dialog {
+    .position-header {
+      flex: 1 0 60px;
 
-      &:hover {
-        max-height: none;
+      h2 {
+        font-size: 1.25em;
       }
     }
 
-    .panel-container {
-      min-height: 300px;
-      min-width: 100%;
+    .position-text {
+      font-size: 0.75em;
+
+      h3 {
+        font-size: 1em;
+      }
     }
   }
 }
 
-@media only screen and (min-width: 1441px) {
+@media only screen and (min-width: 1281px) and (max-width: 1440px) {
+  .career-box {
+    padding: 35px 45px;
+  }
+
+  .career-position,
+  .career-dialog {
+    .position-header {
+      flex: 1 0 70px;
+
+      h2 {
+        font-size: 1.5em;
+      }
+    }
+
+    .position-text {
+      font-size: 0.85em;
+
+      h3 {
+        font-size: 1em;
+      }
+    }
+  }
+
+  .career-dialog {
+    .position-header {
+      padding: 0 10px;
+    }
+
+    .position-text {
+      padding: 0 30px 30px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1441px) and (max-width: 1920px) {
+  .career-box {
+    padding: 65px 75px;
+  }
+
+  .career-position,
+  .career-dialog {
+    .position-header {
+      flex: 1 0 85px;
+
+      h2 {
+        font-size: 1.75em;
+      }
+    }
+
+    .position-text {
+      font-size: 1.15em;
+
+      h3 {
+        font-size: 1em;
+      }
+    }
+
+    .position-footer {
+      .nav-button {
+        margin-bottom: 10px;
+        transform-origin: right bottom;
+      }
+    }
+
+    .nav-button {
+      transform-origin: right center;
+      transform: scale(1.25);
+    }
+  }
+
   .career-dialog {
     min-width: 1024px;
     max-width: 1024px;
     margin-right: 300px;
+
+    .position-header {
+      padding: 0 20px;
+    }
+
+    .position-text {
+      padding: 0 40px 40px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1921px) {
+  .career-box {
+    padding: 95px 105px;
+  }
+
+  .career-position,
+  .career-dialog {
+    .position-header {
+      flex: 1 0 105px;
+
+      h2 {
+        font-size: 2.25em;
+      }
+    }
+
+    .position-text {
+      font-size: 1.4em;
+
+      h3 {
+        font-size: 1.15em;
+      }
+    }
+
+    .position-footer {
+      .nav-button {
+        margin-bottom: 15px;
+        transform-origin: right bottom;
+      }
+    }
+
+    .nav-button {
+      transform-origin: right center;
+      transform: scale(1.75);
+    }
+  }
+
+  .career-dialog {
+    min-width: 1440px;
+    max-width: 1440px;
+    margin-right: 500px;
+
+    .position-header {
+      padding: 0 30px;
+    }
+
+    .position-text {
+      padding: 0 50px 50px;
+    }
   }
 }

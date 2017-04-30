@@ -1,5 +1,6 @@
 .our-work {
   position: relative;
+  padding-bottom: 10px;
 }
 
 .testimonials-container {
@@ -19,13 +20,13 @@
     border-radius: 8px;
     box-shadow: 0 0 100px rgba(0, 0, 0, .3);
     transform-origin: bottom center;
-    transform: scale(.75);
+    transform: scale(.8);
 
     &:last-child {
+      flex-grow: .5;
       margin-top: 3%;
-      margin-bottom: 5%;
       transform-origin: top center;
-      transform: scale(1.25);
+      transform: scale(1);
     }
   }
 }
@@ -214,10 +215,8 @@
       flex-direction: column;
       box-shadow: 0 0 50px rgba(0, 0, 0, .3);
       max-height: 71%;
-      transform: scale(.6);
 
       &:last-child {
-        transform: scale(.8);
         max-height: 69%;
         margin: 0;
         margin-bottom: -22%;
@@ -261,14 +260,28 @@
   .testimonials-container {
     .testemonial-panel {
       flex-direction: column;
+      padding-bottom: 10px;
       box-shadow: 0 0 75px rgba(0, 0, 0, .3);
-      max-height: 70%;
-      transform: scale(.6);
+      min-height: 68%;
 
       &:last-child {
-        transform: scale(.8);
-        margin: 0;
-        margin-bottom: -17%;
+        flex-direction: row;
+        padding-bottom: 0;
+        min-height: 38%;
+        max-height: 38%;
+        margin: -2%;
+
+        .testemonial-logo {
+          border-radius: initial;
+          border-top-left-radius: 8px;
+          border-bottom-left-radius: 8px;
+        }
+
+        .testemonial-text {
+          flex: 1.5;
+          border: none;
+          border-left: 25px solid #6DCDE9;
+        }
       }
 
       .testemonial-logo {
@@ -290,7 +303,7 @@
 
         blockquote {
           padding: 15px 25px 15px 90px;
-          font-size: 1.1em;
+          font-size: 1em;
 
           span {
             font-size: 1em;
@@ -306,17 +319,21 @@
 }
 
 @media only screen and (min-width: 1921px) {
-  .testimonials-container {
-    .testemonial-panel {
-      .testemonial-text {
-        &::before {
-          font-size: 8em;
-          left: 15px;
-          top: 15px;
-        }
+  .our-work {
+    padding-bottom: 50px;
 
-        blockquote {
-          font-size: 1.75em;
+    .testimonials-container {
+      .testemonial-panel {
+        .testemonial-text {
+          &::before {
+            font-size: 8em;
+            left: 15px;
+            top: 15px;
+          }
+
+          blockquote {
+            font-size: 1.75em;
+          }
         }
       }
     }

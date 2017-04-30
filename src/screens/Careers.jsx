@@ -64,7 +64,12 @@ class Careers extends React.Component {
                   </ul>
                 </section>
                 <section className="position-footer">
-                  <Button id='1' callback={this.openDialog.bind(this)} type="button">
+                  <Button
+                    id='1'
+                    callback={this.openDialog.bind(this)}
+                    type="button"
+                    className="nav-button"
+                  >
                     More details
                   </Button>
                 </section>
@@ -107,7 +112,12 @@ class Careers extends React.Component {
                   </ul>
                 </section>
                 <section className="position-footer">
-                  <Button id="2" callback={this.openDialog.bind(this)} type="button">
+                  <Button
+                    id='2'
+                    callback={this.openDialog.bind(this)}
+                    type="button"
+                    className="nav-button"
+                  >
                     More details
                   </Button>
                 </section>
@@ -152,7 +162,12 @@ class Careers extends React.Component {
                   </ul>
                 </section>
                 <section className="position-footer">
-                  <Button id="3" callback={this.openDialog.bind(this)} type="button">
+                  <Button
+                    id='3'
+                    callback={this.openDialog.bind(this)}
+                    type="button"
+                    className="nav-button"
+                  >
                     More details
                   </Button>
                 </section>
@@ -195,7 +210,12 @@ class Careers extends React.Component {
                   </ul>
                 </section>
                 <section className="position-footer">
-                  <Button id="4" callback={this.openDialog.bind(this)} type="button">
+                  <Button
+                    id='4'
+                    callback={this.openDialog.bind(this)}
+                    type="button"
+                    className="nav-button"
+                  >
                     More details
                   </Button>
                 </section>
