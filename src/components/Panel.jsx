@@ -5,7 +5,7 @@ import '../assets/stylesheets/panel.css';
 
 function Panel({ children, className, isContainer }) {
   return (
-    <section className={`${isContainer ? 'panel-container' : 'panel'} ${className}`}>
+    <section className={`${isContainer ? 'panel-container' : 'panel'}${className ? ' ' + className : ''}`}>
       {children}
     </section>
   );

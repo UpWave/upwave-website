@@ -31,12 +31,14 @@ html {
   width: 100%;
   height: 100%;
   min-height: 700px;
+  max-height: 100%;
 }
 
 body {
   width: 100%;
   height: 100%;
   min-height: 700px;
+  max-height: 100%;
   overflow-x: hidden;
   font-family: 'Upwave-Book', sans-serif;
   color: #2c4860;
@@ -72,6 +74,9 @@ p {
 
 .container {
   flex: 1;
+  min-height: 0;
+  height: 100%;
+  max-height: 100%;
 }
 
 h1,
@@ -142,7 +147,9 @@ strong {
   position: relative;
   left: 0;
   width: 100%;
+  min-height: 0;
   height: 100%;
+  max-height: 100%;
   opacity: 1;
   z-index: 1;
   align-items: left;

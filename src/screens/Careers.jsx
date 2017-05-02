@@ -28,7 +28,7 @@ class Careers extends React.Component {
           className="box career-box"
         >
           <Panel isContainer={true}>
-            <Panel className="panel-expanded">
+            <Panel>
               <section className="career-position">
                 <section
                   id="1"
@@ -76,7 +76,7 @@ class Careers extends React.Component {
                 </section>
               </section>
             </Panel>
-            <Panel className="panel-collapsed">
+            <Panel>
               <section className="career-position">
                 <section
                   id="2"
@@ -126,7 +126,7 @@ class Careers extends React.Component {
             </Panel>
           </Panel>
           <Panel isContainer={true}>
-            <Panel className="panel-expanded">
+            <Panel>
               <section className="career-position">
                 <section
                   id="3"
@@ -174,7 +174,7 @@ class Careers extends React.Component {
                 </section>
               </section>
             </Panel>
-            <Panel className="panel-collapsed">
+            <Panel>
               <section className="career-position">
                 <section
                   id="4"

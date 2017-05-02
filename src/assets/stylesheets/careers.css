@@ -1,18 +1,15 @@
 .career-box {
   flex-direction: row;
   flex: 1;
-
-  .panel-container {
-    max-height: 100%;
-  }
 }
 
 .career-position,
 .career-dialog {
   flex: 1;
+  min-height: 0;
 
   .position-header {
-    height: 80px;
+    flex: 1 0;
     align-items: center;
     justify-content: space-between;
     z-index: 1;
@@ -44,6 +41,7 @@
     padding: 0 20px;
     font-size: 14px;
     line-height: 1.5;
+    overflow: hidden;
 
     h3 {
       padding: 15px 0 10px;
@@ -55,7 +53,10 @@
 
   .position-footer {
     position: relative;
-    flex: 1 0 60px;
+    min-height: 60px;
+    height: 60px;
+    max-height: 60px;
+    flex: 1 0;
     padding: 10px 20px 10px;
     align-items: flex-end;
     justify-content: center;
@@ -86,7 +87,7 @@
 }
 
 .career-dialog {
-  flex: 1 0 auto;
+  flex: 1 0;
   min-width: 750px;
   max-width: 750px;
   margin-right: 200px;
@@ -199,7 +200,9 @@
   .career-position,
   .career-dialog {
     .position-header {
-      flex: 1 0 60px;
+      min-height: 60px;
+      height: 60px;
+      max-height: 60px;
 
       h2 {
         font-size: 1.25em;
@@ -224,7 +227,9 @@
   .career-position,
   .career-dialog {
     .position-header {
-      flex: 1 0 70px;
+      min-height: 70px;
+      height: 70px;
+      max-height: 70px;
 
       h2 {
         font-size: 1.5em;
@@ -259,7 +264,9 @@
   .career-position,
   .career-dialog {
     .position-header {
-      flex: 1 0 85px;
+      min-height: 85px;
+      height: 85px;
+      max-height: 85px;
 
       h2 {
         font-size: 1.75em;
@@ -310,7 +317,9 @@
   .career-position,
   .career-dialog {
     .position-header {
-      flex: 1 0 105px;
+      min-height: 105px;
+      height: 105px;
+      max-height: 105px;
 
       h2 {
         font-size: 2.25em;
