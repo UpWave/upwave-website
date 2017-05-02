@@ -5,9 +5,6 @@
 
 .career-position,
 .career-dialog {
-  flex: 1;
-  min-height: 0;
-
   .position-header {
     flex: 1 0;
     align-items: center;
@@ -86,8 +83,13 @@
   }
 }
 
+.career-position {
+  flex: 1;
+  min-height: 0;
+}
+
 .career-dialog {
-  flex: 1 0;
+  display: block;
   min-width: 750px;
   max-width: 750px;
   margin-right: 200px;
