@@ -13,6 +13,7 @@ import '../assets/stylesheets/careers.css';
 class Careers extends React.Component {
   static propTypes = {
     registerAnimation: PropTypes.func.isRequired,
+    toggleSidebar: PropTypes.func.isRequired,
   };
 
   openDialog(e) {
@@ -37,8 +38,8 @@ class Careers extends React.Component {
                 >
                   <h2>Senior Ruby developer</h2>
                   <Button
-                    type="externalButtonLink"
-                    href="mailto:contact@upwave.net"
+                    type="button"
+                    callback={e => { e.stopPropagation(); this.props.toggleSidebar(true); }}
                     className="nav-button"
                   >
                     Apply
@@ -85,8 +86,8 @@ class Careers extends React.Component {
                 >
                   <h2>Junior Ruby developer</h2>
                   <Button
-                    type="externalButtonLink"
-                    href="mailto:contact@upwave.net"
+                    type="button"
+                    callback={e => { e.stopPropagation(); this.props.toggleSidebar(true); }}
                     className="nav-button"
                   >
                     Apply
@@ -135,8 +136,8 @@ class Careers extends React.Component {
                 >
                   <h2>Javascript developer</h2>
                   <Button
-                    type="externalButtonLink"
-                    href="mailto:contact@upwave.net"
+                    type="button"
+                    callback={e => { e.stopPropagation(); this.props.toggleSidebar(true); }}
                     className="nav-button"
                   >
                     Apply
@@ -183,8 +184,8 @@ class Careers extends React.Component {
                 >
                   <h2>UI/UX developer</h2>
                   <Button
-                    type="externalButtonLink"
-                    href="mailto:contact@upwave.net"
+                    type="button"
+                    callback={e => { e.stopPropagation(); this.props.toggleSidebar(true); }}
                     className="nav-button"
                   >
                     Apply

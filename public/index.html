@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
 
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicons/favicon.ico?v=2">
     <link rel="apple-touch-icon" sizes="57x57" href="%PUBLIC_URL%/favicons/apple-icon-57x57.png">
@@ -22,6 +22,18 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="%PUBLIC_URL%/favicons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+
+    <script src='https://www.google.com/recaptcha/api.js' async defer></script>
+    <script>
+      function onReCAPTCHA(token) {
+        var form = document.getElementById('contact-us');
+        var event = document.createEvent('HTMLEvents');
+
+        event.recaptcha = token;
+        event.initEvent('submit', true, true);
+        form.dispatchEvent(event);
+      }
+    </script>
 
     <title>UpWave - Code and more...</title>
     <meta name="description" content="We build Web using Ruby/Rails, Node.JS, React.JS, Angular.JS, Meteor.JS. We build mobile using Objective-C, Swift, PhoneGap, ReactNative. We don't do features just because you say, only because of business value." />

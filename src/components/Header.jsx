@@ -12,6 +12,7 @@ import '../assets/stylesheets/header.css';
 function Header({
   location: { pathname },
   isFromGreeting,
+  toggleSidebar,
 }) {
   return (
     <header className="header">
@@ -62,8 +63,8 @@ function Header({
         </nav>
         <nav className="navigation">
           <Button
-            type="externalButtonLink"
-            href="mailto:contact@upwave.net"
+            type="button"
+            callback={() => toggleSidebar()}
             className="nav-button sm-hide"
           >
             Get in touch
@@ -76,6 +77,7 @@ function Header({
 
 Header.propTypes = {
   isFromGreeting: PropTypes.bool,
+  toggleSidebar: PropTypes.func,
   location: locationShape,
 };
 

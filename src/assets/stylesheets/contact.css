@@ -1,0 +1,89 @@
+.contact-bar {
+  flex: 1;
+  width: 500px;
+  box-shadow: inset 50px 0 50px -50px #000000;
+  padding-top: 75px;
+
+  h2 {
+    display: inline;
+    padding: 0 25px 20px;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: #FDFDFE;
+
+    &::before {
+      width: calc(100% - 50px);
+      left: 25px;
+    }
+  }
+
+  .grecaptcha-badge {
+    position: absolute;
+    bottom: -75px;
+    left: 50%;
+    transform: translateX(-50%) scale(.75);
+  }
+
+  .contact-form,
+  .contact-map,
+  .google-map {
+    flex: 1;
+    width: 100%;
+  }
+
+  #contact-us {
+    position: relative;
+    width: 100%;
+
+    .form-buttons {
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+      justify-content: space-between;
+      color: #FDFDFE;
+
+      .g-recaptcha {
+        opacity: .85;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      .g-recaptcha,
+      .nav-button {
+        flex: 1 1;
+        width: auto;
+      }
+
+      .divider {
+        margin: 0 15px;
+        opacity: .85;
+      }
+
+      .nav-button {
+        font-size: 1.5em;
+        margin: 0;
+        border-color: #FDFDFE;
+        color: #FDFDFE;
+        opacity: .85;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .contact-form,
+  .contact-map {
+    align-items: center;
+    flex: 1;
+    padding: 0 25px;
+  }
+
+  .google-map {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}

@@ -14,14 +14,20 @@
     flex-direction: row;
 
     h2 {
-      bottom: 10px;
-      padding: 0 20px;
+      bottom: 0px;
+      padding: 0 20px 15px;
       font-size: 24px;
-      font-family: 'Upwave-Medium';
+      font-family: 'Upwave-Medium', sans-serif;
       text-transform: uppercase;
+      min-width: 0;
+      width: auto;
+      max-width: 75%;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
 
       &::before {
-        bottom: -15px;
+        bottom: 0px;
         left: 20px;
         width: calc(100% - 40px);
         background: rgba(44, 72, 96, .5);
@@ -43,7 +49,7 @@
     h3 {
       padding: 15px 0 10px;
       font-size: 16px;
-      font-family: 'Upwave-Medium';
+      font-family: 'Upwave-Medium', sans-serif;
       text-transform: uppercase;
     }
   }
@@ -329,7 +335,7 @@
     }
 
     .position-text {
-      font-size: 1.4em;
+      font-size: 1.25em;
 
       h3 {
         font-size: 1.15em;

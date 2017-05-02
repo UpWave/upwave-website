@@ -43,7 +43,6 @@ body {
   font-family: 'Upwave-Book', sans-serif;
   color: #2c4860;
   background-color: #FDFDFE;
-  overflow-x: hidden;
 }
 
 body,
@@ -91,7 +90,7 @@ h1 {
   padding: 20px 0 25px 0;
   font-size: 5.36em;
   line-height: 1;
-  font-family: 'Upwave-Medium';
+  font-family: 'Upwave-Medium', sans-serif;
 
   &::before {
     content: '';
@@ -107,7 +106,7 @@ h1 {
 h2 {
   padding: 20px 0 15px 20px;
   font-size: 3em;
-  font-family: 'Upwave-Medium';
+  font-family: 'Upwave-Medium', sans-serif;
   line-height: 1.5;
 
   &::before {
@@ -122,7 +121,7 @@ h2 {
 }
 
 h3 {
-  font-family: 'Upwave-Medium';
+  font-family: 'Upwave-Medium', sans-serif;
   padding: 0 0 20px 0;
   font-size: 2em;
   line-height: 1.5;
@@ -188,7 +187,7 @@ strong {
         flex: initial;
 
         &::before {
-          font-family: "UpWave-Bold";
+          font-family: "UpWave-Bold", sans-serif;
           content: "\201C";
           color: #F17174;
           font-size: 7em;
@@ -206,7 +205,7 @@ strong {
 
         span {
           margin-top: 35px;
-          font-family: "UpWave-Book";
+          font-family: "UpWave-Book", sans-serif;
         }
 
         blockquote {
@@ -233,6 +232,7 @@ strong {
 }
 
 .box-transition {
+  transition-timing-function: ease-out;
   transition-property: left, opacity;
   transition-duration: .5s, .5s;
   transition-timing-function: ease-out;
@@ -318,7 +318,7 @@ strong {
   float: left;
   color: #F17174;
   font-size: 3.5em;
-  font-family: 'Upwave-Bold';
+  font-family: 'Upwave-Bold', sans-serif;
   line-height: 1;
   margin-right: 10px;
   border-bottom: 10px solid rgba(44, 72, 96, .5);
