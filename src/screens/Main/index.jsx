@@ -54,4 +54,4 @@ Main.propTypes = {
   isFromGreeting: PropTypes.bool,
 };
 
-export default checkGreeting(routerAnimation(Main));
+export default routerAnimation(Main);
