@@ -20,7 +20,10 @@ class Root extends React.Component {
   };
 
   get children() {
+    if (!this.props.children) return this.props.children;
+
     const { isFromGreeting } = this.state;
+
     return React.cloneElement(this.props.children, {
       isFromGreeting,
       toggleSidebar: this.toggleSidebar.bind(this),
@@ -64,6 +67,7 @@ class Root extends React.Component {
             <Footer />
             <HighWaves />
             {/* <Background /> */}
+            <section id="dialogs" />
           </section>
         </Scrollbar>
       </Sidebar>

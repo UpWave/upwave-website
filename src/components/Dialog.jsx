@@ -47,7 +47,7 @@ class Dialog extends React.Component {
         ariaHideApp={true}
         shouldCloseOnOverlayClick={false}
         role="dialog"
-        parentSelector={() => document.body}
+        parentSelector={() => document.getElementById('dialogs')}
       >
         <Button type="link" href="/" className="logo-button">
           <img src={logo} alt="UpWave logo" className="logo" />

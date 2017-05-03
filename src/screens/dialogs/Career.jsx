@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import Dialog from '../../components/Dialog';
 import Scrollbar from '../../components/Scrollbar';
 import Button from '../../components/common/components/Button';
@@ -12,8 +14,8 @@ class Career extends React.Component {
               <section className="position-header ruby">
                 <h2>Senior Ruby developer</h2>
                 <Button
-                  type="externalButtonLink"
-                  href="mailto:contact@upwave.net"
+                  type="button"
+                  callback={e => { e.stopPropagation(); this.props.toggleSidebar(true); }}
                   className="nav-button"
                 >
                   Apply
@@ -50,5 +52,9 @@ class Career extends React.Component {
     );
   }
 }
+
+Career.propTypes = {
+  toggleSidebar: PropTypes.func.isRequired,
+};
 
 export default Career;

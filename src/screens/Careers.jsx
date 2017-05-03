@@ -16,6 +16,14 @@ class Careers extends React.Component {
     toggleSidebar: PropTypes.func.isRequired,
   };
 
+  get children() {
+    if (!this.props.children) return this.props.children;
+
+    return React.cloneElement(this.props.children, {
+      toggleSidebar: this.props.toggleSidebar,
+    });
+  }
+
   openDialog(e) {
     browserHistory.push(`/careers/${e.currentTarget.id}`);
   }
@@ -228,7 +236,7 @@ class Careers extends React.Component {
         {/* <MediaQuery query='(min-device-width: 768px)'>
           <Waves mode="black" registerAnimation={this.props.registerAnimation} />
         </MediaQuery> */}
-        {this.props.children}
+        {this.children}
       </section>
     );
   }

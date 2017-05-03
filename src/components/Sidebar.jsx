@@ -13,6 +13,7 @@ class Sidebar extends React.Component {
     return {
       sidebar: {
         background: '#495560',
+        zIndex: 333,
       },
     };
   }

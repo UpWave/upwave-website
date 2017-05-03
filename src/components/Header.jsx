@@ -64,7 +64,7 @@ function Header({
         <nav className="navigation">
           <Button
             type="button"
-            callback={() => toggleSidebar()}
+            callback={() => toggleSidebar(true)}
             className="nav-button sm-hide"
           >
             Get in touch
