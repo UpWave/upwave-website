@@ -43,8 +43,6 @@
   &:last-child {
     .nav-button {
       margin-right: 15px;
-      border-color: #FDFDFE;
-      color: #FDFDFE;
       transform-origin: right top;
     }
   }

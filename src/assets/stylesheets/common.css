@@ -48,6 +48,7 @@ button {
   cursor: pointer;
   font-size: 14px;
   color: rgba(44, 72, 96, .75);
+  transition: all .2s ease-out;
 }
 
 input[type="reset"]:hover,
@@ -64,8 +65,51 @@ button:hover {
 
 [role="button"] {
   padding: 10px 20px 10px 20px;
-  border: 1px solid rgba(44, 72, 96, .75);
-  border-radius: 8px;
+  border: 1px solid rgba(44, 72, 96, 1);
+  color: rgba(44, 72, 96, 1);
+  border-radius: 100px;
+  opacity: 0.95;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+[role="button"].active {
+  border: none;
+  background: #FDFDFE;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .3);
+}
+
+[role="button"].link {
+  position: relative;
+  border: none;
+  padding-left: 0;
+  padding-bottom: 0;
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 6px;
+    top: 16px;
+    height: 8px;
+    width: 8px;
+    border-top: 1px solid rgba(44, 72, 96, 1);
+    border-right: 1px solid rgba(44, 72, 96, 1);
+    border-top-right-radius: 2px;
+    transform: translateY(-50%) rotate(45deg);
+    opacity: 1;
+    transition: all .2s ease-out;
+  }
+}
+
+[role="button"].link:hover {
+  color: #FE777A !important;
+
+  &::after {
+    right: 0;
+    opacity: 0;
+  }
 }
 
 .bullets,
@@ -142,10 +186,10 @@ form textarea {
   border-radius: 8px;
   display: block;
   width: 100%;
-  margin-top: 25px;
-  font-size: 1.25em;
+  margin-top: 30px;
+  font-size: 1.5em;
   font-family: 'UpWave-Book', sans-serif;
-  box-shadow: 0 0 50px rgba(0, 0, 0, .3);
+  box-shadow: 0 0 20px rgba(0, 0, 0, .3);
   resize: none;
   background: #FDFDFE;
   box-sizing: border-box;
@@ -158,6 +202,54 @@ form textarea {
   opacity: .85;
 }
 
+.in-error {
+  border: 1px solid #FE777A !important;
+}
+
+.field-error {
+  display: flex;
+  color: #FE777A !important;
+  padding: 6px 20px 0 20px;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.5;
+}
+
+.form-notice {
+  display: flex;
+  padding: 20px;
+  color: #55A0B6;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  background: rgb(182, 224, 237);
+  border-radius: 8px;
+  line-height: 1.5;
+  margin-top: 30px;
+}
+
+.loading::before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 9px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #FDFDFE;
+  border-bottom-color: #FDFDFE;
+  animation: loading .8s ease infinite;
+  z-index: 1;
+}
+
+@keyframes loading {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 form input:focus, form textarea:focus {
   opacity: 1;
 }
@@ -167,8 +259,14 @@ form input[type="submit"] {
   background: #6DCDE9;
   cursor: pointer;
   font-size: 1.5em;
+  border-radius: 100px;
   padding: 10px 20px 10px 20px;
-  box-shadow: 0 0 50px rgba(0, 0, 0, .3);
+  box-shadow: 0 0 20px rgba(0, 0, 0, .3);
+  opacity: 0.95;
+
+  &:hover {
+    opacity: 1;
+  }
 }
 
 form textarea {

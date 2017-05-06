@@ -12,7 +12,7 @@ import Main from '../screens/Main';
 import About from '../screens/About';
 import Projects from '../screens/Projects';
 import Careers from '../screens/Careers';
-import Greeting from '../screens/Greeting';
+// import Greeting from '../screens/Greeting';
 import Career from '../screens/dialogs/Career';
 
 function AppRouter() {
@@ -25,7 +25,7 @@ function AppRouter() {
         <Route path='/careers' component={Careers}>
           <Route path='/careers/:id' component={Career} />
         </Route>
-        <Route path='/greeting' component={Greeting} />
+        {/* <Route path='/greeting' component={Greeting} /> */}
       </Route>
       <Redirect from="/*" to="/" />
     </Router>

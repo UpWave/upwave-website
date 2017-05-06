@@ -3,7 +3,6 @@ import React from 'react';
 
 import Content from '../../components/Content';
 import routerAnimation from '../../components/common/components/routerAnimation';
-import checkGreeting from '../../components/common/components/checkGreeting';
 import Button from '../../components/common/components/Button';
 import Testemonial from '../../components/Testemonial';
 

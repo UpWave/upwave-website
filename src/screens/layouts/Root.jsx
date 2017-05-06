@@ -6,7 +6,6 @@ import HighWaves from '../../components/HighWaves';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Sidebar from '../../components/Sidebar';
-import Scrollbar from '../../components/Scrollbar';
 import Contact from '../dialogs/Contact';
 
 class Root extends React.Component {
@@ -60,16 +59,14 @@ class Root extends React.Component {
         sidebar={<Contact toggleSidebar={this.toggleSidebar.bind(this)} />}
         opened={this.state.sidebarOpened}
       >
-        <Scrollbar>
-          <section className={`content${this.pathname}`}>
-            <Header isFromGreeting={isFromGreeting} toggleSidebar={this.toggleSidebar.bind(this)} />
-            {this.children}
-            <Footer />
-            <HighWaves />
-            {/* <Background /> */}
-            <section id="dialogs" />
-          </section>
-        </Scrollbar>
+        <section className={`content${this.pathname}`}>
+          <Header isFromGreeting={isFromGreeting} toggleSidebar={this.toggleSidebar.bind(this)} />
+          {this.children}
+          <Footer />
+          <HighWaves />
+          {/* <Background /> */}
+          <section id="dialogs" />
+        </section>
       </Sidebar>
     );
   }

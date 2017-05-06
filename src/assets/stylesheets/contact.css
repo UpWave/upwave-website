@@ -17,13 +17,6 @@
     }
   }
 
-  .grecaptcha-badge {
-    position: absolute;
-    bottom: -75px;
-    left: 50%;
-    transform: translateX(-50%) scale(.75);
-  }
-
   .contact-form,
   .contact-map,
   .google-map {
@@ -42,17 +35,16 @@
       justify-content: space-between;
       color: #FDFDFE;
 
-      .g-recaptcha {
-        opacity: .85;
-
-        &:hover {
-          opacity: 1;
-        }
+      .submit-button,
+      .nav-button {
+        flex: 1 1 50%;
+        width: auto;
       }
 
-      .g-recaptcha,
-      .nav-button {
-        flex: 1 1;
+      .submit-button-wrapper {
+        position: relative;
+        display: flex;
+        flex: 1 1 50%;
         width: auto;
       }
 
@@ -66,11 +58,6 @@
         margin: 0;
         border-color: #FDFDFE;
         color: #FDFDFE;
-        opacity: .85;
-
-        &:hover {
-          opacity: 1;
-        }
       }
     }
   }
@@ -79,7 +66,7 @@
   .contact-map {
     align-items: center;
     flex: 1;
-    padding: 0 25px;
+    padding: 0 35px;
   }
 
   .google-map {

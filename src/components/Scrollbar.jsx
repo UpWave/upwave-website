@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ReactScrollbar from 'react-custom-scrollbars';
+import ReactScrollbar from 'react-scrollbar';
 
 class Scrollbar extends React.Component {
   static propTypes = {
@@ -9,13 +9,7 @@ class Scrollbar extends React.Component {
 
   render() {
     return (
-      <ReactScrollbar
-        universal
-        autoHide
-        autoHideTimeout={1000}
-        autoHideDuration={200}
-        style={{ width: '100%', height: '100%' }}
-      >
+      <ReactScrollbar>
         {this.props.children}
       </ReactScrollbar>
     );

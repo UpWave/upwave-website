@@ -13,20 +13,17 @@
   border-radius: 8px;
 
   .testemonial-panel {
-    flex: 0 1 50%;
+    flex: 0 1 40%;
     flex-direction: row;
     position: relative;
+    margin: 5% 2%;
     background: #F9F9F9;
     border-radius: 8px;
     box-shadow: 0 0 100px rgba(0, 0, 0, .3);
-    transform-origin: bottom center;
-    transform: scale(.8);
 
     &:last-child {
-      flex-grow: .5;
-      margin-top: 3%;
-      transform-origin: top center;
-      transform: scale(1);
+      transform-origin: center top;
+      transform: scale(1.35);
     }
   }
 }
@@ -318,24 +315,24 @@
   }
 }
 
-@media only screen and (min-width: 1921px) {
-  .our-work {
-    padding-bottom: 50px;
-
-    .testimonials-container {
-      .testemonial-panel {
-        .testemonial-text {
-          &::before {
-            font-size: 8em;
-            left: 15px;
-            top: 15px;
-          }
-
-          blockquote {
-            font-size: 1.75em;
-          }
-        }
-      }
-    }
-  }
-}
+// @media only screen and (min-width: 1921px) {
+//   .our-work {
+//     padding-bottom: 50px;
+//
+//     .testimonials-container {
+//       .testemonial-panel {
+//         .testemonial-text {
+//           &::before {
+//             font-size: 8em;
+//             left: 15px;
+//             top: 15px;
+//           }
+//
+//           blockquote {
+//             font-size: 1.75em;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }

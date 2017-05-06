@@ -29,7 +29,8 @@
         var form = document.getElementById('contact-us');
         var event = document.createEvent('HTMLEvents');
 
-        event.recaptcha = token;
+        event.isReCAPTCHASet = true;
+        event.reCAPTCHA = token;
         event.initEvent('submit', true, true);
         form.dispatchEvent(event);
       }

@@ -15,6 +15,9 @@ class Sidebar extends React.Component {
         background: '#495560',
         zIndex: 333,
       },
+      content: {
+        overflowY: 'auto',
+      }
     };
   }
 
@@ -22,11 +25,12 @@ class Sidebar extends React.Component {
     return (
       <ReactSidebar
         sidebar={this.props.sidebar}
+        docked={this.props.opened}
         transitions={true}
         pullRight={true}
-        docked={this.props.opened}
         styles={this.styles}
         shadow={false}
+        contentClassName="sidebar-wrapper"
       >
         {this.props.children}
       </ReactSidebar>

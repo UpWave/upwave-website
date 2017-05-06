@@ -75,9 +75,8 @@ class Careers extends React.Component {
                 </section>
                 <section className="position-footer">
                   <Button
-                    id='1'
-                    callback={this.openDialog.bind(this)}
-                    type="button"
+                    href='/careers/1'
+                    type="buttonLink"
                     className="nav-button"
                   >
                     More details
@@ -123,9 +122,8 @@ class Careers extends React.Component {
                 </section>
                 <section className="position-footer">
                   <Button
-                    id='2'
-                    callback={this.openDialog.bind(this)}
-                    type="button"
+                    href='/careers/2'
+                    type="buttonLink"
                     className="nav-button"
                   >
                     More details
@@ -173,9 +171,8 @@ class Careers extends React.Component {
                 </section>
                 <section className="position-footer">
                   <Button
-                    id='3'
-                    callback={this.openDialog.bind(this)}
-                    type="button"
+                    href='/careers/3'
+                    type="buttonLink"
                     className="nav-button"
                   >
                     More details
@@ -221,9 +218,8 @@ class Careers extends React.Component {
                 </section>
                 <section className="position-footer">
                   <Button
-                    id='4'
-                    callback={this.openDialog.bind(this)}
-                    type="button"
+                    href='/careers/4'
+                    type="buttonLink"
                     className="nav-button"
                   >
                     More details

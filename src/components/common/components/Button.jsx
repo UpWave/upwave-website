@@ -22,7 +22,7 @@ Button.types = {
     </Link>
   ),
   button: ({ callback, className, children, id }) => (
-    <a id={id} role='button' onClick={callback} className={className}>
+    <a id={id} role='button' onClick={callback} className={`${className ? ' ' + className : '' } active`}>
       {children}
     </a>
   ),
@@ -31,7 +31,7 @@ Button.types = {
       id={id}
       to={href}
       role="button"
-      className={className}
+      className={`${className ? ' ' + className : '' } link`}
       onClick={e => e.stopPropagation()}
     >
       {children}
@@ -42,7 +42,7 @@ Button.types = {
       id={id}
       href={href}
       role='button'
-      className={className}
+      className={`${className ? ' ' + className : '' }`}
       onClick={e => e.stopPropagation()}
     >
       {children}

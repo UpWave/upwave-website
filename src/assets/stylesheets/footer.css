@@ -5,6 +5,7 @@
   width: 100%;
   min-height: 125px;
   height: auto;
+  padding-right: 100px;
   background-color: rgba(44, 72, 96, 1);
 
   &::after {
