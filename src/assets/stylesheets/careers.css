@@ -111,94 +111,108 @@
   }
 }
 
-// @media only screen and (max-width: 568px) {
-//   .career-dialog {
-//     min-width: 100%;
-//     max-width: 100%;
-//     margin-right: 0;
-//     padding-bottom: 25px;
-//     margin-bottom: 0;
-//
-//     .position-header {
-//       h2 {
-//         width: 150px;
-//         font-size: 17px;
-//
-//         &::before {
-//           bottom: -18px;
-//         }
-//       }
-//     }
-//   }
-//
-//   .box.career-box {
-//     padding: 0;
-//
-//     .panel {
-//       min-height: 80px;
-//       max-height: 80px;
-//
-//       &:hover {
-//         min-height: 80px;
-//         max-height: 80px;
-//       }
-//     }
-//
-//     .panel-container {
-//       min-height: 175px;
-//       max-height: 175px;
-//     }
-//
-//     .career-position {
-//       min-height: 80px;
-//       max-height: 80px;
-//
-//       .position-header {
-//         h2 {
-//           width: 150px;
-//           font-size: 17px;
-//
-//           &::before {
-//             bottom: -18px;
-//           }
-//         }
-//       }
-//
-//       .position-text,
-//       .position-footer {
-//         display: none;
-//       }
-//     }
-//   }
-// }
+@media only screen and (max-width: 568px) {
+  .box.career-box {
+    padding: 0 15px;
 
-// @media only screen and (max-width: 1024px) {
-//   .career-dialog {
-//     min-width: 100%;
-//     max-width: 100%;
-//     margin-right: 0;
-//     margin-bottom: 0;
-//     padding-bottom: 75px;
-//   }
-//
-//   .career-box {
-//     flex-direction: column;
-//     flex: initial;
-//
-//     .panel {
-//       max-height: 140px;
-//
-//       &:hover {
-//         max-height: none;
-//       }
-//     }
-//
-//     .panel-container {
-//       min-height: 300px;
-//       min-width: 100%;
-//     }
-//   }
-// }
+    .panel {
+      min-height: 60px;
+      max-height: 60px;
+    }
+
+    .nav-button {
+      margin-left: 0;
+    }
+
+    .panel-container {
+      min-height: 135px;
+      max-height: 135px;
+    }
+
+    .career-position {
+      min-height: 60px;
+      max-height: 60px;
+
+      .position-header {
+        h2 {
+          max-width: 135px;
+          font-size: 17px;
+
+          &::before {
+            height: 15px;
+          }
+        }
+      }
+
+      .position-text,
+      .position-footer {
+        display: none;
+      }
+    }
+  }
+
+  .career-dialog {
+    padding: 0;
+
+    .position-header {
+      min-height: 60px;
+      max-height: 60px;
+
+      h2 {
+        max-width: 135px;
+        font-size: 17px;
+
+        &::before {
+          height: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .career-dialog {
+    min-width: 100%;
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 0;
+    padding-bottom: 75px;
+  }
+
+  .box.career-box {
+    padding: 35px 50px;
+    flex-direction: column;
+    flex: initial;
+
+    .panel {
+      margin-bottom: 25px;
+    }
+
+    .panel-container {
+      min-height: 300px;
+      min-width: 100%;
+      margin: 0;
+
+      .position-header {
+        min-height: 60px;
+        height: 60px;
+        max-height: 60px;
+
+        h2 {
+          font-size: 1.25em;
+        }
+      }
+
+      .position-text {
+        font-size: 0.75em;
+
+        h3 {
+          font-size: 1em;
+        }
+      }
+    }
+  }
+}
 
 @media only screen and (min-width: 1025px) and (max-width: 1280px) {
   .career-box {

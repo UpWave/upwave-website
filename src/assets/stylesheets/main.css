@@ -74,8 +74,6 @@ p {
 
 .content {
   position: relative;
-  width: calc(100% + 100px);
-  padding-right: 100px;
 }
 
 .sidebar-wrapper {
@@ -337,6 +335,13 @@ strong {
   margin-right: 10px;
   border-bottom: 10px solid rgba(44, 72, 96, .5);
   box-sizing: border-box;
+}
+
+@media only screen and (min-width: 1024px) {
+  .content {
+    width: calc(100% + 100px);
+    padding-right: 100px;
+  }
 }
 
 @media only screen and (min-width: 1921px) {
