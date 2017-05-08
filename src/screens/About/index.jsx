@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-// import MediaQuery from 'react-responsive';
 
 import Paragraph from '../../components/Paragraph';
 import Content from '../../components/Content';
@@ -28,9 +27,6 @@ function About({ registerAnimation }) {
           </Paragraph>
         </section>
       </Content>
-      {/* <MediaQuery query='(min-device-width: 768px)'>
-        <Waves mode="blue" registerAnimation={registerAnimation} />
-      </MediaQuery> */}
     </section>
   );
 }

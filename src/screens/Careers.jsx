@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-// import MediaQuery from 'react-responsive';
 import { browserHistory } from 'react-router';
 
 import Content from '../components/Content';
@@ -229,9 +228,6 @@ class Careers extends React.Component {
             </Panel>
           </Panel>
         </Content>
-        {/* <MediaQuery query='(min-device-width: 768px)'>
-          <Waves mode="black" registerAnimation={this.props.registerAnimation} />
-        </MediaQuery> */}
         {this.children}
       </section>
     );

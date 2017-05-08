@@ -41,14 +41,30 @@
   }
 }
 
-@media only screen and (max-width: 568px) {
-  .box.about-us {
-    padding: 0;
-  }
-}
-
 @media only screen and (min-width: 569px) and (max-width: 1024px) {
   .about-us {
     padding: 25px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .box.about-us {
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 568px) {
+  .box.about-us {
+    margin: 0;
+    padding: 0 15px;
+    font-size: 1.05em;
+    line-height: 1.5;
+    justify-content: flex-start;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .box.about-us {
+    font-size: .8em;
   }
 }
