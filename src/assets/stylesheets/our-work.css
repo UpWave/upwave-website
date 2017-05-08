@@ -119,104 +119,32 @@
   }
 }
 
-// @media only screen and (max-width: 568px) {
-//   .arrow-next,
-//   .arrow-previous,
-//   .world-map,
-//   .selected-world-map {
-//     display: none;
-//   }
-//
-//   .testimonials-container {
-//     position: relative;
-//     bottom: initial;
-//     top: 0;
-//     left: 0;
-//     min-height: 100%;
-//
-//     .testemonial-panel {
-//       .testemonial-logo {
-//         max-height: 50px;
-//       }
-//
-//       .testemonial-text {
-//         padding: 5px 0;
-//         justify-content: flex-start;
-//         align-items: center;
-//
-//         blockquote {
-//           font-size: 14px;
-//           line-height: 1.4em;
-//
-//           span {
-//             margin-top: 5px;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-//
-// @media only screen and (max-width: 768px) {
-//   .world-map,
-//   .selected-world-map {
-//     top: 25px;
-//     padding: 0;
-//     transform: scale(1.15);
-//   }
-//
-//   .our-work {
-//     .slider-bullets-inline {
-//       bottom: 0;
-//     }
-//   }
-//
-//   .testemonial-panel {
-//     flex-direction: column;
-//     height: 600px;
-//
-//     .testemonial-logo {
-//       padding: 70px;
-//       border-radius: 0;
-//       border-top-left-radius: 2px;
-//       border-top-right-radius: 2px;
-//
-//       .testemonial-link {
-//         img {
-//           max-width: 100%;
-//         }
-//       }
-//     }
-//
-//     .testemonial-text {
-//       border: none;
-//       border-top: 16px solid rgba(109, 205, 233, .75);
-//
-//       &::before {
-//         font-size: 96px;
-//         left: 20px;
-//         top: 20px;
-//       }
-//
-//       blockquote {
-//         padding: 10px 30px 10px 90px;
-//         font-size: 16px;
-//       }
-//     }
-//   }
-// }
+@media only screen and (max-width: 568px) {
+  .our-work {
+    padding: 0 15px 15px;
 
-@media only screen and (min-width: 569px) and (max-width: 1024px) {
-  .testimonials-container {
-    .testemonial-panel {
-      flex-direction: column;
-      box-shadow: 0 0 50px rgba(0, 0, 0, .3);
-      max-height: 71%;
+    .testimonials-container {
+      flex: 1;
+      flex-direction: row;
+      flex-wrap: wrap-reverse;
+      align-items: stretch;
+      justify-content: space-between;
+      width: 100%;
+      border-radius: 8px;
 
-      &:last-child {
-        max-height: 69%;
+      .testemonial-panel {
+        flex: 1 0;
+        max-height: 600px;
+        flex-direction: column;
+        position: relative;
         margin: 0;
-        margin-bottom: -22%;
+        background: #F9F9F9;
+        border-radius: 8px;
+        box-shadow: 0 0 50px rgba(0, 0, 0, .3);
+
+        &:last-child {
+          transform: none;
+        }
       }
 
       .testemonial-logo {
@@ -226,21 +154,145 @@
       }
 
       .testemonial-text {
-        flex: 2;
+        flex: 5;
         border: none;
-        border-top: 25px solid #6DCDE9;
+        border-top: 15px solid #6DCDE9;
 
         &::before {
-          font-size: 86px;
-          left: 20px;
-          top: 15px;
+          font-family: "UpWave-Bold";
+          content: "\201C";
+          color: #6DCDE9;
+          font-size: 4.5em;
+          position: absolute;
+          left: 10px;
+          top: 5px;
         }
 
         blockquote {
-          padding: 15px 25px 15px 90px;
-          font-size: 1em;
+          padding: 10px 15px 10px 40px;
+          font-size: .8em;
 
           span {
+            margin-top: 15px;
+            font-size: 1em;
+          }
+
+          .testemonial-link {
+            font-size: 1.1em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 569px) and (max-width: 768px) {
+  .box.our-work {
+    margin: 0;
+    padding: 50px;
+
+    .testimonials-container {
+      flex: 1;
+      flex-direction: column;
+      flex-wrap: wrap-reverse;
+      align-items: stretch;
+      justify-content: space-between;
+      width: 100%;
+      border-radius: 8px;
+
+      .testemonial-panel {
+        flex: 0 1 31%;
+        max-height: 600px;
+        flex-direction: row;
+        position: relative;
+        margin: 0;
+        background: #F9F9F9;
+        border-radius: 8px;
+        box-shadow: 0 0 100px rgba(0, 0, 0, .3);
+
+        &:last-child {
+          transform: none;
+        }
+      }
+
+      .testemonial-text {
+        flex: 2;
+
+        &::before {
+          font-family: "UpWave-Bold";
+          content: "\201C";
+          color: #6DCDE9;
+          font-size: 5em;
+          position: absolute;
+          left: 10px;
+          top: 5px;
+        }
+
+        blockquote {
+          padding: 15px 25px 15px 65px;
+          font-size: .85em;
+
+          span {
+            margin-top: 10px;
+            font-size: 1em;
+          }
+
+          .testemonial-link {
+            font-size: 1.1em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .our-work {
+    padding: 25px 50px 35px;
+
+    .testimonials-container {
+      flex: 1;
+      flex-direction: column;
+      flex-wrap: wrap-reverse;
+      align-items: stretch;
+      justify-content: space-between;
+      width: 100%;
+      border-radius: 8px;
+
+      .testemonial-panel {
+        flex: 0 1 31%;
+        max-height: 600px;
+        flex-direction: row;
+        position: relative;
+        margin: 0;
+        background: #F9F9F9;
+        border-radius: 8px;
+        box-shadow: 0 0 100px rgba(0, 0, 0, .3);
+
+        &:last-child {
+          transform: none;
+        }
+      }
+
+      .testemonial-text {
+        flex: 2;
+
+        &::before {
+          font-family: "UpWave-Bold";
+          content: "\201C";
+          color: #6DCDE9;
+          font-size: 5em;
+          position: absolute;
+          left: 10px;
+          top: 5px;
+        }
+
+        blockquote {
+          padding: 15px 25px 15px 65px;
+          font-size: .85em;
+
+          span {
+            margin-top: 10px;
             font-size: 1em;
           }
 
@@ -254,30 +306,30 @@
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1440px) {
-  .testimonials-container {
-    .testemonial-panel {
-      flex-direction: column;
-      padding-bottom: 10px;
-      box-shadow: 0 0 75px rgba(0, 0, 0, .3);
-      min-height: 68%;
+  .our-work {
+    padding: 50px;
 
-      &:last-child {
-        flex-direction: row;
-        padding-bottom: 0;
-        min-height: 38%;
-        max-height: 38%;
-        margin: -2%;
+    .testimonials-container {
+      flex: 1;
+      flex-direction: row;
+      flex-wrap: wrap-reverse;
+      align-items: stretch;
+      justify-content: space-between;
+      width: 100%;
+      border-radius: 8px;
 
-        .testemonial-logo {
-          border-radius: initial;
-          border-top-left-radius: 8px;
-          border-bottom-left-radius: 8px;
-        }
+      .testemonial-panel {
+        flex: 0 1 31%;
+        max-height: 600px;
+        flex-direction: column;
+        position: relative;
+        margin: 0;
+        background: #F9F9F9;
+        border-radius: 8px;
+        box-shadow: 0 0 100px rgba(0, 0, 0, .3);
 
-        .testemonial-text {
-          flex: 1.5;
-          border: none;
-          border-left: 25px solid #6DCDE9;
+        &:last-child {
+          transform: none;
         }
       }
 
@@ -288,18 +340,63 @@
       }
 
       .testemonial-text {
-        flex: 2;
+        flex: 3;
         border: none;
         border-top: 25px solid #6DCDE9;
 
-        &::before {
-          font-size: 96px;
-          left: 20px;
-          top: 15px;
-        }
-
         blockquote {
           padding: 15px 25px 15px 90px;
+          font-size: .9em;
+
+          span {
+            margin-top: 15px;
+            font-size: 1em;
+          }
+
+          .testemonial-link {
+            font-size: 1.1em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1441px) and (max-width: 1920px) {
+  .our-work {
+    padding-bottom: 35px;
+
+    .testimonials-container {
+      flex: 1;
+      flex-direction: row;
+      flex-wrap: wrap-reverse;
+      align-items: stretch;
+      justify-content: center;
+      width: 100%;
+      border-radius: 8px;
+
+      .testemonial-panel {
+        flex: 0 1 42%;
+        flex-direction: row;
+        position: relative;
+        margin: 4% 6% 0 2%;
+        background: #F9F9F9;
+        border-radius: 8px;
+        box-shadow: 0 0 100px rgba(0, 0, 0, .3);
+
+        &:first-child {
+          margin: 4% 2% 0 6%;
+        }
+
+        &:last-child {
+          margin: 4% 5% 3%;
+          transform-origin: center top;
+          transform: scale(1.25);
+        }
+      }
+
+      .testemonial-text {
+        blockquote {
           font-size: 1em;
 
           span {
@@ -314,25 +411,3 @@
     }
   }
 }
-
-// @media only screen and (min-width: 1921px) {
-//   .our-work {
-//     padding-bottom: 50px;
-//
-//     .testimonials-container {
-//       .testemonial-panel {
-//         .testemonial-text {
-//           &::before {
-//             font-size: 8em;
-//             left: 15px;
-//             top: 15px;
-//           }
-//
-//           blockquote {
-//             font-size: 1.75em;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }

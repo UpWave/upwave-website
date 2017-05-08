@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-// import MediaQuery from 'react-responsive';
+import MediaQuery from 'react-responsive';
 
 import Content from '../../components/Content';
 import Testemonial from '../../components/Testemonial';
@@ -60,13 +60,17 @@ class Projects extends React.Component {
           registerAnimation={this.props.registerAnimation}
           className="box our-work"
         >
-          <section className='testimonials-container'>
-            {this.testemonials}
-          </section>
+          <MediaQuery query='(max-device-width: 568px)'>
+            <section className='testimonials-container'>
+              {this.testemonials[Math.floor(Math.random() * 3)]}
+            </section>
+          </MediaQuery>
+          <MediaQuery query='(min-device-width: 569px)'>
+            <section className='testimonials-container'>
+              {this.testemonials}
+            </section>
+          </MediaQuery>
         </Content>
-        {/* <MediaQuery query='(min-device-width: 768px)'>
-          <Waves mode="red" registerAnimation={this.props.registerAnimation} />
-        </MediaQuery> */}
       </section>
     );
   }

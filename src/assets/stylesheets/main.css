@@ -601,10 +601,6 @@ strong {
 }
 
 @media only screen and (min-width: 569px) and (max-width: 768px) {
-  .box {
-    margin: 0 50px;
-  }
-
   .motto {
     .nav-button {
       transform: scale(1.25);
@@ -616,10 +612,6 @@ strong {
   .big-letter-paragraph {
     margin: 0 0 25px;
     min-width: 100%;
-  }
-
-  .box {
-    margin: 0 15px 6px;
   }
 
   .sm-hide {
