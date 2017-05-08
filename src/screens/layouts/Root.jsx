@@ -1,8 +1,9 @@
 import React from 'react';
 import { locationShape } from 'react-router';
+import MediaQuery from 'react-responsive';
 
 import HighWaves from '../../components/HighWaves';
-// import Background from '../../components/Background';
+import Background from '../../components/Background';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Sidebar from '../../components/Sidebar';
@@ -63,8 +64,12 @@ class Root extends React.Component {
           <Header isFromGreeting={isFromGreeting} toggleSidebar={this.toggleSidebar.bind(this)} />
           {this.children}
           <Footer />
-          <HighWaves />
-          {/* <Background /> */}
+          <MediaQuery query='(min-device-width: 569px)'>
+            <HighWaves />
+          </MediaQuery>
+          <MediaQuery query='(max-device-width: 568px)'>
+            <Background />
+          </MediaQuery>
           <section id="dialogs" />
         </section>
       </Sidebar>

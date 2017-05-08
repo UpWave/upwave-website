@@ -17,7 +17,6 @@ function Main({ registerAnimation, isFromGreeting }) {
       >
         <section className="motto">
           <h1>We are <strong>UpWave</strong></h1>
-          <br/>
           <h3>Our highest goal is your successful business.<br/>We are always riding the highest wave.</h3>
           <Button
             type="buttonLink"
