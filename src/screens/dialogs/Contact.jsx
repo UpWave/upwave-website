@@ -124,20 +124,20 @@ class Contact extends React.Component {
                 placeholder="Tell us a little about yourself and how we can help you."></textarea>
               { errors.message ? <span className="field-error">{errors.message}</span> : null }
               <span className="form-buttons">
-                <Button
-                  type="externalButtonLink"
-                  href={`mailto:contact@upwave.net?subject=${this.state.subject}&body=${this.state.message}`}
-                  className="nav-button"
-                >
-                  Via email
-                </Button>
-                <span className='divider'>or</span>
                 <span className={`submit-button-wrapper${isFetching ? ' loading' : ''}`}>
                   <input
                     type='submit'
                     className="submit-button"
                     value="Submit" />
                 </span>
+                <span className='divider'>or</span>
+                <Button
+                  type="externalButtonLink"
+                  href={`mailto:contact@upwave.net?subject=${this.state.subject || ''}&body=${this.state.message || ''}`}
+                  className="nav-button"
+                >
+                  Via email
+                </Button>
               </span>
               { errors.reCAPTCHA ? <span className="field-error">{errors.reCAPTCHA}</span> : null }
               <div

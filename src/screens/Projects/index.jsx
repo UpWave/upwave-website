@@ -27,7 +27,7 @@ class Projects extends React.Component {
         url="http://www.meaningful.place/"
         logo={meaningfulPlace}
       >
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Upwave</strong> is a great engineering partner thanks to their depth of knowledge in technology, their design experience, coupled with their flexibility to engage with their clients and their firm commitment to deliver. <strong>Upwave</strong> team always tries to learn and understand our business needs instead of just coding to our specs.
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>UpWave</strong> is a great engineering partner thanks to their depth of knowledge in technology, their design experience, coupled with their flexibility to engage with their clients and their firm commitment to deliver. <strong>UpWave</strong> team always tries to learn and understand our business needs instead of just coding to our specs.
       </Testemonial>,
       <Testemonial
         key="ourea"
@@ -37,7 +37,7 @@ class Projects extends React.Component {
         url="http://oureasystems.com/"
         logo={ourea}
       >
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Upwave agency</strong> helped develop, design and maintain our webapp. I found his service to be very friendly and helpful. He will always go out of his way to ensure completion of tasks in the most effective way. He completed changes quickly and always to the standard you expect. I would recommend <strong>Upwave agency's</strong> service to anyone looking for talented developers.
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>UpWave agency</strong> helped develop, design and maintain our webapp. I found their service to be very friendly and helpful. They will always go out of their way to ensure completion of tasks in the most effective way. <strong>UpWave</strong> completed work quickly and always to the standard you expect. I would recommend <strong>UpWave agency's</strong> service to anyone looking for talented developers.
       </Testemonial>,
       <Testemonial
         key="eventgeek"
@@ -47,7 +47,7 @@ class Projects extends React.Component {
         url="https://www.eventgeek.com/"
         logo={eventgeek}
       >
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We had a great experience working together with <strong>Upwave agency</strong>. Agency made solid efforts and their contributions meaningfully advanced our company's progress. Their greatest strength is in thinking about both technical and business problems holistically.
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We had a great experience working together with <strong>UpWave agency</strong>. Agency made solid efforts and their contributions meaningfully advanced our company's progress. Their greatest strength is in thinking about both technical and business problems holistically.
       </Testemonial>,
     ];
   }

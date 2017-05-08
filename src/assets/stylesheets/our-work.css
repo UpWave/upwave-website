@@ -162,10 +162,10 @@
           font-family: "UpWave-Bold";
           content: "\201C";
           color: #6DCDE9;
-          font-size: 4.5em;
+          font-size: 4em;
           position: absolute;
-          left: 10px;
-          top: 5px;
+          left: 5px;
+          top: 4px;
         }
 
         blockquote {

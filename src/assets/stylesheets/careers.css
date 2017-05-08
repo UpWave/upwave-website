@@ -76,7 +76,7 @@
     }
   }
 
-  .js {
+  .javascript {
     background: #f7df1e;
   }
 
@@ -114,6 +114,8 @@
 @media only screen and (max-width: 568px) {
   .box.career-box {
     padding: 0 15px;
+    flex: initial;
+    flex-direction: column;
 
     .panel {
       min-height: 60px;
@@ -137,6 +139,7 @@
         h2 {
           max-width: 135px;
           font-size: 17px;
+          padding-bottom: 15px;
 
           &::before {
             height: 15px;
@@ -152,10 +155,15 @@
   }
 
   .career-dialog {
-    padding: 0;
+    min-width: 100%;
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 0;
+    padding: 0 0 75px;
 
     .position-header {
       min-height: 60px;
+      height: 60px;
       max-height: 60px;
 
       h2 {
@@ -170,13 +178,23 @@
   }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (min-width: 569px) and (max-width: 1024px) {
   .career-dialog {
     min-width: 100%;
     max-width: 100%;
     margin-right: 0;
     margin-bottom: 0;
     padding-bottom: 75px;
+
+    .position-header {
+      min-height: 60px;
+      height: 60px;
+      max-height: 60px;
+
+      h2 {
+        font-size: 1.25em;
+      }
+    }
   }
 
   .box.career-box {

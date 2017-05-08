@@ -63,7 +63,7 @@ class Root extends React.Component {
         <section className={`content${this.pathname}`}>
           <Header isFromGreeting={isFromGreeting} toggleSidebar={this.toggleSidebar.bind(this)} />
           {this.children}
-          <Footer />
+          <Footer toggleSidebar={this.toggleSidebar.bind(this)} />
           <MediaQuery query='(min-device-width: 569px)'>
             <HighWaves />
           </MediaQuery>

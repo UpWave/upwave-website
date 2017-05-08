@@ -10,7 +10,7 @@ import li from './assets/linkedin-logo.svg';
 import tw from './assets/twitter-logo.svg';
 import '../../assets/stylesheets/footer.css';
 
-function Footer({ className }) {
+function Footer({ className, toggleSidebar }) {
   return (
     <footer className={`footer${className ? ` ${className}` : ''}`}>
       <nav className="footer-navigation">
@@ -32,10 +32,10 @@ function Footer({ className }) {
           <a href="#" className="social-link">
             <SVGElement svg={fb} />
           </a>
-          <a href="#" className="social-link">
+          <a href="https://www.linkedin.com/company/upwaveagency" target="_blank" className="social-link">
             <SVGElement svg={li} />
           </a>
-          <a href="#" className="social-link">
+          <a href="https://github.com/UpWave" target="_blank" className="social-link">
             <SVGElement svg={gh} />
           </a>
         </section>
@@ -45,7 +45,7 @@ function Footer({ className }) {
           Copyright&nbsp;©&nbsp;{(new Date()).getUTCFullYear()}&nbsp;UpWave&nbsp;Agency
         </span>
         <span className="help-links">
-          <a href="mailto:contact@upwave.net">Contact&nbsp;us</a>
+          <a onClick={toggleSidebar}>Contact&nbsp;us</a>
         </span>
       </span>
     </footer>
@@ -53,6 +53,7 @@ function Footer({ className }) {
 }
 
 Footer.propTypes = {
+  toggleSidebar: PropTypes.func,
   className: PropTypes.string,
 };
 

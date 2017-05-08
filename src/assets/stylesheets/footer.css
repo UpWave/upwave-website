@@ -22,77 +22,7 @@
 .footer.greeting {
   display: none;
 }
-/*
-.who_we_are {
-  .footer {
-    background-color: rgba(109, 205, 233, 1);
-  }
 
-  .footer .copyright,
-  .footer .copyright a {
-    color: #48889A;
-  }
-
-  .footer .social-link svg path {
-    fill: #48889A;
-  }
-
-  .footer .social-link:hover svg path {
-    fill: #23424C;
-  }
-
-  .footer .sitemap-link {
-    color: #48889A;
-  }
-
-  .footer .sitemap-link:hover {
-    color: #23424C;
-  }
-
-  .footer h3 {
-    color: #23424C;
-  }
-
-  .footer h3::before {
-    background-color: #23424C;
-  }
-}
-
-.our_work {
-  .footer {
-    background-color: rgba(241, 113, 116, 1);
-  }
-
-  .footer .copyright,
-  .footer .copyright a {
-    color: #A24C4E;
-  }
-
-  .footer .social-link svg path {
-    fill: #A24C4E;
-  }
-
-  .footer .social-link:hover svg path {
-    fill: #7B3A3B;
-  }
-
-  .footer .sitemap-link {
-    color: #A24C4E;
-  }
-
-  .footer .sitemap-link:hover {
-    color: #7B3A3B;
-  }
-
-  .footer h3 {
-    color: #7B3A3B;
-  }
-
-  .footer h3::before {
-    background-color: #7B3A3B;
-  }
-}
-*/
 .footer-navigation {
   width: 100%;
   margin-top: 12px;
