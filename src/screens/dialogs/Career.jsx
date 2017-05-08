@@ -51,7 +51,7 @@ class Career extends React.Component {
 }
 
 Career.propTypes = {
-  toggleSidebar: PropTypes.func.isRequired,
+  toggleSidebar: PropTypes.func,
 };
 
 export default Career;

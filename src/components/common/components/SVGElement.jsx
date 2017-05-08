@@ -12,14 +12,16 @@ class SVGElement extends React.Component {
     className: "",
   };
 
+  svgElement = null;
+
   componentDidMount() {
-    let svgElement = ReactDOM.findDOMNode(this.refs.svgElement);
+    let svgElement = ReactDOM.findDOMNode(this.svgElement);
     svgElement.innerHTML = this.props.svg;
   }
 
   render() {
     return (
-      <section ref="svgElement" className={this.props.className} />
+      <section ref={node => this.svgElement = node} className={this.props.className} />
     );
   }
 }
