@@ -63,7 +63,8 @@ button:hover {
   color: #FE777A;
 }
 
-[role="button"] {
+[role="button"],
+form input[type="submit"] {
   padding: 10px 20px 10px 20px;
   border: 1px solid rgba(44, 72, 96, 1);
   color: rgba(44, 72, 96, 1);
@@ -257,16 +258,10 @@ form input:focus, form textarea:focus {
 form input[type="submit"] {
   color: #FDFDFE;
   background: #6DCDE9;
-  cursor: pointer;
-  font-size: 1.5em;
   border-radius: 100px;
-  padding: 10px 20px 10px 20px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, .3);
-  opacity: 0.95;
-
-  &:hover {
-    opacity: 1;
-  }
+  font-size: 14px;
+  padding: 10px 20px;
+  line-height: 14px;
 }
 
 form textarea {

@@ -123,6 +123,7 @@ class Contact extends React.Component {
                 onChange={this.handleChange.bind(this)}
                 placeholder="Tell us a little about yourself and how we can help you."></textarea>
               { errors.message ? <span className="field-error">{errors.message}</span> : null }
+              { successMessage ? <p className="form-notice">{successMessage}</p> : null }
               <span className="form-buttons">
                 <span className={`submit-button-wrapper${isFetching ? ' loading' : ''}`}>
                   <input
@@ -146,7 +147,6 @@ class Contact extends React.Component {
                 data-callback="onReCAPTCHA"
                 data-size="invisible">
               </div>
-              { successMessage ? <p className="form-notice">{successMessage}</p> : null }
             </form>
           </section>
           {/* <section className='contact-map'>

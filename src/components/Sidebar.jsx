@@ -14,8 +14,11 @@ class Sidebar extends React.Component {
       sidebar: {
         background: '#495560',
         zIndex: 333,
+        overflowX: 'hidden',
+        overflowY: 'auto',
       },
       content: {
+        overflowX: 'hidden',
         overflowY: 'auto',
       }
     };

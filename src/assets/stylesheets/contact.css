@@ -2,7 +2,7 @@
   flex: 1;
   width: 550px;
   box-shadow: inset 50px 0 50px -50px #000000;
-  padding-top: 75px;
+  padding-top: 50px;
 
   h2 {
     display: inline;
@@ -34,36 +34,57 @@
       align-items: center;
       justify-content: center;
       color: #FDFDFE;
-      margin-top: 30px;
+      margin-top: 25px;
 
       .submit-button,
       .nav-button {
-        flex: 1 1 50%;
-        width: auto;
-        margin: 10px 0;
+        transform-origin: center;
       }
 
       .submit-button-wrapper {
         position: relative;
         display: flex;
-        flex: 1 1 50%;
-        width: auto;
+        flex: 1;
       }
 
       .divider {
-        margin: 0 15px;
+        position: relative;
+        margin: 25px 0 20px;
         opacity: .85;
         font-size: 1em;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: -50px;
+          width: 40px;
+          height: 2px;
+          background: #FDFDFE;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          right: -50px;
+          width: 40px;
+          height: 2px;
+          background: #FDFDFE;
+        }
       }
 
       .nav-button {
-        font-size: 1.5em;
         border-color: #FDFDFE;
         color: #FDFDFE;
+        transform: scale(1.5);
+        margin: 0;
       }
 
       .submit-button {
-        font-size: 2.5em;
+        transform: scale(2);
+        min-width: 125px;
+        margin: 0;
       }
     }
   }
@@ -86,29 +107,36 @@
     width: 450px;
 
     h2 {
-      font-size: 1.9em;
+      font-size: 1.75em;
     }
 
     form input,
     form textarea {
       padding: 9px 18px;
-      font-size: 1.35em;
+      font-size: 1.25em;
+      margin-top: 20px;
+    }
+
+    .form-notice {
       margin-top: 20px;
     }
 
     #contact-us {
       .form-buttons {
-        margin-top: 15px;
+        margin-top: 20px;
 
-        .submit-button,
-        .nav-button {
-          font-size: 1.8em;
-          padding: 9px 20px;
-          margin: 5px 0;
+        .divider {
+          margin: 20px 0 15px;
+          font-size: .9em;
         }
 
         .nav-button {
-          font-size: 1.2em;
+          transform: scale(1.25);
+        }
+
+        .submit-button {
+          transform: scale(1.5);
+          font-size: 14px;
         }
       }
     }
@@ -120,13 +148,13 @@
     width: 400px;
 
     h2 {
-      font-size: 1.75em;
+      font-size: 1.5em;
     }
 
     form input,
     form textarea {
       padding: 9px 18px;
-      font-size: 1.2em;
+      font-size: 1.1em;
       margin-top: 20px;
     }
 
@@ -134,19 +162,26 @@
       height: 150px;
     }
 
+    .form-notice {
+      margin-top: 20px;
+    }
+
     #contact-us {
       .form-buttons {
-        margin-top: 15px;
+        margin-top: 25px;
 
-        .submit-button,
-        .nav-button {
-          font-size: 1.65em;
-          padding: 9px 20px;
-          margin: 5px 0;
+        .divider {
+          margin: 15px 0 10px;
+          font-size: .9em;
         }
 
         .nav-button {
-          font-size: 1.1em;
+          transform: none;
+        }
+
+        .submit-button {
+          transform: scale(1.25);
+          font-size: 14px;
         }
       }
     }
@@ -165,22 +200,29 @@
     form textarea {
       padding: 8px 16px;
       font-size: 1.15em;
-      margin-top: 25px;
+      margin-top: 20px;
+    }
+
+    .form-notice {
+      margin-top: 20px;
     }
 
     #contact-us {
       .form-buttons {
-        margin-top: 20px;
+        margin-top: 30px;
 
-        .submit-button,
-        .nav-button {
-          font-size: 1.55em;
-          padding: 8px 18px;
-          margin: 10px 0;
+        .divider {
+          margin: 10px 0 5px;
+          font-size: .9em;
         }
 
         .nav-button {
-          font-size: 1.05em;
+          transform: none;
+        }
+
+        .submit-button {
+          transform: scale(1.25);
+          font-size: 14px;
         }
       }
     }
@@ -212,28 +254,36 @@
       margin-top: 15px;
     }
 
+    .form-notice {
+      margin-top: 15px;
+    }
+
     form textarea {
       height: 125px;
     }
 
     #contact-us {
       .form-buttons {
-        margin-top: 15px;
-
-        .submit-button,
-        .nav-button {
-          font-size: 1.35em;
-          padding: 7px 16px;
-          margin: 5px 0;
-        }
-
-        .nav-button {
-          font-size: .9em;
-        }
+        margin-top: 20px;
 
         .divider {
+          margin: 10px 0 5px;
           font-size: .9em;
         }
+
+        .nav-button {
+          transform: none;
+        }
+
+        .submit-button {
+          transform: scale(1.25);
+          font-size: 16px;
+          min-height: 32px;
+        }
+      }
+
+      .field-error {
+        font-size: 0.75em;
       }
     }
   }
