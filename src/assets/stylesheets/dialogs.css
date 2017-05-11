@@ -24,7 +24,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('../images/back.jpg') no-repeat center center fixed;
+    background: url('../images/careers-dialog-back.jpg') no-repeat center center fixed;
     background-size: cover;
     opacity: 1;
     z-index: -1;
@@ -109,6 +109,12 @@
 .sidebar-close-button {
   top: 15px;
   right: 15px;
+}
+
+@media only screen and (min-width: 1025px) {
+  .dialogs-close-button {
+    right: 150px;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
