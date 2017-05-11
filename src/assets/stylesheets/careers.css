@@ -257,6 +257,12 @@
       }
     }
   }
+
+  .career-dialog {
+    .position-text {
+      padding-bottom: 50px;
+    }
+  }
 }
 
 @media only screen and (min-width: 1281px) and (max-width: 1440px) {
@@ -291,7 +297,7 @@
     }
 
     .position-text {
-      padding: 0 30px 30px;
+      padding: 0 30px 50px;
     }
   }
 }
@@ -344,7 +350,7 @@
     }
 
     .position-text {
-      padding: 0 40px 40px;
+      padding: 0 40px 50px;
     }
   }
 }

@@ -113,7 +113,7 @@
 
 @media only screen and (max-width: 1024px) {
   .dialogs-overlay {
-    padding-top: 90px;
+    padding-top: 100px;
 
     .logo-button {
       position: absolute;

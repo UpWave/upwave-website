@@ -4,7 +4,7 @@ import React from 'react';
 import Content from '../../components/Content';
 import routerAnimation from '../../components/common/components/routerAnimation';
 import Button from '../../components/common/components/Button';
-import Testemonial from '../../components/Testemonial';
+import getTestemonials from '../Projects/assets/testemonials';
 
 function Main({ registerAnimation, isFromGreeting }) {
   return (
@@ -27,13 +27,7 @@ function Main({ registerAnimation, isFromGreeting }) {
           </Button>
         </section>
         <section className="main-testimonial">
-          <Testemonial
-            signedBy="Kestas Barzdaitis, Managing partner at"
-            company="Meaningful.place"
-            url="http://www.meaningful.place/"
-          >
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Upwave</strong> is a great engineering partner thanks to their depth of knowledge in technology, their design experience, coupled with their flexibility to engage with their clients and their firm commitment to deliver. <strong>Upwave</strong> team always tries to learn and understand our business needs instead of just coding to our specs.
-          </Testemonial>
+          {getTestemonials(false)[Main.getRandomValue(0, 2)]}
           <Button
             type="buttonLink"
             href="/our_work"
@@ -51,5 +45,7 @@ Main.propTypes = {
   registerAnimation: PropTypes.func.isRequired,
   isFromGreeting: PropTypes.bool,
 };
+
+Main.getRandomValue = (min, max) => Math.floor(Math.random() * (max - min) + min);
 
 export default routerAnimation(Main);

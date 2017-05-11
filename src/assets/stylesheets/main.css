@@ -170,69 +170,99 @@ strong {
     margin: 0 100px 50px 0;
     align-items: flex-end;
 
-    .testemonial-panel {
-      height: auto;
-      flex: initial;
-      flex-direction: column;
-      align-items: left;
-      background: none;
-      box-shadow: none;
-
-      .testemonial-logo {
-        flex: initial;
-        padding-top: 0;
-        padding-bottom: 0;
-
-        h2 {
-          padding-left: 0;
-          padding-bottom: 20px;
-          color: #6DCDE9;
-        }
-      }
-
-      .testemonial-text {
-        padding-top: 50px;
-        border: none;
-        flex: initial;
-
-        &::before {
-          font-family: "UpWave-Bold", sans-serif;
-          content: "\201C";
-          color: #F17174;
-          font-size: 7em;
-          position: absolute;
-          left: 15px;
-          top: 18px;
-        }
-
-        span,
-        .testemonial-link {
-          color: #FDFDFE;
-          font-size: 1.25em;
-          line-height: 1.5;
-        }
-
-        span {
-          margin-top: 35px;
-          font-family: "UpWave-Book", sans-serif;
-        }
-
-        blockquote {
-          color: #FDFDFE;
-          font-size: 1.3em;
-          line-height: 1.5;
-          padding-left: 70px;
-          padding-right: 0;
-        }
-      }
+    h2 {
+      color: #6DCDE9;
+      padding-left: 0;
     }
 
     .nav-button {
       color: #FDFDFE;
       margin: 0;
+      transform-origin: right top;
 
       &::after {
         border-color: #FDFDFE;
+      }
+    }
+
+    .testemonial-panel {
+      flex: 1;
+      flex-direction: column;
+
+      .testemonial-logo {
+        flex: 1;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        .testemonial-link {
+          position: relative;
+          flex: 1;
+        }
+      }
+
+      .testemonial-text {
+        flex: 2;
+        position: relative;
+        flex-direction: column;
+
+        &::before {
+          font-family: "UpWave-Bold";
+          content: "\201C";
+          color: #F17174;
+          font-size: 7em;
+          position: absolute;
+          left: 10px;
+          top: 5px;
+        }
+
+        blockquote {
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+          position: relative;
+          font-style: italic;
+          line-height: 1.5;
+          color: rgba(44, 72, 96, .75);
+          padding: 30px 0 25px 80px;
+          text-align: justify;
+          font-size: 1.35em;
+          min-height: 0;
+          max-height: 100%;
+          justify-content: center;
+          overflow-y: hidden;
+          overflow-x: visible;
+          color: #FDFDFE;
+
+          .testemonial-body {
+            flex: 1;
+            overflow-y: hidden;
+            overflow-x: visible;
+          }
+
+          .testemonial-sign {
+            position: relative;
+            flex: 1;
+            font-family: "UpWave-Medium";
+            font-style: normal;
+            font-size: 1.1em;
+            align-items: flex-end;
+            justify-content: center;
+            text-align: right;
+            margin-top: 25px;
+
+            span {
+              z-index: 1;
+              opacity: .9;
+            }
+
+            .testemonial-link {
+              font-family: "UpWave-Medium";
+              font-size: 1.2em;
+              color: #FDFDFE;
+              opacity: 1;
+            }
+          }
+        }
       }
     }
   }
@@ -337,7 +367,7 @@ strong {
   box-sizing: border-box;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1025px) {
   .content {
     width: calc(100% + 100px);
     padding-right: 100px;
@@ -349,7 +379,7 @@ strong {
     margin: 60px 0;
 
     .motto {
-      margin-left: 125px;
+      margin-left: 100px;
 
       .nav-button {
         margin: 0;
@@ -367,28 +397,29 @@ strong {
     }
 
     .main-testimonial {
-      margin-right: 150px;
+      h2 {
+        font-size: 5em;
+
+        &::before {
+          height: 25px;
+        }
+      }
 
       .nav-button {
-        transform-origin: right top;
-        transform: scale(2);
+        transform: scale(2.25);
       }
 
       .testemonial-panel {
-        .testemonial-logo {
-          h2 {
-            font-size: 3.75em;
-          }
-        }
-
         .testemonial-text {
-          span,
-          .testemonial-link {
-            font-size: 1.2em;
+          &::before {
+            font-size: 9em;
+            left: 10px;
+            top: 10px;
           }
 
           blockquote {
-            font-size: 1.75em;
+            padding: 30px 0 25px 110px;
+            font-size: 2em;
           }
         }
       }
@@ -417,26 +448,27 @@ strong {
     }
 
     .main-testimonial {
+      margin: 0 100px 50px 0;
+
+      h2 {
+        font-size: 3em;
+      }
+
       .nav-button {
-        transform-origin: right top;
-        transform: scale(1.5);
+        transform: scale(1.75);
       }
 
       .testemonial-panel {
-        .testemonial-logo {
-          h2 {
-            font-size: 2.75em;
-          }
-        }
-
         .testemonial-text {
-          span,
-          .testemonial-link {
-            font-size: 1.2em;
+          &::before {
+            font-size: 8em;
+            left: 10px;
+            top: 10px;
           }
 
           blockquote {
-            font-size: 1.25em;
+            padding: 30px 0 25px 100px;
+            font-size: 1.5em;
           }
         }
       }
@@ -452,6 +484,12 @@ strong {
       margin-top: 0;
       margin-left: 50px;
 
+      .nav-button {
+        margin: 0;
+        transform: scale(1.5);
+        transform-origin: left top;
+      }
+
       h1 {
         font-size: 4.5em;
       }
@@ -462,34 +500,27 @@ strong {
     }
 
     .main-testimonial {
-      margin-right: 50px;
+      margin: 0 50px 50px 0;
+
+      h2 {
+        font-size: 2.5em;
+      }
 
       .nav-button {
-        transform-origin: right top;
-        transform: scale(1.25);
+        transform: scale(1.5);
       }
 
       .testemonial-panel {
-        .testemonial-logo {
-          h2 {
-            font-size: 2em;
-          }
-        }
-
         .testemonial-text {
-          padding-top: 15px;
-
           &::before {
-            top: 5px;
-          }
-
-          span,
-          .testemonial-link {
-            font-size: 1.2em;
+            font-size: 6em;
+            left: 5px;
+            top: 10px;
           }
 
           blockquote {
-            font-size: 1em;
+            padding: 25px 0 20px 75px;
+            font-size: 1.25em;
           }
         }
       }
@@ -505,6 +536,12 @@ strong {
       margin-top: 0;
       margin-left: 50px;
 
+      .nav-button {
+        margin: 0;
+        transform: scale(1.5);
+        transform-origin: left top;
+      }
+
       h1 {
         font-size: 4.25em;
       }
@@ -515,35 +552,27 @@ strong {
     }
 
     .main-testimonial {
-      margin-right: 50px;
-      margin-bottom: 25px;
+      margin: 0 50px 50px 0;
+
+      h2 {
+        font-size: 2.25em;
+      }
+
+      .nav-button {
+        transform: scale(1.5);
+      }
 
       .testemonial-panel {
-        .testemonial-logo {
-          h2 {
-            font-size: 2em;
-          }
-        }
-
         .testemonial-text {
-          padding-top: 15px;
-
           &::before {
-            top: 5px;
-          }
-
-          span,
-          .testemonial-link {
-            font-size: 1.2em;
-          }
-
-          span {
-            margin-top: 15px;
+            font-size: 5em;
+            left: 5px;
+            top: 10px;
           }
 
           blockquote {
-            padding-bottom: 15px;
-            font-size: .9em;
+            padding: 25px 0 20px 75px;
+            font-size: 1em;
           }
         }
       }
@@ -557,6 +586,12 @@ strong {
       margin-top: 35px;
       margin-left: 50px;
 
+      .nav-button {
+        margin: 0;
+        transform: scale(1.25);
+        transform-origin: left top;
+      }
+
       h1 {
         font-size: 3.75em;
       }
@@ -567,37 +602,27 @@ strong {
     }
 
     .main-testimonial {
-      width: 30%;
-      margin-right: 50px;
-      margin-bottom: 25px;
+      margin: 0 50px 50px 0;
+
+      h2 {
+        font-size: 2.25em;
+      }
+
+      .nav-button {
+        transform: scale(1.25);
+      }
 
       .testemonial-panel {
-        .testemonial-logo {
-          h2 {
-            font-size: 2em;
-          }
-        }
-
         .testemonial-text {
-          padding-top: 0;
-
           &::before {
-            top: 5px;
-            font-size: 72px;
-          }
-
-          span,
-          .testemonial-link {
-            font-size: 1em;
-          }
-
-          span {
-            margin-top: 15px;
+            font-size: 5em;
+            left: 5px;
+            top: 10px;
           }
 
           blockquote {
+            padding: 20px 0 15px 65px;
             font-size: .9em;
-            padding-bottom: 15px;
           }
         }
       }
@@ -653,53 +678,6 @@ strong {
 
       .nav-button {
         transform: none;
-      }
-    }
-
-    .main-testimonial {
-      width: auto;
-      margin: 0;
-      padding: 0 15px 25px;
-      background: rgba(44, 72, 96, 0.75);
-      // box-shadow: 0 0 50px rgba(44, 72, 96, 0.75);
-
-      .testemonial-panel {
-        .testemonial-logo {
-          h2 {
-            font-size: 1.5em;
-            padding-bottom: 15px;
-
-            &::before {
-              height: 15px;
-            }
-          }
-        }
-
-        .testemonial-text {
-          padding-top: 0;
-
-          &::before {
-            top: 5px;
-            left: 20px;
-            font-size: 56px;
-          }
-
-          span,
-          .testemonial-link {
-            font-size: 1em;
-          }
-
-          span {
-            margin-top: 15px;
-          }
-
-          blockquote {
-            font-size: .75em;
-            padding-top: 15px;
-            padding-left: 60px;
-            padding-bottom: 15px;
-          }
-        }
       }
     }
   }
