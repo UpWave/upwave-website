@@ -23,7 +23,7 @@ class Dialog extends React.Component {
   };
 
   componentWillUnmount() {
-    document.body.style.overflow = 'visible';
+    window.document.querySelector('.content').style.overflowY = 'auto';
   }
 
   closeDialog() {
@@ -39,7 +39,7 @@ class Dialog extends React.Component {
     return (
       <ReactModal
         isOpen={true}
-        onAfterOpen={() => document.body.style.overflow = 'hidden'}
+        onAfterOpen={() => window.document.querySelector('.content').style.overflowY = 'hidden'}
         contentLabel="Career Modal"
         portalClassName="dialogs-portal"
         overlayClassName={`dialogs-overlay ${this.state.fadeOut ? 'dialog-fade-out' : ''}`}
@@ -47,7 +47,7 @@ class Dialog extends React.Component {
         ariaHideApp={true}
         shouldCloseOnOverlayClick={false}
         role="dialog"
-        parentSelector={() => document.getElementById('dialogs')}
+        parentSelector={() => window.document.getElementById('dialogs')}
       >
         <Button type="link" href="/" className="logo-button">
           <img src={logo} alt="UpWave logo" className="logo" />

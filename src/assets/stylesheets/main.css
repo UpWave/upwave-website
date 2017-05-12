@@ -76,10 +76,6 @@ p {
   position: relative;
 }
 
-.sidebar-wrapper {
-  overflow-x: hidden;
-}
-
 .container {
   flex: 1;
   min-height: 0;
