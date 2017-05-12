@@ -70,7 +70,7 @@
 
 .sidebar-close-button,
 .dialogs-close-button {
-  position: absolute;
+  position: fixed;
   top: 25px;
   right: 50px;
   width: 40px;
@@ -107,14 +107,9 @@
 }
 
 .sidebar-close-button {
+  position: absolute;
   top: 15px;
   right: 15px;
-}
-
-@media only screen and (min-width: 1025px) {
-  .dialogs-close-button {
-    right: 150px;
-  }
 }
 
 @media only screen and (max-width: 1024px) {

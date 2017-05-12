@@ -13,7 +13,14 @@ function routerTransition(WrappedComponent, route) {
     }
 
     routerWillLeave(nextLocation) {
+      const isSubRoute = this.props.router.location.pathname.replace('/').split('/')[0] === nextLocation.pathname.replace('/').split('/')[0];
       const { isFreeToLeave } = this.state;
+
+      if (isSubRoute) {
+        window.setTimeout(this.setRouterHandler.bind(this), 0);
+
+        return true;
+      }
 
       if (isFreeToLeave) return isFreeToLeave;
 
@@ -33,6 +40,10 @@ function routerTransition(WrappedComponent, route) {
     }
 
     componentDidMount() {
+      this.setRouterHandler();
+    }
+
+    setRouterHandler() {
       this.props.router.setRouteLeaveHook(
         this.findRoute(),
         this.routerWillLeave.bind(this),
