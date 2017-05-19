@@ -1,5 +1,7 @@
 .header {
+  min-height: 80px;
   height: 80px;
+  max-height: 80px;
   z-index: 1;
 }
 
@@ -118,7 +120,9 @@
 
 @media only screen and (max-width: 568px) {
   .header {
+    min-height: 125px;
     height: 125px;
+    max-height: 125px;
   }
 
   .header-wrapper {

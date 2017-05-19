@@ -27,7 +27,7 @@ function Main({ registerAnimation, isFromGreeting }) {
           </Button>
         </section>
         <section className="main-testimonial">
-          {getTestemonials(false)[Main.getRandomValue(0, 2)]}
+          {Main.getTestemonial(Main.getRandomValue(0, 2))}
           <Button
             type="buttonLink"
             href="/our_work"
@@ -44,6 +44,14 @@ function Main({ registerAnimation, isFromGreeting }) {
 Main.propTypes = {
   registerAnimation: PropTypes.func.isRequired,
   isFromGreeting: PropTypes.bool,
+};
+
+Main.testemonialId = null;
+
+Main.getTestemonial = id => {
+  if (!Main.testemonialId) Main.testemonialId = id;
+
+  return getTestemonials(false)[Main.testemonialId];
 };
 
 Main.getRandomValue = (min, max) => Math.floor(Math.random() * (max - min) + min);

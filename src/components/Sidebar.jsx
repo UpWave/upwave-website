@@ -11,16 +11,26 @@ class Sidebar extends React.Component {
 
   get styles() {
     return {
+      root: {
+        position: 'relative',
+        flex: '1',
+        minHeight: '100%',
+        height: '100%',
+      },
+      overlay: {
+        flex: '1',
+        zIndex: 2,
+      },
       sidebar: {
+        flex: '1',
         background: '#495560',
-        zIndex: 333,
-        overflowX: 'hidden',
-        overflowY: 'auto',
+        zIndex: 3,
       },
       content: {
-        overflowX: 'hidden',
-        overflowY: 'auto',
-      }
+        position: 'relative',
+        flex: '1',
+        overflow: 'hidden',
+      },
     };
   }
 
@@ -28,7 +38,7 @@ class Sidebar extends React.Component {
     return (
       <ReactSidebar
         sidebar={this.props.sidebar}
-        docked={this.props.opened}
+        open={this.props.opened}
         transitions={true}
         pullRight={true}
         styles={this.styles}

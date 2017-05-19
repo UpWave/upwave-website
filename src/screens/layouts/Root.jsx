@@ -56,23 +56,23 @@ class Root extends React.Component {
     const { isFromGreeting } = this.state;
 
     return (
-      <Sidebar
-        sidebar={<Contact toggleSidebar={this.toggleSidebar.bind(this)} />}
-        opened={this.state.sidebarOpened}
-      >
-        <section className={`content${this.pathname}`}>
+      <section className={`content${this.pathname}`}>
+        <Sidebar
+          sidebar={<Contact toggleSidebar={this.toggleSidebar.bind(this)} />}
+          opened={this.state.sidebarOpened}
+        >
           <Header isFromGreeting={isFromGreeting} toggleSidebar={this.toggleSidebar.bind(this)} />
           {this.children}
-          <Footer toggleSidebar={this.toggleSidebar.bind(this)} />
-          <MediaQuery query='(min-device-width: 569px)'>
-            <HighWaves />
-          </MediaQuery>
-          <MediaQuery query='(max-device-width: 568px)'>
-            <Background />
-          </MediaQuery>
-          <section id="dialogs" />
-        </section>
-      </Sidebar>
+        </Sidebar>
+        <Footer toggleSidebar={this.toggleSidebar.bind(this)} />
+        <MediaQuery query='(min-device-width: 569px)'>
+          <HighWaves />
+        </MediaQuery>
+        <MediaQuery query='(max-device-width: 568px)'>
+          <Background />
+        </MediaQuery>
+        <section id="dialogs" />
+      </section>
     );
   }
 }
