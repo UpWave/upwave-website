@@ -27,26 +27,19 @@
   src: url('./../fonts/Monaco.ttf') format('truetype');
 }
 
-html {
-  width: 100%;
+html,
+body {
+  height: 100%;
+  box-sizing: border-box;
 }
 
 body {
-  flex: 1;
   font-family: 'Upwave-Book', sans-serif;
   color: #2c4860;
   background-color: #FDFDFE;
 }
 
-html,
-body {
-  min-height: 100%;
-  height: 100%;
-}
-
-body,
 section,
-div,
 footer,
 header,
 nav,
@@ -66,7 +59,7 @@ p {
 
 #root,
 .content {
-  flex: 1;
+  height: 100%;
 }
 
 .content {

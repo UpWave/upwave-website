@@ -7,7 +7,7 @@
   padding: 75px 0;
   overflow-x: hidden;
   overflow-y: auto;
-  z-index: 2;
+  z-index: 4;
   background-color: rgba(44, 72, 96, .9);
   animation-name: fadeDialogIn;
   animation-duration: .5s;

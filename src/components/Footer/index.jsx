@@ -45,7 +45,7 @@ function Footer({ className, toggleSidebar }) {
           Copyright&nbsp;©&nbsp;{(new Date()).getUTCFullYear()}&nbsp;UpWave&nbsp;Agency
         </span>
         <span className="help-links">
-          <a onClick={toggleSidebar}>Contact&nbsp;us</a>
+          <a onClick={() => toggleSidebar(true)}>Contact&nbsp;us</a>
         </span>
       </span>
     </footer>

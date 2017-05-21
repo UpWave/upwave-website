@@ -13,22 +13,25 @@ class Sidebar extends React.Component {
     return {
       root: {
         position: 'relative',
-        flex: '1',
-        minHeight: '100%',
         height: '100%',
       },
       overlay: {
-        flex: '1',
         zIndex: 2,
       },
       sidebar: {
+        position: 'fixed',
+        display: 'flex',
+        flexDirection: 'column',
         flex: '1',
-        background: '#495560',
-        zIndex: 3,
+        width: '1000px',
+        background: 'rgba(44, 72, 96, .93)',
+        boxShadow: '0 0 20px rgba(0, 0, 0, .3)',
+        zIndex: 5,
       },
       content: {
-        position: 'relative',
+        display: 'flex',
         flex: '1',
+        flexDirection: 'column',
         overflow: 'hidden',
       },
     };
@@ -42,7 +45,8 @@ class Sidebar extends React.Component {
         transitions={true}
         pullRight={true}
         styles={this.styles}
-        shadow={false}
+        shadow={true}
+        touch={false}
         contentClassName="sidebar-wrapper"
       >
         {this.props.children}

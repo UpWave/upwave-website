@@ -21,6 +21,16 @@ Button.types = {
       {children}
     </Link>
   ),
+  externalLink: ({ href, children, className, id }) => (
+    <a
+      id={id}
+      href={href}
+      className={`${className ? ' ' + className : '' }`}
+      onClick={e => e.stopPropagation()}
+    >
+      {children}
+    </a>
+  ),
   button: ({ callback, className, children, id }) => (
     <a id={id} role='button' onClick={callback} className={`${className ? ' ' + className : '' } active`}>
       {children}

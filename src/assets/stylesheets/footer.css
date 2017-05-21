@@ -1,8 +1,8 @@
 .footer {
   position: relative;
-  flex: 1;
   min-height: 125px;
   height: 125px;
+  max-height: 125px;
   background-color: rgba(44, 72, 96, 1);
 
   &::after {
@@ -28,6 +28,7 @@
   justify-content: space-between;
   align-items: center;
   flex: 1;
+  z-index: 6;
 }
 
 .social {
@@ -106,6 +107,8 @@
 }
 
 .copyright {
+  z-index: 6;
+
   .help-links {
     margin: 0 10px;
   }

@@ -56,7 +56,7 @@ class Root extends React.Component {
     const { isFromGreeting } = this.state;
 
     return (
-      <section className={`content${this.pathname}`}>
+      <div className={`content${this.pathname}`}>
         <Sidebar
           sidebar={<Contact toggleSidebar={this.toggleSidebar.bind(this)} />}
           opened={this.state.sidebarOpened}
@@ -71,8 +71,8 @@ class Root extends React.Component {
         <MediaQuery query='(max-device-width: 568px)'>
           <Background />
         </MediaQuery>
-        <section id="dialogs" />
-      </section>
+        <div id="dialogs" />
+      </div>
     );
   }
 }
