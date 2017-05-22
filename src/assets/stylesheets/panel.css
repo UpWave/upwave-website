@@ -1,36 +1,29 @@
 .panel-container {
   flex-direction: column;
   flex: 1;
-  height: 100%;
-  min-height: 0;
-  max-height: 100%;
-  margin-right: 125px;
+  padding-right: 125px;
 
   &:last-child {
-    margin: 0;
+    padding: 0;
   }
 }
 
 .panel {
   flex: 1;
-  margin-bottom: 125px;
-  background: #F9F9F9;
-  box-shadow: 0 0 100px rgba(0, 0, 0, .3);
-  border-radius: 8px;
-  overflow: hidden;
+  padding-bottom: 125px;
 
   &:last-child {
-    margin: 0;
+    padding: 0;
   }
 }
 
 @media only screen and (max-width: 568px) {
   .box {
     .panel-container {
-      margin-bottom: 15px;
+      padding-bottom: 15px;
 
       .panel {
-        margin-bottom: 15px;
+        padding-bottom: 15px;
       }
     }
   }
@@ -38,68 +31,64 @@
 
 @media only screen and (max-width: 1024px) {
   .panel-container {
-    margin-right: 0;
-    margin-bottom: 20px;
-
-    .panel {
-      box-shadow: 0 0 50px rgba(0, 0, 0, .3);
-    }
+    padding-right: 0;
+    padding-bottom: 20px;
   }
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1280px) {
   .panel-container {
-    margin-right: 35px;
+    padding-right: 35px;
 
     &:last-child {
-      margin: 0;
+      padding: 0;
     }
   }
 
   .panel {
-    margin-bottom: 35px;
+    padding-bottom: 35px;
   }
 }
 
 @media only screen and (min-width: 1281px) and (max-width: 1440px) {
   .panel-container {
-    margin-right: 45px;
+    padding-right: 45px;
 
     &:last-child {
-      margin: 0;
+      padding: 0;
     }
   }
 
   .panel {
     flex: 1;
-    margin-bottom: 45px;
+    padding-bottom: 45px;
   }
 }
 
 @media only screen and (min-width: 1441px) and (max-width: 1920px) {
   .panel-container {
-    margin-right: 75px;
+    padding-right: 75px;
 
     &:last-child {
-      margin: 0;
+      padding: 0;
     }
   }
 
   .panel {
-    margin-bottom: 75px;
+    padding-bottom: 75px;
   }
 }
 
 @media only screen and (min-width: 1921px) {
   .panel-container {
-    margin-right: 105px;
+    padding-right: 105px;
 
     &:last-child {
-      margin: 0;
+      padding: 0;
     }
   }
 
   .panel {
-    margin-bottom: 105px;
+    padding-bottom: 105px;
   }
 }

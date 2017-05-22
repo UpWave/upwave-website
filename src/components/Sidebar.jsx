@@ -23,7 +23,6 @@ class Sidebar extends React.Component {
         display: 'flex',
         flexDirection: 'column',
         flex: '1',
-        width: '1000px',
         background: 'rgba(44, 72, 96, .93)',
         boxShadow: '0 0 20px rgba(0, 0, 0, .3)',
         zIndex: 5,
@@ -47,6 +46,7 @@ class Sidebar extends React.Component {
         styles={this.styles}
         shadow={true}
         touch={false}
+        rootClassName={this.props.opened ? 'sidebar-opened' : ''}
         contentClassName="sidebar-wrapper"
       >
         {this.props.children}

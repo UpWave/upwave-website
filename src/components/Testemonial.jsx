@@ -5,7 +5,7 @@ function Testemonial({ children, signedBy, company, url, logo, className }) {
   return (
     <section className="testemonial-wrapper">
       <section className={`testemonial-panel${className ? ' ' + className : ''}`}>
-        <div className="testemonial-logo">
+        <section className="testemonial-logo">
           <a
             className="testemonial-link"
             href={url}
@@ -14,8 +14,8 @@ function Testemonial({ children, signedBy, company, url, logo, className }) {
           >
             { logo ? <img src={logo} role="presentation" /> : <h2>{company}</h2> }
           </a>
-        </div>
-        <div className="testemonial-text">
+        </section>
+        <section className="testemonial-text">
           <blockquote cite={url}>
             <section className="testemonial-body">
               <span>{children}</span>
@@ -33,7 +33,7 @@ function Testemonial({ children, signedBy, company, url, logo, className }) {
               </span>
             </section>
           </blockquote>
-        </div>
+        </section>
       </section>
     </section>
   );
