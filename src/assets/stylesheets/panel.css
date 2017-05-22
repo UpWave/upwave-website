@@ -1,6 +1,6 @@
 .panel-container {
   flex-direction: column;
-  flex: 1;
+  flex-grow: 1;
   padding-right: 125px;
 
   &:last-child {
@@ -9,7 +9,7 @@
 }
 
 .panel {
-  flex: 1;
+  flex-grow: 1;
   padding-bottom: 125px;
 
   &:last-child {
@@ -60,7 +60,7 @@
   }
 
   .panel {
-    flex: 1;
+    flex-grow: 1;
     padding-bottom: 45px;
   }
 }

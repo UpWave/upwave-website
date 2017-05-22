@@ -1,14 +1,11 @@
 .header {
-  min-height: 80px;
-  height: 80px;
-  max-height: 80px;
   z-index: 1;
 }
 
 .header-wrapper {
-  flex: 1;
+  flex-grow: 1;
   height: 80px;
-  padding: 0 25px;
+  padding: 0 2%;
   flex-direction: row;
   justify-content: space-between;
 }
@@ -17,7 +14,7 @@
   opacity: 0;
 }
 
-.header-wrapper-animation {
+/*.header-wrapper-animation {
   position: absolute;
   width: 100%;
   animation-name: slideHeaderIn;
@@ -36,7 +33,7 @@
     top: 0;
     opacity: 1;
   }
-}
+}*/
 
 .navigation {
   flex-direction: row;
@@ -55,12 +52,10 @@
 }
 
 .logo {
-  width: auto;
   height: 100%;
 }
 
 .logo-button {
-  width: auto;
   height: 80%;
 }
 
@@ -132,7 +127,8 @@
   }
 
   .navigation {
-    flex: 1;
+    flex-grow: 1;
+    flex-shrink: 0;
     align-items: center;
     justify-content: center;
     margin-top: 30px;

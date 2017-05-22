@@ -1,7 +1,7 @@
 .contact-bar {
-  flex: 1;
+  flex-grow: 1;
   width: 1441px;
-  padding-top: 50px;
+  padding-top: 20px;
   padding-bottom: 125px;
   flex-direction: row;
 
@@ -10,9 +10,8 @@
   }
 
   h2 {
-    display: inline;
-    padding: 0 25px 20px;
-    font-size: 2.5em;
+    padding-left: 25px;
+    padding-right: 25px;
     text-transform: uppercase;
     color: #FDFDFE;
 
@@ -30,21 +29,20 @@
 
   .google-map {
     width: 100%;
-    flex: 1;
-    padding-top: 20px;
+    flex-grow: 1;
+    padding-top: 30px;
     border-radius: 8px;
     box-sizing: border-box;
 
     iframe {
-      display: 'flex';
-      flex: 1;
+      flex-grow: 1;
       border-radius: 8px;
       box-shadow: 0 0 20px rgba(0, 0, 0, .3);
     }
   }
 
   .contact-address {
-    padding: 30px 0;
+    padding: 0 0 30px;
     color: #FDFDFE;
     line-height: 1.5;
     text-align: center;
@@ -56,27 +54,21 @@
       color: #FDFDFE;
     }
 
-    h2 {
-      margin-bottom: 20px;
-    }
-
     .contact-street {
-      padding-bottom: 20px;
+      padding: 30px 0 0;
     }
   }
 
   .contact-form {
     flex: .7;
-    width: 100%;
   }
 
   #contact-us {
-    position: relative;
     width: 100%;
 
     .g-recaptcha {
       display: inline-block;
-      margin-top: 20px;
+      margin-top: 30px;
       overflow: hidden;
       box-shadow: 0 0 20px rgba(0, 0, 0, .3);
       border-radius: 8px;
@@ -98,7 +90,7 @@
       .submit-button-wrapper {
         position: relative;
         display: flex;
-        flex: 1;
+        flex-grow: 1;
       }
 
       .divider {
@@ -145,13 +137,15 @@
 
   .contact-form{
     align-items: center;
-    flex: 1;
+    flex-grow: 1;
     padding: 0 35px;
   }
 }
 
 @media only screen and (min-width: 1441px) and (max-width: 1920px) {
   .contact-bar {
+    width: 1280px;
+
     h2 {
       font-size: 1.75em;
     }
@@ -167,7 +161,23 @@
       margin-top: 20px;
     }
 
+    .contact-map {
+      .google-map {
+        padding-top: 20px;
+      }
+
+      .contact-address {
+        .contact-street {
+          padding-top: 20px;
+        }
+      }
+    }
+
     #contact-us {
+      .g-recaptcha {
+        margin-top: 20px;
+      }
+
       .form-buttons {
         margin-top: 30px;
 
@@ -212,7 +222,30 @@
       margin-top: 20px;
     }
 
+    .contact-map {
+      .google-map {
+        padding-top: 20px;
+      }
+
+      .contact-address {
+        .contact-street {
+          padding-top: 20px;
+        }
+      }
+    }
+
+    .field-error {
+      padding-top: 0;
+      font-size: 1em;
+    }
+
     #contact-us {
+      .g-recaptcha {
+        margin-top: 0;
+        transform-origin: bottom;
+        transform: scale(.75);
+      }
+
       .form-buttons {
         margin-top: 25px;
 
@@ -249,11 +282,36 @@
       margin-top: 20px;
     }
 
+    form textarea {
+      height: 125px;
+    }
+
     .form-notice {
       margin-top: 20px;
     }
 
+    .contact-map {
+      .google-map {
+        padding-top: 20px;
+      }
+
+      .contact-address {
+        .contact-street {
+          padding-top: 20px;
+        }
+      }
+    }
+
+    .field-error {
+      padding-top: 0;
+      font-size: 1em;
+    }
+
     #contact-us {
+      .g-recaptcha {
+        margin-top: 20px;
+      }
+
       .form-buttons {
         margin-top: 30px;
 
@@ -305,10 +363,18 @@
     }
 
     form textarea {
-      height: 125px;
+      height: 100px;
+    }
+
+    .contact-map {
+      display: none;
     }
 
     #contact-us {
+      .g-recaptcha {
+        margin-top: 20px;
+      }
+
       .form-buttons {
         margin-top: 20px;
 
@@ -329,6 +395,7 @@
       }
 
       .field-error {
+        padding-top: 0;
         font-size: 0.75em;
       }
     }

@@ -56,7 +56,7 @@ input[type="button"]:hover,
 [role="button"]:hover,
 [role="link"]:hover,
 button:hover {
-  color: rgba(44, 72, 96, 1);
+  color: #2c4860;
 }
 
 [role="link"].active {
@@ -66,8 +66,8 @@ button:hover {
 [role="button"],
 form input[type="submit"] {
   padding: 10px 20px 10px 20px;
-  border: 1px solid rgba(44, 72, 96, 1);
-  color: rgba(44, 72, 96, 1);
+  border: 1px solid #2c4860;
+  color: #2c4860;
   border-radius: 100px;
   opacity: 0.95;
 
@@ -95,8 +95,8 @@ form input[type="submit"] {
     top: 16px;
     height: 8px;
     width: 8px;
-    border-top: 1px solid rgba(44, 72, 96, 1);
-    border-right: 1px solid rgba(44, 72, 96, 1);
+    border-top: 1px solid #2c4860;
+    border-right: 1px solid #2c4860;
     border-top-right-radius: 2px;
     transform: translateY(-50%) rotate(45deg);
     opacity: 1;
@@ -167,7 +167,7 @@ form input[type="submit"] {
     &:hover,
     &.active {
       &::before {
-        background: rgba(44, 72, 96, 1);
+        background: #2c4860;
       }
     }
   }

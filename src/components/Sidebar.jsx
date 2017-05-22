@@ -12,8 +12,10 @@ class Sidebar extends React.Component {
   get styles() {
     return {
       root: {
-        position: 'relative',
-        height: '100%',
+        position: 'static',
+        display: 'flex',
+        flex: '1',
+        minHeight: '100vh',
       },
       overlay: {
         zIndex: 2,
@@ -28,10 +30,11 @@ class Sidebar extends React.Component {
         zIndex: 5,
       },
       content: {
+        position: 'static',
         display: 'flex',
         flex: '1',
         flexDirection: 'column',
-        overflow: 'hidden',
+        overflowY: 'visible',
       },
     };
   }

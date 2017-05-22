@@ -1,6 +1,6 @@
 .career-box {
   flex-direction: row;
-  flex: 1;
+  flex-grow: 1;
 }
 
 .career-position,
@@ -45,7 +45,7 @@
   }
 
   .position-text {
-    flex: 1;
+    flex-grow: 1;
     padding: 0 20px;
     font-size: 14px;
     line-height: 1.5;
@@ -95,7 +95,7 @@
 }
 
 .career-position {
-  flex: 1;
+  flex-grow: 1;
   min-height: 0;
 }
 
