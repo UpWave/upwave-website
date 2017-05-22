@@ -17,7 +17,7 @@ export default `
       <rect id="j" width="1920" height="1080" rx="8"/>
     </defs>
     <g fill="none" fill-rule="evenodd" filter="url(#a)" transform="translate(99 99)">
-      <rect width="1920" height="1080" fill="#343B58" fill-rule="nonzero" rx="8"/>
+      <rect width="1920" height="1080" fill="#2c4860" fill-rule="nonzero" rx="8"/>
       <mask id="c" fill="#fff">
         <use xlink:href="#b"/>
       </mask>

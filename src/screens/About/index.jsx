@@ -17,7 +17,42 @@ function About({ registerAnimation }) {
         registerAnimation={registerAnimation}
         className="box about-us"
       >
-        <SVGElement svg={whoWeAre} className="who-we-are-term sm-hide" />
+        <div className="about-us-container sm-hide">
+          <div className="screen monitor">
+            <div className="content">
+              <SVGElement svg={whoWeAre} className="who-we-are-term" />
+            </div>
+            <div className="base">
+              <div className="grey-shadow"></div>
+              <div className="foot top"></div>
+              <div className="foot bottom"></div>
+              <div className="shadow"></div>
+              <div className="keyboard">
+                <div className="btm"></div>
+                <ul className="keys">
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+                <div className="shadow"></div>
+              </div>
+            </div>
+          </div>
+          <div className="laptop">
+            <div className="content">
+              <ul className="txt txt-laptop">
+                <li></li>
+                <li></li>
+                <li className="thin"></li>
+                <li className="thin"></li>
+                <li className="thin"></li>
+              </ul>
+            </div>
+            <div className="btm"></div>
+            <div className="shadow"></div>
+          </div>
+        </div>
         <section className="all-hide sm-show">
           <Paragraph>
             &#09;We are small software development agency, which is focused on working with rising startups. <strong>Our main goal is your successful business.</strong> We are always ready to consult and assess your project and provide the best solution to achieve the greatest results.
