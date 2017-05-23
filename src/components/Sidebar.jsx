@@ -16,6 +16,8 @@ class Sidebar extends React.Component {
         display: 'flex',
         flex: '1',
         minHeight: '100vh',
+        overflowX: 'hidden',
+        overflowY: 'visible',
       },
       overlay: {
         zIndex: 2,

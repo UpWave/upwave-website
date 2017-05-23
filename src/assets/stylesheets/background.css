@@ -7,7 +7,7 @@
   z-index: -1;
 }
 
-.background.greeting {
+/*.background.greeting {
   animation-name: fadeBackgroundIn;
   animation-duration: 1s;
   animation-timing-function: ease-out;
@@ -24,5 +24,11 @@
   }
   100% {
     opacity: 1;
+  }
+}*/
+
+@media only screen and (min-width: 569px) {
+  .background {
+    display: none;
   }
 }

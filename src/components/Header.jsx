@@ -30,10 +30,10 @@ function Header({
               `nav-button ${pathname === '/who_we_are' ? 'active': ''}`
             }
           >
-            <MediaQuery query='(min-device-width: 569px)'>
+            <MediaQuery query='(min-device-width: 769px)'>
               Who we are
             </MediaQuery>
-            <MediaQuery query='(max-device-width: 568px)'>
+            <MediaQuery query='(max-device-width: 768px)'>
               About
             </MediaQuery>
           </Button>
@@ -44,10 +44,10 @@ function Header({
               `nav-button ${pathname === '/our_work' ? 'active': ''}`
             }
           >
-            <MediaQuery query='(min-device-width: 569px)'>
+            <MediaQuery query='(min-device-width: 769px)'>
               Our work
             </MediaQuery>
-            <MediaQuery query='(max-device-width: 568px)'>
+            <MediaQuery query='(max-device-width: 768px)'>
               Work
             </MediaQuery>
           </Button>

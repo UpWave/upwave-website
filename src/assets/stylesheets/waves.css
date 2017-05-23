@@ -19,3 +19,9 @@
   width: 100%;
   height: auto;
 }
+
+@media only screen and (max-width: 568px) {
+  .waves {
+    display: none;
+  }
+}

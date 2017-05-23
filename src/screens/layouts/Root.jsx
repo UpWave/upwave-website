@@ -1,6 +1,5 @@
 import React from 'react';
 import { locationShape } from 'react-router';
-import MediaQuery from 'react-responsive';
 
 import HighWaves from '../../components/HighWaves';
 import Background from '../../components/Background';
@@ -65,12 +64,8 @@ class Root extends React.Component {
           {this.children}
         </Sidebar>
         <Footer toggleSidebar={this.toggleSidebar.bind(this)} />
-        <MediaQuery query='(min-device-width: 569px)'>
-          <HighWaves />
-        </MediaQuery>
-        <MediaQuery query='(max-device-width: 568px)'>
-          <Background />
-        </MediaQuery>
+        <HighWaves />
+        <Background />
         <section id="dialogs" />
       </section>
     );
