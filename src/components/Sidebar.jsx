@@ -7,6 +7,7 @@ class Sidebar extends React.Component {
     children: PropTypes.node.isRequired,
     sidebar: PropTypes.node.isRequired,
     opened: PropTypes.bool.isRequired,
+    onClose: PropTypes.func,
   };
 
   get styles() {
@@ -41,6 +42,18 @@ class Sidebar extends React.Component {
     };
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.opened) {
+      window.document.body.style.overflow = 'hidden';
+    } else {
+      window.document.body.style.overflow = 'visible';
+    }
+  }
+
+  componentWillUnmount() {
+    window.document.body.style.overflow = 'visible';
+  }
+
   render() {
     return (
       <ReactSidebar
@@ -53,6 +66,7 @@ class Sidebar extends React.Component {
         touch={false}
         rootClassName={this.props.opened ? 'sidebar-opened' : ''}
         contentClassName="sidebar-wrapper"
+        onSetOpen={() => this.props.onClose(false)}
       >
         {this.props.children}
       </ReactSidebar>

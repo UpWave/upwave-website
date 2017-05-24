@@ -59,6 +59,7 @@ class Root extends React.Component {
         <Sidebar
           sidebar={<Contact toggleSidebar={this.toggleSidebar.bind(this)} />}
           opened={this.state.sidebarOpened}
+          onClose={this.toggleSidebar.bind(this)}
         >
           <Header isFromGreeting={isFromGreeting} toggleSidebar={this.toggleSidebar.bind(this)} />
           {this.children}
