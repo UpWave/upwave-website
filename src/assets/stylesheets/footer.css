@@ -31,7 +31,6 @@
   justify-content: flex-end;
   align-items: center;
   flex-grow: 1;
-  z-index: 6;
 }
 
 .social {
@@ -107,8 +106,6 @@
 }
 
 .copyright {
-  z-index: 6;
-
   .help-links {
     padding: 0 10px;
 
