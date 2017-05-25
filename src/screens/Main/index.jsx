@@ -27,7 +27,7 @@ function Main({ registerAnimation, isFromGreeting }) {
           </Button>
         </section>
         <section className="main-testimonial">
-          {Main.getTestemonial(Main.getRandomValue(0, 2))}
+          {Main.getTestemonial(Main.getRandomValue(0, 3))}
           <Button
             type="buttonLink"
             href="/our_work"

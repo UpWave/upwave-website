@@ -3,6 +3,35 @@
   justify-content: flex-start;
   padding: 2% 3%;
 
+  .about-us-reviews {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30%;
+    padding: 6% 5% 0 0;
+    line-height: 1.5;
+    align-items: flex-end;
+
+    p {
+      color: #FDFDFE;
+      text-align: justify;
+      font-style: italic;
+      font-size: 2.5em;
+    }
+
+    .nav-button {
+      color: #FDFDFE;
+      margin: 15px 0 0;
+      line-height: 1;
+      transform: scale(2.25);
+      transform-origin: right top;
+
+      &::after {
+        border-color: #FDFDFE;
+      }
+    }
+  }
+
   .about-us-container-both,
   .about-us-container-laptop {
     display: block;
@@ -11,6 +40,10 @@
     position: relative;
     transform-origin: center top;
     transform: scale(2.75);
+  }
+
+  .about-us-container-both {
+    margin: 1% 30%;
   }
 
   .about-us-container-both > .screen,
@@ -262,8 +295,8 @@
   }
 
   .laptop > .content {
-    width: 211px;
-    height: 131px;
+    width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
     margin-left: 0;
@@ -514,7 +547,8 @@
 
 @media only screen and (max-width: 1279px) {
   .about-us {
-    .about-us-container-both {
+    .about-us-container-both,
+    .about-us-reviews {
       display: none;
     }
   }
@@ -524,6 +558,19 @@
   .about-us {
     .about-us-container-both {
       transform: scale(1.4);
+      margin: 1% 15%;
+    }
+
+    .about-us-reviews {
+      padding-top: 5%;
+
+      p {
+        font-size: 1.35em;
+      }
+
+      .nav-button {
+        transform: scale(1.35);
+      }
     }
 
     .about-us-container-laptop {
@@ -536,6 +583,19 @@
   .about-us {
     .about-us-container-both {
       transform: scale(1.6);
+      margin: 1% 20%;
+    }
+
+    .about-us-reviews {
+      padding-top: 5%;
+
+      p {
+        font-size: 1.5em;
+      }
+
+      .nav-button {
+        transform: scale(1.5);
+      }
     }
   }
 }
@@ -544,6 +604,17 @@
   .about-us {
     .about-us-container-both {
       transform: scale(2);
+      margin: 1% 25%;
+    }
+
+    .about-us-reviews {
+      p {
+        font-size: 1.8em;
+      }
+
+      .nav-button {
+        transform: scale(1.8);
+      }
     }
   }
 }
@@ -552,6 +623,17 @@
   .about-us {
     .about-us-container-both {
       transform: scale(2.75);
+      margin: 1% 30%;
+    }
+
+    .about-us-reviews {
+      p {
+        font-size: 2.5em;
+      }
+
+      .nav-button {
+        transform: scale(2.5);
+      }
     }
   }
 }

@@ -5,6 +5,7 @@ import Paragraph from '../../components/Paragraph';
 import Content from '../../components/Content';
 import routerAnimation from '../../components/common/components/routerAnimation';
 import SVGElement from '../../components/common/components/SVGElement';
+import Button from '../../components/common/components/Button';
 
 import whoWeAre from './assets/who-we-are.svg';
 import '../../assets/stylesheets/about.css';
@@ -70,6 +71,18 @@ function About({ registerAnimation }) {
           <Paragraph>
             &#09;Our experience is based on a big number of projects which we’ve already done. We prefer to build long term relationships with our customers. In addition, we are proud to announce that <strong>UpWave</strong> was working on <strong>Y combinator Summer 2016 startup EventGeek</strong>.
           </Paragraph>
+        </section>
+        <section className="about-us-reviews">
+          <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;For sure, we are working hard and doing our best to achieve all goals and make our customers successful. If you still don't believe us, check our reviews!
+          </p>
+          <Button
+            type="buttonLink"
+            href="/our_work"
+            className="nav-button"
+          >
+            Check for reviews
+          </Button>
         </section>
       </Content>
     </section>

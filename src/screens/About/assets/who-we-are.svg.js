@@ -8,7 +8,7 @@ export default `
       <rect id="i" width="1920" height="1080" rx="8"/>
     </defs>
     <g fill="none" fill-rule="evenodd">
-      <rect width="1920" height="1080" fill="#2C4860" fill-rule="nonzero" rx="8"/>
+      <rect width="1920" height="1080" fill="#203546" fill-rule="nonzero" rx="8"/>
       <mask id="b" fill="#fff">
         <use xlink:href="#a"/>
       </mask>

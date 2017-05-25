@@ -44,7 +44,10 @@ class Sidebar extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.opened) {
-      window.document.body.style.overflow = 'hidden';
+      window.setTimeout(
+        () => window.document.body.style.overflow = 'hidden',
+        350,
+      );
     } else {
       window.document.body.style.overflow = 'visible';
     }
