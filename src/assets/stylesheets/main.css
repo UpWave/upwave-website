@@ -1,3 +1,11 @@
+#preload-01 {
+  display: none;
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  background: url('./../images/careers-dialog-back.jpg') no-repeat -9999px -9999px;
+}
+
 @font-face {
   font-family: 'Upwave-Light';
   src: url('./../fonts/Upwave-Light.woff') format('woff'),
