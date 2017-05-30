@@ -67,7 +67,6 @@ class Root extends React.Component {
         <Footer toggleSidebar={this.toggleSidebar.bind(this)} />
         <HighWaves />
         <Background />
-        <section id="dialogs" />
       </section>
     );
   }
