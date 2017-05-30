@@ -47,7 +47,7 @@ input[type="button"],
 button {
   cursor: pointer;
   font-size: 14px;
-  color: rgba(44, 72, 96, .75);
+  color: rgba(43, 72, 95, .75);
   transition: all .2s ease-out;
 }
 
@@ -56,7 +56,7 @@ input[type="button"]:hover,
 [role="button"]:hover,
 [role="link"]:hover,
 button:hover {
-  color: #2c4860;
+  color: #2B485F;
 }
 
 [role="link"].active {
@@ -66,8 +66,8 @@ button:hover {
 [role="button"],
 form input[type="submit"] {
   padding: 10px 20px 10px 20px;
-  border: 1px solid #2c4860;
-  color: #2c4860;
+  border: 1px solid #2B485F;
+  color: #2B485F;
   border-radius: 100px;
   opacity: 0.95;
 
@@ -95,8 +95,8 @@ form input[type="submit"] {
     top: 16px;
     height: 8px;
     width: 8px;
-    border-top: 1px solid #2c4860;
-    border-right: 1px solid #2c4860;
+    border-top: 1px solid #2B485F;
+    border-right: 1px solid #2B485F;
     border-top-right-radius: 2px;
     transform: translateY(-50%) rotate(45deg);
     opacity: 1;
@@ -132,7 +132,7 @@ form input[type="submit"] {
       height: 8px;
       margin: 0;
       border-radius: 8px;
-      background: rgba(44, 72, 96, .75);
+      background: rgba(43, 72, 95, .75);
     }
   }
 }
@@ -157,7 +157,7 @@ form input[type="submit"] {
       height: 12px;
       margin: 0 9px;
       border-radius: 12px;
-      background: rgba(44, 72, 96, .5);
+      background: rgba(43, 72, 95, .5);
     }
   }
 }
@@ -167,7 +167,7 @@ form input[type="submit"] {
     &:hover,
     &.active {
       &::before {
-        background: #2c4860;
+        background: #2B485F;
       }
     }
   }
@@ -194,7 +194,7 @@ form textarea {
   resize: none;
   background: #FDFDFE;
   box-sizing: border-box;
-  color: #2c4860;
+  color: #2B485F;
 }
 
 form input[type="text"],

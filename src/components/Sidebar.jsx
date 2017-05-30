@@ -28,7 +28,7 @@ class Sidebar extends React.Component {
         display: 'flex',
         flexDirection: 'column',
         flex: '1',
-        background: 'rgba(44, 72, 96, .93)',
+        background: 'rgba(43, 72, 95, .93)',
         boxShadow: '0 0 20px rgba(0, 0, 0, .3)',
         zIndex: 5,
       },

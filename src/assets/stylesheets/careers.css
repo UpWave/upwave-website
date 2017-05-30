@@ -35,7 +35,7 @@
         bottom: 0px;
         left: 20px;
         width: calc(100% - 40px);
-        background: rgba(44, 72, 96, .5);
+        background: rgba(43, 72, 95, .5);
       }
     }
 
@@ -109,7 +109,7 @@
   border-radius: 8px;
 
   .position-header {
-    box-shadow: 0 0 2px rgba(44, 72, 96, .3);
+    box-shadow: 0 0 2px rgba(43, 72, 95, .3);
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     cursor: default;
