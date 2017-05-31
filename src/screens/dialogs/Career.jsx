@@ -13,19 +13,26 @@ class Career extends React.Component {
 
     return (
       <Dialog name='career'>
-          <section className="career-dialog">
-            <section className={`position-header ${positions[positionId]['name'].replace('/', '-')}`}>
-              <h2>{[positions[positionId]['level'], positions[positionId]['name']].join(' ')} developer</h2>
-              <Button
-                type="button"
-                callback={e => { e.stopPropagation(); this.props.toggleSidebar(true); }}
-                className="nav-button"
-              >
-                Apply
-              </Button>
-            </section>
-            {positions[positionId]['body']}
+        <section className="career-dialog">
+          <section className={`position-header ${positions[positionId]['name'].replace('/', '-')}`}>
+            <h2>{[positions[positionId]['level'], positions[positionId]['name']].join(' ')} developer</h2>
+            <Button
+              type="button"
+              callback={e => { e.stopPropagation(); this.props.toggleSidebar(true); }}
+              className="nav-button sm-hide"
+            >
+              Apply
+            </Button>
           </section>
+          {positions[positionId]['body']}
+          <Button
+            type="button"
+            callback={e => { e.stopPropagation(); this.props.toggleSidebar(true); }}
+            className={`nav-button phone-apply-button sm-show all-hide ${positions[positionId]['name'].replace('/', '-')}`}
+          >
+            Apply
+          </Button>
+        </section>
       </Dialog>
     );
   }

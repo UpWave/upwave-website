@@ -127,6 +127,7 @@
     <script>
       function onPageLoaded() {
         window.setTimeout(function() {
+          window.document.body.style.overflow = 'visible';
           window.document.getElementById('page-loader').style.display = 'none';
         }, 1000);
 
@@ -144,7 +145,7 @@
     <title>UpWave - Code and more...</title>
     <meta name="description" content="We build Web using Ruby/Rails, Node.JS, React.JS, Angular.JS, Meteor.JS. We build mobile using Objective-C, Swift, PhoneGap, ReactNative. We don't do features just because you say, only because of business value." />
   </head>
-  <body>
+  <body style="overflow: hidden;">
     <section id="root" style="visibility: hidden;"></section>
     <div id="page-loader" class="page-loader">
       <div id="preload-01"></div>

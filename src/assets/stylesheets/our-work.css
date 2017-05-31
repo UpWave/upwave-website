@@ -1,123 +1,119 @@
 .our-work {
   position: relative;
-  padding: 100px;
+  flex-grow: 1;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 3% 2%;
+  align-items: justify;
+  justify-content: center;
 
-  .testimonials-container {
-    flex-grow: 1;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: justify;
-    justify-content: center;
-    width: 100%;
+  .testemonial-wrapper {
+    flex: 0 0 50%;
+    padding: 2%;
 
-    .testemonial-wrapper {
-      flex: 0 0 50%;
-      padding: 50px;
+    .testemonial-panel {
+      flex-grow: 1;
+      flex-direction: row;
+      background: #F9F9F9;
+      border-radius: 8px;
+      box-shadow: 0 0 100px rgba(0, 0, 0, .3);
 
-      .testemonial-panel {
+      .testemonial-logo {
         flex-grow: 1;
-        flex-direction: row;
-        background: #F9F9F9;
-        border-radius: 8px;
-        box-shadow: 0 0 100px rgba(0, 0, 0, .3);
+        justify-content: center;
+        align-items: center;
+        padding: 25px;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
 
-        .testemonial-logo {
+        .testemonial-link {
+          position: relative;
+          width: 100%;
+          height: 100%;
           flex-grow: 1;
-          justify-content: center;
-          align-items: center;
-          padding: 25px;
-          border-top-left-radius: 8px;
-          border-bottom-left-radius: 8px;
 
-          .testemonial-link {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            flex-grow: 1;
-
-            img {
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              max-width: 100%;
-              max-height: 100%;
-              transform: translate(-50%, -50%);
-            }
+          img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            max-width: 100%;
+            max-height: 100%;
+            transform: translate(-50%, -50%);
           }
         }
+      }
 
-        .testemonial-text {
-          flex: 2;
-          position: relative;
+      .testemonial-text {
+        flex: 2;
+        position: relative;
+        flex-direction: column;
+        border-left: 25px solid #6DCDE9;
+
+        &::before {
+          font-family: "UpWave-Bold";
+          content: "\201C";
+          color: #6DCDE9;
+          font-size: 7em;
+          position: absolute;
+          left: 10px;
+          top: 5px;
+        }
+
+        blockquote {
+          display: flex;
           flex-direction: column;
-          border-left: 25px solid #6DCDE9;
+          flex-grow: 1;
+          position: relative;
+          font-style: italic;
+          line-height: 1.5;
+          color: rgba(43, 72, 95, .75);
+          padding: 25px 45px 25px 90px;
+          text-align: justify;
+          font-size: 1.35em;
+          min-height: 0;
+          max-height: 100%;
+          justify-content: center;
+          overflow-y: hidden;
+          overflow-x: visible;
 
-          &::before {
-            font-family: "UpWave-Bold";
-            content: "\201C";
-            color: #6DCDE9;
-            font-size: 7em;
-            position: absolute;
-            left: 10px;
-            top: 5px;
-          }
-
-          blockquote {
-            display: flex;
-            flex-direction: column;
+          .testemonial-body {
             flex-grow: 1;
-            position: relative;
-            font-style: italic;
-            line-height: 1.5;
-            color: rgba(43, 72, 95, .75);
-            padding: 25px 45px 25px 90px;
-            text-align: justify;
-            font-size: 1.35em;
-            min-height: 0;
-            max-height: 100%;
-            justify-content: center;
             overflow-y: hidden;
             overflow-x: visible;
+          }
 
-            .testemonial-body {
-              flex-grow: 1;
-              overflow-y: hidden;
-              overflow-x: visible;
+          .testemonial-sign {
+            position: relative;
+            flex: 1 0;
+            min-height: 60px;
+            height: 60px;
+            max-height: 60px;
+            font-family: "UpWave-Medium";
+            font-style: normal;
+            font-size: 1.1em;
+            color: rgba(43, 72, 95, .6);
+            align-items: flex-end;
+            justify-content: center;
+            text-align: right;
+            background: #F9F9F9;
+
+            &::before {
+              content: '';
+              position: absolute;
+              top: -50px;
+              left: 0;
+              width: 100%;
+              height: 50px;
+              background: linear-gradient(to bottom, rgba(249, 249, 249, 0) 0%, rgba(249, 249, 249, 1) 75%);
             }
 
-            .testemonial-sign {
-              position: relative;
-              flex: 1 0;
-              min-height: 60px;
-              height: 60px;
-              max-height: 60px;
+            span {
+              z-index: 1;
+            }
+
+            .testemonial-link {
               font-family: "UpWave-Medium";
-              font-style: normal;
-              font-size: 1.1em;
-              color: rgba(43, 72, 95, .6);
-              align-items: flex-end;
-              justify-content: center;
-              text-align: right;
-              background: #F9F9F9;
-
-              &::before {
-                content: '';
-                position: absolute;
-                top: -50px;
-                left: 0;
-                width: 100%;
-                height: 50px;
-                background: linear-gradient(to bottom, rgba(249, 249, 249, 0) 0%, rgba(249, 249, 249, 1) 75%);
-              }
-
-              span {
-                z-index: 1;
-              }
-
-              .testemonial-link {
-                font-family: "UpWave-Medium";
-                font-size: 1.2em;
-              }
+              font-size: 1.2em;
             }
           }
         }
@@ -148,21 +144,39 @@
 
 @media only screen and (max-width: 568px) {
   .our-work {
-    padding: 15px 15px;
+    padding: 0 5% 4%;
 
-    .testimonials-container {
-      .testemonial-wrapper {
-        flex: 1 0 100%;
-        padding: 0;
+    .testemonial-wrapper {
+      flex-grow: 1;
+      padding: 4% 2%;
 
-        .testemonial-panel {
-          .testemonial-logo {
-            padding: 10px;
-            border-radius: 8px;
+      .testemonial-panel {
+        flex-direction: column;
+        box-shadow: 0 0 20px rgba(0, 0, 0, .3);
+
+        .testemonial-logo {
+          border-bottom-left-radius: 0;
+          border-top-left-radius: 8px;
+          border-top-right-radius: 8px;
+          padding: 10px;
+          min-height: 150px;
+          height: 150px;
+          max-height: 150px;
+        }
+
+        .testemonial-text {
+          border-left: none;
+          border-top: 25px solid #6DCDE9;
+
+          &::before {
+            font-size: 4em;
+            left: 7px;
+            top: 7px;
           }
 
-          .testemonial-text {
-            display: none;
+          blockquote {
+            padding: 15px 35px 15px 50px;
+            font-size: .85em;
           }
         }
       }
@@ -172,25 +186,27 @@
 
 @media only screen and (min-width: 569px) and (max-width: 768px) {
   .our-work {
-    padding: 15px 25px;
+    padding: 3% 3% 2%;
 
-    .testimonials-container {
-      .testemonial-wrapper {
-        flex: 1 0 100%;
-        padding: 15px;
+    .testemonial-wrapper {
+      flex: 1 0 100%;
+      padding: 2.5% 2%;
 
-        .testemonial-panel {
-          .testemonial-text {
-            &::before {
-              font-size: 4em;
-              left: 7px;
-              top: 7px;
-            }
+      .testemonial-panel {
+        flex-direction: row;
+        min-height: 250px;
+        box-shadow: 0 0 50px rgba(0, 0, 0, .3);
 
-            blockquote {
-              padding: 15px 35px 15px 50px;
-              font-size: .85em;
-            }
+        .testemonial-text {
+          &::before {
+            font-size: 4em;
+            left: 7px;
+            top: 7px;
+          }
+
+          blockquote {
+            padding: 15px 35px 15px 50px;
+            font-size: .85em;
           }
         }
       }
@@ -200,44 +216,33 @@
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
   .our-work {
-    padding: 15px 35px;
+    padding: 3% 3% 2%;
 
-    .testimonials-container {
-      flex-wrap: nowrap;
+    .testemonial-wrapper {
+      flex: 1 0 100%;
+      padding: 2.5% 2%;
 
-      .testemonial-wrapper {
-        flex: 1 0 33.333%;
-        padding: 25px;
+      .testemonial-panel {
+        flex-direction: row;
+        min-height: 250px;
+        box-shadow: 0 0 50px rgba(0, 0, 0, .3);
 
-        .testemonial-panel {
-          flex-direction: column;
-
-          .testemonial-logo {
-            border-bottom-left-radius: 0;
-            border-top-left-radius: 8px;
-            border-top-right-radius: 8px;
+        .testemonial-text {
+          &::before {
+            font-size: 5em;
+            left: 10px;
+            top: 7px;
           }
 
-          .testemonial-text {
-            border-left: none;
-            border-top: 25px solid #6DCDE9;
+          blockquote {
+            padding: 15px 35px 15px 65px;
+            font-size: .95em;
 
-            &::before {
-              font-size: 5em;
-              left: 10px;
-              top: 7px;
-            }
+            .testemonial-sign {
+              font-size: 1em;
 
-            blockquote {
-              padding: 15px 35px 15px 65px;
-              font-size: .95em;
-
-              .testemonial-sign {
-                font-size: 1em;
-
-                .testemonial-link {
-                  font-size: 1.1em;
-                }
+              .testemonial-link {
+                font-size: 1.1em;
               }
             }
           }
@@ -249,44 +254,40 @@
 
 @media only screen and (min-width: 1025px) and (max-width: 1440px) {
   .our-work {
-    padding: 15px 35px;
+    .testemonial-wrapper {
+      flex: 1 0 33.333%;
 
-    .testimonials-container {
-      flex-wrap: nowrap;
+      .testemonial-panel {
+        flex-direction: column;
 
-      .testemonial-wrapper {
-        flex: 1 0 33.333%;
-        padding: 25px;
+        .testemonial-logo {
+          border-bottom-left-radius: 0;
+          border-top-left-radius: 8px;
+          border-top-right-radius: 8px;
+          min-height: 200px;
+          height: 200px;
+          max-height: 200px;
+        }
 
-        .testemonial-panel {
-          flex-direction: column;
+        .testemonial-text {
+          border-left: none;
+          border-top: 25px solid #6DCDE9;
 
-          .testemonial-logo {
-            border-bottom-left-radius: 0;
-            border-top-left-radius: 8px;
-            border-top-right-radius: 8px;
+          &::before {
+            font-size: 5em;
+            left: 10px;
+            top: 7px;
           }
 
-          .testemonial-text {
-            border-left: none;
-            border-top: 25px solid #6DCDE9;
+          blockquote {
+            padding: 15px 35px 15px 65px;
+            font-size: .95em;
 
-            &::before {
-              font-size: 5em;
-              left: 10px;
-              top: 7px;
-            }
+            .testemonial-sign {
+              font-size: 1em;
 
-            blockquote {
-              padding: 15px 35px 15px 65px;
-              font-size: .95em;
-
-              .testemonial-sign {
-                font-size: 1em;
-
-                .testemonial-link {
-                  font-size: 1.1em;
-                }
+              .testemonial-link {
+                font-size: 1.1em;
               }
             }
           }
@@ -298,24 +299,18 @@
 
 @media only screen and (min-width: 1441px) and (max-width: 1920px) {
   .our-work {
-    padding: 15px 35px;
+    .testemonial-wrapper {
+      .testemonial-panel {
+        .testemonial-text {
+          &::before {
+            font-size: 6em;
+            left: 15px;
+            top: 7px;
+          }
 
-    .testimonials-container {
-      .testemonial-wrapper {
-        padding: 35px;
-
-        .testemonial-panel {
-          .testemonial-text {
-            &::before {
-              font-size: 6em;
-              left: 15px;
-              top: 7px;
-            }
-
-            blockquote {
-              padding: 15px 35px 15px 90px;
-              font-size: 1.05em;
-            }
+          blockquote {
+            padding: 15px 35px 15px 90px;
+            font-size: 1.05em;
           }
         }
       }

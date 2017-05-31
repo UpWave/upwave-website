@@ -1,7 +1,7 @@
 .about-us {
   align-items: flex-start;
   justify-content: flex-start;
-  padding: 2% 3%;
+  padding: 3% 2% 1%;
 
   .about-us-reviews {
     position: absolute;
@@ -501,8 +501,10 @@
   transform: translateZ(0, 0, 0) perspective(1000) !important;
 }
 
-@media only screen and (max-width: 568px) {
+@media only screen and (max-width: 567px) {
   .about-us {
+    padding: 0 5% 4%;
+
     .who-we-are-term.term-only {
       display: none;
     }
@@ -511,11 +513,15 @@
 
 @media only screen and (max-width: 767px) {
   .about-us {
-    padding: 3% 5%;
-
     .about-us-container-laptop {
       display: none;
     }
+  }
+}
+
+@media only screen and (min-width: 568px) {
+  .about-us {
+    padding: 3% 3% 2%;
   }
 }
 

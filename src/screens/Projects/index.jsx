@@ -20,9 +20,7 @@ class Projects extends React.Component {
           registerAnimation={this.props.registerAnimation}
           className="box our-work"
         >
-          <section className='testimonials-container'>
-            {getTestemonials()}
-          </section>
+          {getTestemonials()}
         </Content>
       </section>
     );

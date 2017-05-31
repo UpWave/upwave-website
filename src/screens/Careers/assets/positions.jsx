@@ -26,29 +26,6 @@ export default [
     </section>
   },
   {
-    name: 'ruby',
-    level: 'junior',
-    body: <section className="position-text">
-      <h3>Requirements:</h3>
-      <ul className="bullets">
-        <li className="bullet">1+ years experience in Ruby / RoR</li>
-        <li className="bullet">Experience with RDBMS (Postgres, MySQL)</li>
-        <li className="bullet">Experience with NoSQL databases (Mongo, Redis, etc)</li>
-        <li className="bullet">Solid knowledge of JavaScript</li>
-        <li className="bullet">Ability to communicate with client</li>
-        <li className="bullet">English skills intermediate or better</li>
-      </ul>
-      <h3>Technology stack:</h3>
-      <ul className="bullets">
-        <li className="bullet">Ruby 2+</li>
-        <li className="bullet">Ruby on Rails (4, 5)</li>
-        <li className="bullet">Postgresql, Mysql</li>
-        <li className="bullet">React.js, Ember.js (is a plus)</li>
-        <li className="bullet">Knowledge of cloud technologies</li>
-      </ul>
-    </section>
-  },
-  {
     name: 'javascript',
     level: '',
     body: <section className="position-text">
@@ -69,6 +46,29 @@ export default [
         <li className="bullet">Databases: relational (orm), no-sql</li>
         <li className="bullet">Docker, Heroku</li>
         <li className="bullet">Networking skills</li>
+      </ul>
+    </section>
+  },
+  {
+    name: 'ruby',
+    level: 'junior',
+    body: <section className="position-text">
+      <h3>Requirements:</h3>
+      <ul className="bullets">
+        <li className="bullet">1+ years experience in Ruby / RoR</li>
+        <li className="bullet">Experience with RDBMS (Postgres, MySQL)</li>
+        <li className="bullet">Experience with NoSQL databases (Mongo, Redis, etc)</li>
+        <li className="bullet">Solid knowledge of JavaScript</li>
+        <li className="bullet">Ability to communicate with client</li>
+        <li className="bullet">English skills intermediate or better</li>
+      </ul>
+      <h3>Technology stack:</h3>
+      <ul className="bullets">
+        <li className="bullet">Ruby 2+</li>
+        <li className="bullet">Ruby on Rails (4, 5)</li>
+        <li className="bullet">Postgresql, Mysql</li>
+        <li className="bullet">React.js, Ember.js (is a plus)</li>
+        <li className="bullet">Knowledge of cloud technologies</li>
       </ul>
     </section>
   },
