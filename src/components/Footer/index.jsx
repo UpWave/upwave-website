@@ -10,9 +10,10 @@ import li from './assets/linkedin-logo.svg';
 import tw from './assets/twitter-logo.svg';
 import '../../assets/stylesheets/footer.css';
 
-function Footer({ className, toggleSidebar }) {
+function Footer({ className, toggleSidebar, children }) {
   return (
     <footer className={`footer${className ? ` ${className}` : ''}`}>
+      {children}
       <nav className="footer-navigation">
         <nav className="sitemap">
           <h3>CHECK&nbsp;THIS</h3>
@@ -45,7 +46,7 @@ function Footer({ className, toggleSidebar }) {
           Copyright&nbsp;©&nbsp;{(new Date()).getUTCFullYear()}&nbsp;UpWave&nbsp;Agency
         </span>
         <span className="help-links">
-          <a onClick={() => toggleSidebar(true)}>Contact&nbsp;us</a>
+          <a className="xs-hide sm-hide" onClick={() => toggleSidebar(true)}>Contact&nbsp;us</a>
         </span>
       </span>
     </footer>

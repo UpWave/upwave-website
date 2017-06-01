@@ -581,7 +581,27 @@ strong {
   }
 }
 
+@media only screen and (max-width: 767px) {
+  .main-box {
+    .main-testimonial {
+      display: none;
+    }
+  }
+
+  .container {
+    background: none;
+  }
+}
+
 @media only screen and (min-width: 569px) and (max-width: 768px) {
+  .sm-hide {
+    display: none !important;
+  }
+
+  .sm-show {
+    display: flex !important;
+  }
+
   .main-box {
     .motto {
       .nav-button {
@@ -601,11 +621,15 @@ strong {
     min-width: 100%;
   }
 
-  .sm-hide {
-    display: none;
+  .xs-hide {
+    display: none !important;
   }
 
   .sm-show {
+    display: flex !important;
+  }
+
+  .xs-show {
     display: flex !important;
   }
 

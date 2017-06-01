@@ -87,6 +87,11 @@
         transform-origin: center;
       }
 
+      .loading .submit-button {
+        pointer-events: none;
+        opacity: .1;
+      }
+
       .submit-button-wrapper {
         position: relative;
         display: flex;
@@ -267,7 +272,7 @@
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
   .contact-bar {
     width: 700px;
 
@@ -334,12 +339,14 @@
 }
 
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   .contact-bar {
     width: 100%;
+    flex-direction: column;
+    padding-bottom: 0;
 
     .contact-form {
-      padding: 0 20px;
+      padding: 0 125px;
     }
 
     h2 {
@@ -367,7 +374,19 @@
     }
 
     .contact-map {
-      display: none;
+      padding: 30px 0 0;
+
+      h2.map-title {
+        display: none;
+      }
+
+      .google-map {
+        display: none;
+      }
+
+      .contact-address {
+        padding-bottom: 20px;
+      }
     }
 
     #contact-us {
@@ -398,6 +417,14 @@
         padding-top: 0;
         font-size: 0.75em;
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 568px) {
+  .contact-bar {
+    .contact-form {
+      padding: 0;
     }
   }
 }

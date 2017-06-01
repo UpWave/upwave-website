@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { withRouter, locationShape } from 'react-router';
-import MediaQuery from 'react-responsive';
 
 import Button from './common/components/Button';
 
@@ -30,12 +29,8 @@ function Header({
               `nav-button ${pathname === '/who_we_are' ? 'active': ''}`
             }
           >
-            <MediaQuery query='(min-device-width: 769px)'>
-              Who we are
-            </MediaQuery>
-            <MediaQuery query='(max-device-width: 768px)'>
-              About
-            </MediaQuery>
+            <span className="xs-hide sm-hide">Who we are</span>
+            <span className="sm-show all-hide">About</span>
           </Button>
           <Button
             type="link"
@@ -44,12 +39,8 @@ function Header({
               `nav-button ${pathname === '/our_work' ? 'active': ''}`
             }
           >
-            <MediaQuery query='(min-device-width: 769px)'>
-              Our work
-            </MediaQuery>
-            <MediaQuery query='(max-device-width: 768px)'>
-              Work
-            </MediaQuery>
+            <span className="xs-hide sm-hide">Our work</span>
+            <span className="sm-show all-hide">Work</span>
           </Button>
           <Button
             type="link"
@@ -65,7 +56,7 @@ function Header({
           <Button
             type="button"
             callback={() => toggleSidebar(true)}
-            className="nav-button sm-hide"
+            className="nav-button xs-hide sm-hide"
           >
             Get in touch
           </Button>

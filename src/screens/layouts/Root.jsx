@@ -1,5 +1,6 @@
 import React from 'react';
 import { locationShape } from 'react-router';
+import MediaQuery from 'react-responsive';
 
 import HighWaves from '../../components/HighWaves';
 import Background from '../../components/Background';
@@ -57,14 +58,22 @@ class Root extends React.Component {
     return (
       <section className={`content${this.pathname}`}>
         <Sidebar
-          sidebar={<Contact toggleSidebar={this.toggleSidebar.bind(this)} />}
+          sidebar={
+            <MediaQuery query='(min-device-width: 769px)'>
+              <Contact toggleSidebar={this.toggleSidebar.bind(this)} />
+            </MediaQuery>
+          }
           opened={this.state.sidebarOpened}
           onClose={this.toggleSidebar.bind(this)}
         >
           <Header isFromGreeting={isFromGreeting} toggleSidebar={this.toggleSidebar.bind(this)} />
           {this.children}
         </Sidebar>
-        <Footer toggleSidebar={this.toggleSidebar.bind(this)} />
+        <Footer toggleSidebar={this.toggleSidebar.bind(this)}>
+          <MediaQuery query='(max-device-width: 768px)'>
+            <Contact toggleSidebar={this.toggleSidebar.bind(this)} />
+          </MediaQuery>
+        </Footer>
         <HighWaves />
         <Background />
       </section>

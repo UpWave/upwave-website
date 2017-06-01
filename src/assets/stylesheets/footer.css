@@ -1,5 +1,5 @@
 .footer {
-  background-color: #2B485F;
+  background: url('../images/black.png');
   padding: 0 1%;
   position: relative;
 
@@ -10,7 +10,7 @@
     left: 0;
     width: 100%;
     height: 6px;
-    background-color: #2B485F;
+    background: url('../images/black.png');
   }
 }
 
@@ -129,7 +129,7 @@
     .sitemap {
       flex-direction: column;
       align-items: flex-start;
-      padding: 5px 0;
+      padding: 20px 0 10px;
     }
 
     .sitemap h3 {
@@ -159,7 +159,7 @@
 
     .copyright {
       padding-top: 10px;
-      line-height: 1em;
+      line-height: 1.5em;
 
       .help-links,
       .legit-name {

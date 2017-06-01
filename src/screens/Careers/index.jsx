@@ -46,7 +46,7 @@ class Careers extends React.Component {
                 <Button
                   type="button"
                   callback={e => { e.stopPropagation(); this.props.toggleSidebar(true); }}
-                  className="nav-button sm-hide"
+                  className="nav-button xs-hide sm-hide"
                 >
                   Apply
                 </Button>
@@ -74,7 +74,7 @@ class Careers extends React.Component {
                 <Button
                   type="button"
                   callback={e => { e.stopPropagation(); this.props.toggleSidebar(true); }}
-                  className="nav-button sm-hide"
+                  className="nav-button xs-hide sm-hide"
                 >
                   Apply
                 </Button>
@@ -102,7 +102,7 @@ class Careers extends React.Component {
                 <Button
                   type="button"
                   callback={e => { e.stopPropagation(); this.props.toggleSidebar(true); }}
-                  className="nav-button sm-hide"
+                  className="nav-button xs-hide sm-hide"
                 >
                   Apply
                 </Button>
@@ -130,7 +130,7 @@ class Careers extends React.Component {
                 <Button
                   type="button"
                   callback={e => { e.stopPropagation(); this.props.toggleSidebar(true); }}
-                  className="nav-button sm-hide"
+                  className="nav-button xs-hide sm-hide"
                 >
                   Apply
                 </Button>

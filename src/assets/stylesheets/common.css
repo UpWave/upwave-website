@@ -233,8 +233,8 @@ form textarea {
   content: '';
   box-sizing: border-box;
   position: absolute;
-  bottom: 9px;
-  right: 10px;
+  top: calc(50% - 15px);
+  left: calc(50% - 15px);
   width: 30px;
   height: 30px;
   border-radius: 50%;

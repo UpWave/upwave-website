@@ -25,6 +25,7 @@ Button.types = {
     <a
       id={id}
       href={href}
+      target="_blank"
       className={`${className ? ' ' + className : '' }`}
       onClick={e => e.stopPropagation()}
     >

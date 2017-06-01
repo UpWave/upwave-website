@@ -26,6 +26,8 @@ class Contact extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
 
+    if (this.state.isFetching) return;
+
     const reCAPTCHAToken = window.grecaptcha.getResponse();
 
     if (reCAPTCHAToken) {
@@ -93,7 +95,7 @@ class Contact extends React.Component {
     return (
         <section className='contact-bar'>
           <Button
-            className="sidebar-close-button"
+            className="sidebar-close-button xs-hide sm-hide"
             callback={() => this.props.toggleSidebar(false)}
             type="button"
           ></Button>
@@ -151,7 +153,7 @@ class Contact extends React.Component {
             </form>
           </section>
           <section className='contact-map'>
-            <h2>We are here</h2>
+            <h2 className="map-title">We are here</h2>
             <section className='google-map'>
               <iframe
                 src="https://www.google.com/maps/embed/v1/place?q=Akademika+Andriya+Sakharova+St,+35,+L'viv,+Lviv+Oblast&zoom=17&key=AIzaSyAoef4tUtPuY5nETIb-8oA-2GDhH6R2dKo"
@@ -159,7 +161,13 @@ class Contact extends React.Component {
             </section>
             <section className='contact-address'>
               <h2>Lviv</h2>
-              <span className="contact-street">33a Akademika Andriya<br />Sakharova street, 79000</span>
+              <Button
+                type="externalLink"
+                href="https://maps.google.com/maps?ll=49.822172,24.016328&z=17&t=m&hl=en-US&gl=US&mapclient=embed&q=Akademika%20Andriya%20Sakharova%20St%2C%2035%20L%27viv%20Lviv%20Oblast%20Ukraine"
+                className="nav-button contact-street"
+              >
+                33a Akademika Andriya<br />Sakharova street, 79000
+              </Button>
               <Button
                 type="externalLink"
                 href={`mailto:contact@upwave.net?subject=${this.state.subject || ''}&body=${this.state.message || ''}`}

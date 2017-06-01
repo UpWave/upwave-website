@@ -21,7 +21,7 @@ class Sidebar extends React.Component {
         overflowY: 'visible',
       },
       overlay: {
-        zIndex: 2,
+        zIndex: 5,
       },
       sidebar: {
         position: 'fixed',
@@ -30,7 +30,7 @@ class Sidebar extends React.Component {
         flex: '1',
         background: 'rgba(43, 72, 95, .93)',
         boxShadow: '0 0 20px rgba(0, 0, 0, .3)',
-        zIndex: 5,
+        zIndex: 6,
       },
       content: {
         position: 'static',

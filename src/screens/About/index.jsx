@@ -64,7 +64,7 @@ function About({ registerAnimation }) {
           </div>
         </div>
         <SVGElement svg={whoWeAre} className="who-we-are-term term-only" />
-        <section className="all-hide sm-show">
+        <section className="all-hide xs-show">
           <Paragraph>
             &#09;We are small software development agency, which is focused on working with rising startups. <strong>Our main goal is your successful business.</strong> We are always ready to consult and assess your project and provide the best solution to achieve the greatest results.
           </Paragraph>

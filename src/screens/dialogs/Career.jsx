@@ -19,19 +19,13 @@ class Career extends React.Component {
             <Button
               type="button"
               callback={e => { e.stopPropagation(); this.props.toggleSidebar(true); }}
-              className="nav-button sm-hide"
+              className="nav-button xs-hide sm-hide"
             >
               Apply
             </Button>
           </section>
           {positions[positionId]['body']}
-          <Button
-            type="button"
-            callback={e => { e.stopPropagation(); this.props.toggleSidebar(true); }}
-            className={`nav-button phone-apply-button sm-show all-hide ${positions[positionId]['name'].replace('/', '-')}`}
-          >
-            Apply
-          </Button>
+          <p className="mobile-contact-us">Let us know if it suits you!<br />Just send us email or use contact form on our website.</p>
         </section>
       </Dialog>
     );

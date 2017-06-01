@@ -22,10 +22,18 @@ class Dialog extends React.Component {
     fadeOut: false,
   };
 
+  setMainDisplay(value) {
+    window.document.querySelector('.header').style.display = value;
+    window.document.querySelector('.box').style.display = value;
+    window.document.querySelector('.footer').style.display = value;
+  }
+
+  componentWillUnmount() {
+    this.setMainDisplay('flex');
+  }
+
   closeDialog() {
-    window.document.querySelector('.header').style.display = 'flex';
-    window.document.querySelector('.box').style.display = 'flex';
-    window.document.querySelector('.footer').style.display = 'flex';
+    this.setMainDisplay('flex');
 
     this.setState({
       fadeOut: true,
@@ -43,9 +51,7 @@ class Dialog extends React.Component {
           onAfterOpen={() => {
             window.setTimeout(
               () => {
-                window.document.querySelector('.header').style.display = 'none';
-                window.document.querySelector('.box').style.display = 'none';
-                window.document.querySelector('.footer').style.display = 'none';
+                this.setMainDisplay('none');
               },
               500
             );
