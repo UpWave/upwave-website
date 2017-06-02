@@ -2,7 +2,6 @@
   flex-grow: 1;
   width: 1441px;
   padding-top: 20px;
-  padding-bottom: 125px;
   flex-direction: row;
 
   .sidebar-close-button {
@@ -343,7 +342,6 @@
   .contact-bar {
     width: 100%;
     flex-direction: column;
-    padding-bottom: 0;
 
     .contact-form {
       padding: 0 125px;

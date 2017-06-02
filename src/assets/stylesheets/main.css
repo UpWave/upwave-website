@@ -56,6 +56,14 @@ p {
   flex-direction: column;
 }
 
+p {
+  line-height: 1.5;
+}
+
+i {
+  font-style: italic;
+}
+
 .all-hide {
   display: none !important;
 }
@@ -638,6 +646,8 @@ strong {
   }
 
   .main-box {
+    padding-bottom: 25px;
+
     .motto {
       padding: 3% 5%;
       text-align: center;

@@ -17,7 +17,7 @@ import Career from '../screens/dialogs/Career';
 
 function AppRouter() {
   return (
-    <Router history={browserHistory}>
+    <Router onUpdate={() => window.scrollTo(0, 0)} history={browserHistory}>
       <Route path='/' component={Root}>
         <IndexRoute component={Main} />
         <Route path='/who_we_are' component={About} />

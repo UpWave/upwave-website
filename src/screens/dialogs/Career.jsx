@@ -25,7 +25,7 @@ class Career extends React.Component {
             </Button>
           </section>
           {positions[positionId]['body']}
-          <p className="mobile-contact-us">Let us know if it suits you!<br />Just send us email or use contact form on our website.</p>
+          <p className="mobile-contact-us xs-show sm-show all-hide"><i>Let us know if it suits you!<br />Just send us an email or use a contact form from our website.</i></p>
         </section>
       </Dialog>
     );
